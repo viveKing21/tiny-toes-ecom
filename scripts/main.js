@@ -4,3 +4,5 @@ export const LSK = {
     CARTS: "carts",
     AUTH: "auth"
 }
+
+export const API = "https://64214f5434d6cd4ebd6fd51c.mockapi.io/products"
