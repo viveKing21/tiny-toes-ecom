@@ -1,4 +1,5 @@
 import { LSK } from "./main.js";
+
 document.addEventListener("DOMContentLoaded",function(){
     async function fecthProducts(url){
         let data= await fetch(url);
@@ -7,3 +8,5 @@ document.addEventListener("DOMContentLoaded",function(){
     }
     fecthProducts("https://64214f5434d6cd4ebd6fd51c.mockapi.io/products")
 })
+
+
