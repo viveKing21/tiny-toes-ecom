@@ -1,0 +1,129 @@
+
+#nav1{
+ display: flex;
+ padding-top: 1%;
+ width: 100%;
+ /* height: 3vh; */
+ justify-content: space-between;
+ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+input{
+    margin-left: 20px;
+    width: 300px;
+    height: 40px;
+    margin-top: 6px;
+    border-radius: 7px;
+    border: 2px solid orange;
+}
+#inpbutton{
+    margin-left: -34px;
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    color: orange;
+    margin-top: 13px;
+    height: 25px;
+}
+
+
+#nav1>div{
+    display: flex;
+}
+#nav1>div:nth-child(2){
+    margin: 18px 30px;
+}
+#nav1>div:nth-child(2)>a{
+    text-decoration: none;
+    margin-right:6px;
+    color: grey;
+}
+#nav1>div:nth-child(2)>a:hover{
+   text-decoration: underline;
+}
+.verticalline{
+    height: 17px;
+    width: 1.5px;
+    margin-top: 1px;
+    margin-right: 5px;
+    background-color: rgb(204, 200, 200);
+}
+#nav2{
+    display: flex;
+    height: 6vh;
+    width: 100%;
+    justify-content: center;
+    gap: 14px;
+   background-color:#F5CD12;
+   align-items: center;
+}
+#nav2 ul{
+    display: inline-flex;
+    list-style: none;
+    color: rgb(52, 48, 48);
+    
+}
+#nav2 ul li{
+    padding: 5px 10px;
+    height: 35px;
+    margin-left: 10px;
+}
+#nav2 ul li a{
+    text-decoration: none;
+    color: rgb(55, 52, 52);
+    font-weight: 600;
+    font-family: Calibri;
+}
+.submenu-1{
+display: none;
+background-color:white;
+
+
+}
+#nav2>ul>li:hover{
+    background-color:whitesmoke;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#nav2 ul li:hover .submenu-1{
+    display: flex;
+    position: absolute;
+    margin-top: 11px;
+    margin-left: -11vw;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 100%;
+   
+}
+#nav2 ul li:hover .submenu-1 ul{
+    display:block;
+    margin-left: 1vw;
+    margin-top: 40px;
+    width: 100%;
+} 
+#nav2 ul li:hover .submenu-1 ul li {
+  margin-left: -10px;
+  width: 100%;
+/* background-color: red; */
+
+
+} 
+#nav2 ul li:hover .submenu-1>ul>li>a:hover{
+    text-decoration: underline;
+  
+  } 
+  #slider{
+    width: 100%;
+    height: 60vh;
+    
+    
+  }
+  #slider>img{
+    width: 100%;
+   
+  }
+
+
+
+
+
+
