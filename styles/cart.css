@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+main {
+    line-height: 1;
+    background-image: url(//cdn.fcglcdn.com/brainbees/images/n/main-bg.jpg);
+    background-repeat: repeat;
+    font-size: 12px;
+  
+
+}
+
+
+
+.card-block {
+    background: #fff;
+    float: left;
+    padding: 20px 24px;
+    border-radius: 3px 0 3px 3px;
+    margin-bottom: 12px;
+    width: 100%;
+   
+}
+
+element.style {
+    cursor: pointer;
+}
+img {
+    max-width: 112px;
+    max-height: 136px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+
+.product-card{
+    display: grid;
+    grid-template-columns: 140px 2fr 1fr;
+    font-family: "Roboto-Medium";
+    font-size: 16px!important;
+     color: #424242!important;
+    line-height: 22px!important;
+        
+    
+}
