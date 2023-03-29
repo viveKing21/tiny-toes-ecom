@@ -31,7 +31,7 @@ body{
     /* display:  grid;
     grid-template-columns: repeat(4,1fr);
     gap: 20px; */
-    border: solid yellow;
+    /* border: solid yellow; */
 }
 
 #products{
@@ -72,33 +72,62 @@ img{
     gap: 20px;
 }
 
-#add-product{
+#addproduct{
     border: solid pink;
     display: flex;
     flex-direction: column;
-    display: none;
+    /* display: none; */
 
 }
 
-#update-product{
+#updateproduct{
     border: solid pink;
     display: flex;
     flex-direction: column;
-    display: none;
+    /* display: none; */
 
 }
 
-#update-price{
+#updateprice{
     border: solid pink;
     display: flex;
     flex-direction: column;
-    display: none;
+    /* display: none; */
 }
 
-#remove-product{
+#removeproduct{
     border: solid pink;
     display: flex;
     flex-direction: column;
-    display: none;
+    /* display: none; */
 }
 
+#chart{
+    border: solid red;
+}
+
+#upperCharts{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+#chartLower{
+    margin-top: 100px;
+    border: solid red;
+    height: 400px;
+}
+
+.orderHeadings{
+    border: solid blue;
+}
+
+#headings{
+    border: solid pink;
+    width: 100%;
+}
+
+
+.hide{
+    display: none !important;
+
+}

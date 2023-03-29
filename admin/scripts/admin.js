@@ -1,34 +1,197 @@
+// <--------- display -------->
 let sideContainer = document.getElementById("side-container");
 let report = document.getElementById("report-btn");
 let product = document.getElementById("product-btn");
 let orders = document.getElementById("orders-btn");
 let admins = document.getElementById("admins-btn");
 let profile = document.getElementById("profile-btn");
+// <--------- display -------->
+
+
+
+
+// <---------- Reports Charts & Reports Section ------------->
 
 let displayContainer = document.getElementById("display-container");
 
+async function fetchDataGlobal() {
 
-report.addEventListener("click", () => {
-    displayContainer.innerHTML = "";
-    console.log("reports");
+    let res = await fetch("https://64214f5434d6cd4ebd6fd51c.mockapi.io/products");
+    let data = await res.json();
+    console.log(data);
+    renderDash(data)
+}
+fetchDataGlobal()
 
-})
+let count1 = 0;
+function renderDash(data) {
+    count1 = data.length
+    console.log(count1);
 
-product.addEventListener("click", () => {
-    displayContainer.innerHTML = "";
-    // report.innerHTML = "";
-    // orders.innerHTML = "";
-    // admins.innerHTML = "";
-    // profile.innerHTML = "";
-    sideContainer.innerHTML = "";
-    console.log("product");
-    fetchData()
-})
+    report.addEventListener("click", () => {
+
+        displayContainer.innerHTML = "";
+        displayContainer.innerHTML = `
+        <div id="upperCharts">
+        <div id="chart">
+            <div id="donutChart1" style="margin-top : 60px;">
+            </div>
+        </div>
+        <div id="chart">
+            <div id="donutChart2" style="margin-top : 60px;">
+            </div>
+        </div>
+        <div id="chart">
+            <div id="donutChart3" style="margin-top : 60px;">
+            </div>
+        </div>
+        </div>
+        <div id ="chartLower">
+        <div id="chart3d">
+        </div>
+        `
+
+        let donutchart1 = document.getElementById("donutChart1");
+        let donutchart2 = document.getElementById("donutChart1");
+        let donutchart3 = document.getElementById("donutChart1");
+        let chart3d = document.getElementById("chart3d");
+
+        google.charts.load("current", { packages: ["corechart"] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data1 = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Total Products', count1],
+                ['Boys', 23],
+                ['Girls', 12],
+                // ['Watch TV', 2],
+                // ['Sleep',    7]
+            ]);
+
+            var data2 = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Total Products', count1],
+                ['Boys', 23],
+                ['Girls', 12],
+                // ['Watch TV', 2],
+                // ['Sleep',    7]
+            ]);
+
+            var options = {
+                title: 'Total Products',
+                pieHole: 0.2,
+                width: 400,
+            };
+
+            var data3 = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Total Products', count1],
+                ['Boys', 23],
+                ['Girls', 12],
+                // ['Watch TV', 2],
+                // ['Sleep',    7]
+            ]);
+
+            var options = {
+                title: 'Total Products',
+                pieHole: 0.2,
+                width: 400,
+            };
+
+            var data4 = google.visualization.arrayToDataTable([
+                ['Task', 'Hours per Day'],
+                ['Work',     11],
+                ['Eat',      2],
+                ['Commute',  2],
+                ['Watch TV', 2],
+                ['Sleep',    7]
+              ]);
+      
+              var options4 = {
+                title: 'My Daily Activities',
+                is3D: true,
+                
+              };
+      
+
+            var chart1 = new google.visualization.PieChart(document.getElementById('donutChart1'));
+            chart1.draw(data1, options);
+            var chart2 = new google.visualization.PieChart(document.getElementById('donutChart2'));
+            chart2.draw(data2, options);
+            var chart3 = new google.visualization.PieChart(document.getElementById('donutChart3'));
+            chart3.draw(data3, options);
+            var chart4 = new google.visualization.PieChart(document.getElementById('chart3d'));
+            chart4.draw(data4, options4);
+        }
+        console.log("reports");
+    })
+}
+
+// <---------- Reports Charts & Reports Section ------------->
+
+
+// <----------- order-details & Orders Section----------->
+let body = document.querySelector("tbody");
+// let orderData = JSON.parse(localStorage.getItem("order-list")) || [];
+
+
+var orderData = [{
+    firstname : "ansh",
+    lastname : "check",
+    email : "ddscs",
+    address : "cscscs",
+    pincode : 1233,
+    city : "dcscs",
+    state : "dscsc"
+}]
 
 orders.addEventListener("click", () => {
     displayContainer.innerHTML = "";
+    displayContainer.innerHTML = `
+    <div id="orderTable">
+    <table id="headings">
+    <thead >
+      <tr>
+        <th class="orderHeadings">First Name</th>
+        <th class="orderHeadings">Last Name</th>
+        <th class="orderHeadings">E-mail</th>
+        <th class="orderHeadings">Address</th>
+        <th class="orderHeadings">Pincode</th>
+        <th class="orderHeadings">City</th>
+        <th class="orderHeadings">State</th>
+      </tr>
+    </thead>
+    <tbody>
+    ${orderData.map((item) => renderorders(item.firstname,item.lastname,item.email,item.address,item.pincode,item.city,item.state)).join("")}
+    </tbody>
+    </table>
+    </div>
+    `
     console.log("orders");
 })
+
+
+let orderList = document.getElementById("orders-btn");
+
+function renderorders(firstname,lastname,email,address,pincode,city,state) {
+    let orderTable = `
+    <tbody>
+    <tr>
+    <td>${firstname}</td>
+    <td>${lastname}</td>
+    <td>${email}</td>
+    <td>${address}</td>
+    <td>${pincode}</td>
+    <td>${city}</td>
+    <td>${state}</td>
+    </tr>
+</tbody>
+`
+    return  orderTable
+}
+// <----------- order-details & Orders Section----------->
+
+
 
 admins.addEventListener("click", () => {
     displayContainer.innerHTML = "";
@@ -39,6 +202,18 @@ profile.addEventListener("click", () => {
     displayContainer.innerHTML = "";
     console.log("profile");
 })
+
+
+// <------------- Products CRUD Section Button ----------------->
+product.addEventListener("click", () => {
+    displayContainer.innerHTML = "";
+    sideContainer.innerHTML = "";
+    console.log("product");
+    fetchData()
+})
+
+
+
 
 //<--------------- Product Data -------------->
 
@@ -55,8 +230,9 @@ async function fetchData() {
 
 function renderBtn(arr) {
     sideContainer.innerHTML = `<div id="crudBtns">
-        <button id="addHead">Add product</button>
-        <div id="add-product">
+        <button id="addHead" onclick = "this.nextElementSibling.classList.toggle('hide')">Add product</button>
+        <div id="addproduct">
+
         <label for="title">Product Title</label>
         <input type="text" name="" id="titleAdd">
         <label for="image1">Product Image1</label>
@@ -76,8 +252,8 @@ function renderBtn(arr) {
         <button id="addProductBtn">Add</button>
         </div>
         
-        <button>Update Product</button>
-        <div id="update-product">
+        <button onclick = "this.nextElementSibling.classList.toggle('hide')">Update Product</button>
+        <div id="update">
         <label for="id">Product Id</label>
         <input type="number" name="" id="idProduct">
         <label for="title">Product Title</label>
@@ -99,8 +275,8 @@ function renderBtn(arr) {
         <button id="updateProductBtn">Update</button>
         </div>
 
-        <button>Update Key Value</button>
-        <div id="update-price">
+        <button onclick = "this.nextElementSibling.classList.toggle('hide')">Update Key Value</button>
+        <div id="updateprice">
         <label for="id">Product Id</label>
         <input type="number" name="" id="ProductId">
         <label for="price">Product Price</label>
@@ -108,12 +284,13 @@ function renderBtn(arr) {
         <button id="updateOnlyPrice">Update Price</button>
         </div>
         
-
-        <button>Remove Product</button>
-        <div id="remove-product">
+        <button onclick = "this.nextElementSibling.classList.toggle('hide')">Remove Product</button>
+        <div id="removeproduct">
         <label for="id">Product Id</label>
         <input type="number" name="" id="removeId">
+        <button id="removeProductBtn">Remove Product</button>
         </div>
+        
         </div>`
     displayContainer.innerHTML = `
         <div id="product-container">
@@ -131,25 +308,11 @@ function renderBtn(arr) {
     }
 
 
-    // <------------ Adding the Products -------------->
+  
+  
+    // <------------ Adding the Products CRUD -------------->
 
-    let addToggle = document.getElementById("addHead");
     let addBtn = document.getElementById("addProductBtn");
-    let addDiv = document.getElementById("add-product");
-
-
-    let flagAdd = false;
-    addToggle.addEventListener("click", () => {
-        flagAdd != flagAdd
-        if (flagAdd == true) {
-            addDiv.style.display === "block"
-        } else {
-            addDiv.style.display === "none"
-        }
-
-        console.log("check")
-    })
-
     addBtn.addEventListener("click", async () => {
 
         let addTitle = document.getElementById("titleAdd").value;
@@ -188,9 +351,10 @@ function renderBtn(arr) {
         alert("Product-added");
         fetchData()
     }
+    // <------------ Adding the Products CRUD -------------->
 
 
-    // <-----Updating the Product------->
+    // <-----Updating the Product CRUD------->
 
     let updateBtn = document.getElementById("updateProductBtn");
 
@@ -234,8 +398,9 @@ function renderBtn(arr) {
         console.log(data);
         fetchData();
     }
+    // <-----Updating the Product CRUD------->
 
-    // <-------Update Price of the Product------->
+    // <-------Update Price of the Product CRUD------->
 
     let updatePriceBtn = document.getElementById("updateOnlyPrice");
 
@@ -265,8 +430,9 @@ function renderBtn(arr) {
         console.log(data);
         fetchData();
     }
+    // <-------Update Price of the Product CRUD------->
 
-    // <-------Remove Product------->
+    // <-------Remove Product CRUD------->
 
     let removeProductId = document.getElementById("removeProductBtn");
 
@@ -288,6 +454,34 @@ function renderBtn(arr) {
 
     }
 
+    // <-------Remove Product CRUD------->
+
+
+    //   <-------- Toggle Side-Section--------->
+//   let addSectionOfCrud = document.getElementById("addproduct");
+//   let addToggleBtn = document.getElementById("addHead");
+  
+//   let xa = false;
+//   addToggleBtn.addEventListener("click", () => {
+//     //   xa != xa;
+//       if (xa == true) {
+//           addSectionOfCrud.style.display = "block";
+//       } else {
+//           addSectionOfCrud.style.display = "none";
+//       }
+//       console.log("check");
+//   })
+  
+//   <-------- Toggle Side-Section--------->
 }
+
+// <------------- Products CRUD Section Button ----------------->
+
+
+
+
+
+
+
 
 
