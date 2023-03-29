@@ -9,20 +9,23 @@
 
 }
 input{
-    margin-left: 20px;
-    width: 300px;
-    height: 40px;
+ 
+    width: 350px;
+    height: 35px;
     margin-top: 6px;
     border-radius: 7px;
-    border: 2px solid orange;
+    border: 1px solid #f92f2f;
+}
+input:focus{
+outline: #f92f2f    ;
 }
 #inpbutton{
-    margin-left: -34px;
+    margin-left: -32px;
     background-color: white;
     border: none;
     font-size: 15px;
-    color: orange;
-    margin-top: 13px;
+    color:#f92f2f;
+    margin-top: 11px;
     height: 25px;
 }
 
@@ -41,6 +44,7 @@ input{
 #nav1>div:nth-child(2)>a:hover{
    text-decoration: underline;
 }
+
 .verticalline{
     height: 17px;
     width: 1.5px;
@@ -54,36 +58,47 @@ input{
     width: 100%;
     justify-content: center;
     gap: 14px;
-   background-color:#F5CD12;
+   background-color:#fed005;
    align-items: center;
+   z-index: 5;
 }
 #nav2 ul{
     display: inline-flex;
     list-style: none;
     color: rgb(52, 48, 48);
+    z-index: 5;
     
 }
 #nav2 ul li{
     padding: 5px 10px;
     height: 35px;
     margin-left: 10px;
+    z-index: 5;
 }
 #nav2 ul li a{
     text-decoration: none;
-    color: rgb(55, 52, 52);
+    color: rgb(94, 86, 86);
     font-weight: 600;
     font-family: Calibri;
+    z-index: 5;
 }
 .submenu-1{
 display: none;
 background-color:white;
+z-index: 5;
 
 
 }
 #nav2>ul>li:hover{
-    background-color:whitesmoke;
-    border-radius: 5px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color:white;
+    border-radius: 1px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 5px 0px;
+    z-index: 5;
+}
+#nav2>ul>li:last-child:hover{
+    background:none;
+    box-shadow: none;
+    z-index: 5;
 }
 #nav2 ul li:hover .submenu-1{
     display: flex;
@@ -92,6 +107,7 @@ background-color:white;
     margin-left: -11vw;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     width: 100%;
+    z-index: 5;
    
 }
 #nav2 ul li:hover .submenu-1 ul{
@@ -99,28 +115,169 @@ background-color:white;
     margin-left: 1vw;
     margin-top: 40px;
     width: 100%;
+    z-index: 5;
 } 
 #nav2 ul li:hover .submenu-1 ul li {
   margin-left: -10px;
   width: 100%;
 /* background-color: red; */
+z-index: 5;
 
 
 } 
 #nav2 ul li:hover .submenu-1>ul>li>a:hover{
     text-decoration: underline;
+    z-index: 5;
   
   } 
   #slider{
-    width: 100%;
-    height: 60vh;
-    
-    
+    overflow: hidden;
   }
-  #slider>img{
+ 
+  #slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+  }
+  #slider figure img{
+    float: left;
+    width: 20%;
+  }  
+  @keyframes slider{
+    0% {
+           left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+      left: -300%;
+    }
+    95%{ 
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+  }
+  #premiumMain>h2{
+    margin-left: 30vw;
+    margin-bottom:3vh;
+    font-family: calibri;
+    font-size: 30px;
+    color: rgb(46, 43, 43);
+    font-weight: 500;
+  }
+  #premiumMain{
     width: 100%;
+    padding: 1vh 10vw;
+    padding-bottom: 6vh;
+    background-color:#d7d7cf;
+  }
+#premium{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    width: 100%;
+    
    
-  }
+}
+.card{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 6px;
+    background-color: white;
+}
+.card>h3{
+    margin-left: 1vw;
+    color: rgb(93, 83, 83);
+    font-family: calibri;
+    font-weight: 400;
+    font-size: 19px;
+    margin-top: 8px;
+}
+.card>p{
+    margin-left: 1vw;
+    margin-top: -10px;
+    color:rgb(147, 142, 142) ;
+    font-family: calibri;
+}
+.card p1{
+    margin-left: 1vw;
+    margin-top: -10px;
+    color:rgb(22, 21, 21) ;
+    font-family: calibri;
+    font-weight: 800;
+display: none;
+}
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 18px;
+    transform:scale(1.01);
+  
+}
+.card:hover p{
+    display: none;
+ }
+ .card:hover p1{
+    display: block;
+ }
+.card>img{
+    width: 100%;
+}
+#footer{
+    padding: 4vh 5vw;
+} 
+#bodyfooter{
+    display: flex;
+    background-color: #e0f0fa;
+    padding: 8vh;
+}
+   
+#ulfooter{
+    display: flex;
+    gap: 40px;
+}
+#ulfooter>ul>li{
+    font-size: 15px;
+    font-family: calibri;
+    font-weight: 500;
+    color: rgb(93, 83, 83);
+    list-style: none;
+    margin-bottom: 6px;
+}
+#ulfooter>ul>li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+#ulfooter>ul>li:nth-child(1){
+    font-size: 16px;
+    font-family: calibri;
+    font-weight: 600;
+    color: rgb(93, 83, 83);
+    list-style: none;
+}
+#imgfooter{
+    margin-left: 10vw;
+}
+#imgfooter>img{
+    display:block;
+    margin-top: 5vh;
+}
+
+  
 
 
 
