@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon">
-    <title>Tiny Toes | Orders</title>
+    <title>Tiny Toes | Profile</title>
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/orders.css">
-    <script src="scripts/orders.js" type="module" defer></script>
+    <script src="/scripts/orders.js" type="module" defer></script>
 </head>
 <body>
     <header>
@@ -16,6 +16,31 @@
     </header>
     <main>
         <!-- Page Content -->
+        <div class="tabs">
+            <a href="profile.html" class="tab">Profile</a>
+            <a href="orders.html" class="tab selected">Orders</a>
+        </div>
+        <section>
+            <div class="empty">
+                <img src="https://i.pinimg.com/736x/ae/bc/8c/aebc8c60e30c83f3ab34c978733dab26.jpg" alt="">
+                <p>You Haven't made any purchase recently</p>
+            </div>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Order ID</th>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Amount</th>
+                        <th>Invoice</th>
+                        <th>status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
     </main>
     <footer>
          <!-- Footer -->
