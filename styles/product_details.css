@@ -1,0 +1,386 @@
+main{
+    padding: 50px;
+    color: #424242;
+}
+main > .path{
+    font-size: 14px;
+}
+main > .loading_screen{
+    height: 100vh;
+    width: 100%;
+    margin-top: 20px;
+}
+main > .loading_screen .skeleton{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+main > .loading_screen .skeleton div{
+    background-color: rgb(231, 231, 231);
+    border-radius: 5px;
+    animation: skeleton 1s infinite ease-in;
+}
+@keyframes skeleton {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: .3;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+main > .loading_screen .skeleton div:last-child{
+    grid-column: span 2;
+}
+main > .loading_screen[show] ~ *{
+    display: none;
+}
+main > .error{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main > .error img{
+    width: 80%;
+    max-width: 600px;
+}
+main > .error[show] ~ *{
+    display: none;
+}
+main > :is(.loading_screen,.error):not([show]){
+    display: none;
+}
+main > .content{
+    display: flex;
+    height: 100%;
+    margin-top: 20px;
+    gap: 10px;
+    
+}
+main > .content > *{
+    flex: 1;
+}
+main > .content .image-view{
+    display: flex;
+    gap: 10px;
+    position: sticky;
+    top: 10px;
+    align-self: flex-start;
+    max-width: 800px;
+}
+main > .content .image-view .images{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+main > .content .image-view .images img{
+    width: 70px;
+    cursor: pointer;
+}
+main > .content .image-view .preview-image{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    right: -10px;
+    transform: translateX(100%);
+    border: .5px solid rgb(227, 227, 227);
+    border-radius: 5px;
+    background-image: url(https://cdn.fcglcdn.com/brainbees/images/products/438x531/12746338a.webp);
+    background-size: 200%;
+    background-position: var(--x) var(--y);
+    background-repeat: no-repeat;
+}
+main > .content .image-view .image{
+    flex: 1;
+}
+main > .content .image-view .images img.selected{
+    outline: 1px solid #ff7043;
+    box-shadow: 0 0 5px 0px #00000029;
+}
+main > .content button{
+    background-color: #ff7043;
+    min-height: 50px;
+    width: 100%;
+    max-width: 200px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color .2s;
+}
+main > .content button:hover{
+    background-color: #ffa143;
+    cursor: pointer;
+}
+main > .content .image-view .image img{
+    width: 100%;
+    cursor: zoom-in;
+}
+main > .content .product-details{
+    display: flex;
+    flex-direction: column;
+}
+main > .content .product-details .title{
+    font-weight: bold;
+    font-size: 20px;
+}
+main > .content .product-details .p-id{
+    font-size: 14px;
+}
+
+main hr{
+    width: 100%;
+    border-color: rgb(227, 227, 227);
+    margin: 15px 0;
+    border-top: .5px;
+}
+
+main > .content .product-details .price{
+    display: flex;
+    gap: 10px;
+    font-size: 19px;
+}
+
+main > .content .product-details .price .selling{
+    font-weight: bold;
+    color: #00325f;
+}
+main > .content .product-details .price .mrp{
+    color: rgb(171, 171, 171);
+}
+main > .content .product-details .price .discount{
+    color: #ff7043;
+}
+
+main > .content .shipping{
+    display: flex;
+    margin: 15px 0;
+    border: 1px solid rgb(227, 227, 227);
+    border-radius: 5px;
+    align-self: flex-start;
+    flex-direction: column;
+}
+main > .content .shipping .details{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+main > .content .shipping .details img{
+    height: 40px;
+}
+main > .content .shipping .details .info{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+main > .content .shipping .details .info span:first-child{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+main > .content .shipping .details .info span:first-child img{
+    height: 15px;
+}
+main > .content .shipping .details .info span:last-child{
+    font-size: 14px;
+}
+main > .content .shipping .details .info span:last-child span{
+    color: rgb(24, 186, 59);
+}
+main > .content .shipping .details .button{
+    display: flex;
+    align-items: center;
+    color:#ff7043;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+main > .content .shipping .offer{
+    padding: 5px;
+    font-size: 14px;
+    border-top: 1px solid rgb(224, 211, 103);
+    background-color: #fffbe8;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+main > .content .sizes{
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+main > .content .sizes p{
+    font-size: 14px;
+    font-weight: bold;
+}
+main > .content .sizes .options{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+main > .content .sizes .options div{
+    border: 1px solid rgb(227, 227, 227);
+    height: 40px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+main > .content .sizes .options div.selected{
+    outline: 1.5px solid #424242;
+}
+main > .content .club{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+main > .content .box-title{
+    font-size: 14px;
+    margin-top: 0;
+    font-weight: 600;
+}
+main > .content .club .cards{
+    display: flex;
+    gap: 10px;
+}
+main > .content .club .cards .card{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    flex: 1;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    cursor: pointer;
+}
+main > .content .material-info{
+    margin: 10px 0;
+}
+main > .content .material-info .info-box{
+    display: grid;
+    font-size: 14px;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 15px;
+}
+main > .content .material-info .info-box p{
+    padding-bottom: 10px;
+    border-bottom:  1px solid rgb(227, 227, 227);
+    margin: 0;
+}
+main > .products p{
+    font-weight: bold;
+}
+.slider{
+    display: flex;
+}
+.slider > span{
+    font-size: 40px;
+    color: rgb(50, 50, 50);
+    cursor: pointer;
+    align-self: center;
+    margin: 0 10px;
+}
+.slider > span.disabled{
+    color: rgb(214, 214, 214);
+}
+.slider .slider-items{
+    overflow-x: hidden;
+}
+.slider .slider-items .slider-wrapper{
+    flex-grow: 1;
+    display: flex;
+    --gap: 50px;
+    gap: var(--gap);
+    transform: translateX(calc(var(--left) * -100%));
+    transition: transform .5s ease;
+}
+.slider .slider-items .slider-item{
+    min-width: calc(100% / var(--view) - var(--gap));
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.slider .slider-items .slider-item img{
+    width: 100%;
+}
+.slider .slider-items .slider-item .title{
+    font-size: 16px;
+}
+.slider .slider-items .slider-item .prices{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+.slider .slider-items .slider-item .prices span{
+    color: #ff7043;
+}
+
+/* Responsive */
+@media screen and (min-width: 1800px){
+    .slider .slider-items .slider-wrapper{
+        --view: 8 !important
+    }
+}
+@media screen and (min-width: 1200px){
+    .slider .slider-items .slider-wrapper{
+        --view: 6 !important
+    }
+}
+@media screen and (max-width: 900px){
+    .slider .slider-items .slider-wrapper{
+        --view: 4 !important
+    }
+}
+@media screen and (max-width: 850px) {
+    main > .content{
+        flex-direction: column;
+    }
+    main > .content .image-view{
+        position: static;
+        flex-direction: column;
+        width: 100%;
+    }
+    main > .content .image-view .image button{
+        display: none;
+    }
+    main > .content .image-view .images{
+        display: flex;
+        flex-direction: row;
+        order: 2;
+    }
+    main > .content .image-view .preview-image{
+        display: none;
+    }
+    main > .content > .add-cart{
+        display: block !important;
+    }
+}
+@media screen and (max-width: 700px){
+    .slider .slider-items .slider-wrapper{
+        --view: 2 !important
+    }
+}
+
+@media screen and (max-width: 500px){
+    main{
+        padding: 20px;
+    }
+    .slider .slider-items .slider-wrapper{
+        --view: 1 !important
+    }
+}

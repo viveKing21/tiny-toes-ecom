@@ -1,0 +1,101 @@
+
+
+#nav1{
+    display: flex;
+    padding-top: 1%;
+    width: 100%;
+    /* height: 3vh; */
+    justify-content: space-between;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #fff;
+    font-family: Roboto-Regular;
+   
+   }
+   #nav1 img{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+   }
+   #Myaccount{
+    width: 25px;
+    color: #616161;
+    border: 0px;
+   }
+   body{
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+main {
+    line-height: 1;
+    background-image: url(//cdn.fcglcdn.com/brainbees/images/n/main-bg.jpg);
+    background-repeat: repeat;
+}
+#MainDiv{
+    display: flex;
+    flex-direction: column;
+    height: 602px;
+    color: #575757;
+    position: absolute;
+    align-items: center;
+   justify-content: center;
+   margin: auto;
+   
+}
+
+#Formating{
+    width: 30%;
+    margin: auto;
+}
+
+#Formating input{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border: none;
+}
+#Formating button{
+    margin-top: 20px;
+    width: 80%;
+    margin-left: 10%;
+    height: 45px;
+    color: #fff;
+    background-color: #ff7043;;
+}
+#dropdown{
+    visibility: visible;
+}
+.drop-show{
+    visibility: hidden;
+}
+
+
+#upipayment{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+}
+#headingofUpi{
+    margin-top: 30px;
+  
+    display:flex;
+    flex-direction: row;
+}
+#labelofupi{
+    font-family: "Roboto-Bold";
+    font-size: 30px;
+    color: #424242;
+    line-height: 21px;
+}
+#headingofUpi img{
+    background-color: aqua;
+    width: 50%;
+}
+#PayTm{
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

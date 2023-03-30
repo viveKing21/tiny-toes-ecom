@@ -1,3 +1,4 @@
+
 import { LSK } from "./main.js";
 var log=JSON.parse(localStorage.getItem("logged"))
 var user=JSON.parse(localStorage.getItem("user"))
@@ -16,4 +17,4 @@ var wlcm=document.getElementById("welcome")
        },300)
 
    })
-   
+
