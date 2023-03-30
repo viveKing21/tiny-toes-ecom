@@ -3,16 +3,19 @@
  display: flex;
  padding-top: 1%;
  width: 100%;
- /* height: 3vh; */
+ height: 12vh;
  justify-content: space-between;
  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+ 
 
 }
+    
+
 input{
  
-    width: 350px;
-    height: 35px;
-    margin-top: 6px;
+    width: 24vw;
+    height: 5vh;
+    margin-top: 0.8vh;
     border-radius: 7px;
     border: 1px solid #f92f2f;
 }
@@ -20,13 +23,13 @@ input:focus{
 outline: #f92f2f    ;
 }
 #inpbutton{
-    margin-left: -32px;
+    margin-left: -2vw;
     background-color: white;
     border: none;
     font-size: 15px;
     color:#f92f2f;
-    margin-top: 11px;
-    height: 25px;
+    margin-top: 1.5vh;
+    height: 4vh;
 }
 
 
@@ -34,11 +37,11 @@ outline: #f92f2f    ;
     display: flex;
 }
 #nav1>div:nth-child(2){
-    margin: 18px 30px;
+    margin: 2vh 2vw;
 }
 #nav1>div:nth-child(2)>a{
     text-decoration: none;
-    margin-right:6px;
+    margin-right:1vw;
     color: grey;
 }
 #nav1>div:nth-child(2)>a:hover{
@@ -57,7 +60,7 @@ outline: #f92f2f    ;
     height: 6vh;
     width: 100%;
     justify-content: center;
-    gap: 14px;
+   
    background-color:#fed005;
    align-items: center;
    z-index: 5;
@@ -67,14 +70,21 @@ outline: #f92f2f    ;
     list-style: none;
     color: rgb(52, 48, 48);
     z-index: 5;
+    /* background-color: red; */
+} 
     
-}
+
 #nav2 ul li{
-    padding: 5px 10px;
-    height: 35px;
-    margin-left: 10px;
+    padding: 0.6vh 0.5vw;
+    height: 4vh;
+    margin-left: 1vw;
     z-index: 5;
+    /* background-color: black; */
 }
+
+  
+   
+
 #nav2 ul li a{
     text-decoration: none;
     color: rgb(94, 86, 86);
@@ -85,10 +95,44 @@ outline: #f92f2f    ;
 .submenu-1{
 display: none;
 background-color:white;
+height: 60vh;
 z-index: 5;
 
 
+} 
+#user a{
+    text-decoration: none;
+    color: rgb(46, 43, 43);
+    height: 40px;
 }
+#user:hover .submenu-1{
+    display: block;
+    position: absolute;
+   border-radius: 5px;
+    width: 100px;
+    z-index: 5;
+    text-align: left;
+    margin-top: -3px;
+    height: 10vh;
+   
+  
+}
+#user:hover .submenu-1 ul li{
+    margin-left: -30px;
+    list-style: none;
+    margin-bottom: 4px;
+    height: 20px;
+}
+#user:hover .submenu-1 ul li a{
+    text-decoration: none;
+    color:rgb(46, 43, 43) ;
+} 
+#user:hover .submenu-1 ul li a:hover{
+    text-decoration: underline;
+    color:#f92f2f ;
+} 
+
+
 #nav2>ul>li:hover{
     background-color:white;
     border-radius: 1px;
@@ -103,9 +147,10 @@ z-index: 5;
 #nav2 ul li:hover .submenu-1{
     display: flex;
     position: absolute;
-    margin-top: 11px;
-    margin-left: -11vw;
+    margin-top: 1vh;
+    margin-left: -10vw;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
     width: 100%;
     z-index: 5;
    
@@ -193,10 +238,8 @@ z-index: 5;
     grid-template-columns: repeat(3,1fr);
     gap: 25px;
     width: 100%;
-    
-   
-}
-.card{
+}  
+   .card{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 6px;
     background-color: white;
@@ -241,13 +284,15 @@ display: none;
     padding: 4vh 5vw;
 } 
 #bodyfooter{
-    display: flex;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
     background-color: #e0f0fa;
     padding: 8vh;
 }
    
 #ulfooter{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     gap: 40px;
 }
 #ulfooter>ul>li{
@@ -276,6 +321,27 @@ display: none;
     display:block;
     margin-top: 5vh;
 }
+@media only screen and (max-width:1272px){
+    #nav2>ul>li:nth-child(1), #nav2>ul>li:nth-child(2){
+     display: none;
+    }
+    #lilogo{
+     display: none;
+    }
+    #premium{
+     display: grid;
+     grid-template-columns: repeat(2,1fr)!important;
+   
+ }
+ #ulfooter{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+}
+#imgfooter{
+    display:none;
+}
+ }
 
   
 
