@@ -8,7 +8,7 @@
     <title>Tiny Toes | Profile</title>
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/profile.css">
-    <script src="scripts/profile.js" type="module" defer></script>
+    <script src="/scripts/profile.js" type="module" defer></script>
 </head>
 <body>
     <header>
@@ -16,6 +16,39 @@
     </header>
     <main>
         <!-- Page Content -->
+        <div class="tabs">
+            <a href="profile.html" class="tab selected">Profile</a>
+            <a href="orders.html" class="tab">Orders</a>
+        </div>
+        <section>
+            <img class="avatar" src="https://img.freepik.com/premium-vector/avatar-profile-icon_188544-4755.jpg" alt="">
+            <form name="form_details">
+                <h3>Account Details</h3>
+                <input type="text" name="name" placeholder="Full Name" required>
+                <textarea name="address" placeholder="Address" required></textarea>
+                <div class="error"></div>
+                <div class="success"></div>
+                <input type="submit" value="Update">
+            </form>
+            <br>
+            <form name="form_email">
+                <h3>Email</h3>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <div class="error" required></div>
+                <div class="success" required></div>
+                <input type="submit" value="Change">
+            </form>
+            <br>
+            <form name="form_password">
+                <h3>Password</h3>
+                <input type="text" name="current_password" placeholder="Current Password" required>
+                <input type="text" name="new_password" placeholder="New Password" required>
+                <input type="text" name="confirm_password" placeholder="Confirm Password" required>
+                <div class="error"></div>
+                <div class="success"></div>
+                <input type="submit" value="Change">
+            </form>
+        </section>
     </main>
     <footer>
          <!-- Footer -->
