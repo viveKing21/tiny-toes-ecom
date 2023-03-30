@@ -45,9 +45,12 @@ function formHandler(handler){
 async function updateDetails(e){
     let name = this.name.value
     let address = this.address.value
+    let phone = this.phone.value
 
-    if(name === user_details.name && address === user_details.address) throw "No changes found!"
+    if(name === user_details.name && address === user_details.address && phone === user_details.phone) 
+      throw "No changes found!"
     
+    user_details.phone = phone
     user_details.name = name
     user_details.address = address
     return "Account details updated successfully!"
@@ -80,6 +83,7 @@ function updateForms(){
     // details form
     document.form_details.name.value = user_details.name
     document.form_details.address.value = user_details.address
+    document.form_details.phone.value = user_details.phone
 
     // email form
     document.form_email.email.value = user_details.email

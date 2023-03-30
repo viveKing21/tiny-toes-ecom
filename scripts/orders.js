@@ -68,6 +68,8 @@ function createRow(order) {
     cancel.onclick = () => cancelOrder(order.id)
     tds.at(-1).append(cancel)
 
+    if(['returned', 'delivered'].includes(order.status.toLowerCase())) cancel.disabled = true
+
     tr.append(...tds)
     return tr
 }
