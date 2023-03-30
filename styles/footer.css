@@ -1,0 +1,39 @@
+footer #footer{
+    padding: 4vh 5vw;
+} 
+footer #bodyfooter{
+    display: flex;
+    background-color: #e0f0fa;
+    padding: 8vh;
+}
+   
+footer #ulfooter{
+    display: flex;
+    gap: 40px;
+}
+footer #ulfooter>ul>li{
+    font-size: 15px;
+    font-family: calibri;
+    font-weight: 500;
+    color: rgb(93, 83, 83);
+    list-style: none;
+    margin-bottom: 6px;
+}
+footer #ulfooter>ul>li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+footer #ulfooter>ul>li:nth-child(1){
+    font-size: 16px;
+    font-family: calibri;
+    font-weight: 600;
+    color: rgb(93, 83, 83);
+    list-style: none;
+}
+footer #imgfooter{
+    margin-left: 10vw;
+}
+footer #imgfooter>img{
+    display:block;
+    margin-top: 5vh;
+}
