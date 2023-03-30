@@ -32,6 +32,9 @@ function renderDash(data) {
 
         displayContainer.innerHTML = "";
         displayContainer.innerHTML = `
+        <div id="topdash">
+        <h1>DashBoard</h1>
+        </div>
         <div id="upperCharts">
         <div id="chart">
             <div id="donutChart1" style="margin-top : 60px;">
@@ -142,8 +145,64 @@ var orderData = [{
     address : "cscscs",
     pincode : 1233,
     city : "dcscs",
-    state : "dscsc"
-}]
+    state : "Rajasthan"
+},
+{
+    firstname : "ansh",
+    lastname : "check",
+    email : "ddscs",
+    address : "cscscs",
+    pincode : 1233,
+    city : "dcscs",
+    state : "Delhi"
+},
+{
+    firstname : "ansh",
+    lastname : "check",
+    email : "ddscs",
+    address : "cscscs",
+    pincode : 1233,
+    city : "dcscs",
+    state : "Punjab"
+},
+{
+    firstname : "ansh",
+    lastname : "check",
+    email : "ddscs",
+    address : "cscscs",
+    pincode : 1233,
+    city : "dcscs",
+    state : "Madhya Pradesh"
+},
+{
+    firstname : "ansh",
+    lastname : "check",
+    email : "ddscs",
+    address : "cscscs",
+    pincode : 1233,
+    city : "dcscs",
+    state : "Delhi"
+},
+{
+    firstname : "ansh",
+    lastname : "check",
+    email : "ddscs",
+    address : "cscscs",
+    pincode : 1233,
+    city : "dcscs",
+    state : "Jammu and Kashmir"
+},
+{
+    firstname : "ansh",
+    lastname : "check",
+    email : "ddscs",
+    address : "cscscs",
+    pincode : 1233,
+    city : "dcscs",
+    state : "Jammu and Kashmir"
+}
+
+]
 
 orders.addEventListener("click", () => {
     displayContainer.innerHTML = "";
@@ -159,6 +218,8 @@ orders.addEventListener("click", () => {
         <th class="orderHeadings">Pincode</th>
         <th class="orderHeadings">City</th>
         <th class="orderHeadings">State</th>
+        <th class="orderHeadings">Product Status</th>
+        <th class="orderHeadings"></th>
       </tr>
     </thead>
     <tbody>
@@ -166,9 +227,104 @@ orders.addEventListener("click", () => {
     </tbody>
     </table>
     </div>
+    <div id= "map">
+    <div id="chartOrder">
+    </div>
+    </div>
     `
     console.log("orders");
+
+
+// <------------- India Order Map ---------------->
+
+
+    let obj={}
+let Arr=[['State','Popularity']]
+orderData.map((item)=>{
+  if(obj[item.state]==undefined){
+      obj[item.state]=1;  
+  }
+  else{
+      obj[item.state]++;
+  }
 })
+
+for(let key in obj){
+  let arr2=[]
+  arr2.push(key)
+  arr2.push(obj[key])
+  Arr.push(arr2)
+}
+console.log(Arr)
+
+
+    google.load('visualization', '1', {'packages': ['geochart']});
+google.setOnLoadCallback(drawVisualization);
+
+function drawVisualization() {
+  var dataOrder = google.visualization.arrayToDataTable(
+    // [
+        // ['State Code', 'State', 'Temperature'],     
+        Arr
+    //       [ 'IN-UP','Uttar Pradesh', 33],
+    // ['IN-MH','Maharashtra', 32],
+    // ['IN-BR','Bihar', 31],
+    // ['IN-WB','West Bengal', 32],
+    // ['IN-MP','Madhya Pradesh', 30],
+    // ['IN-TN','Tamil Nadu', 33],
+    // ['IN-RJ','Rajasthan', 33],
+    // ['IN-KA','Karnataka', 29],
+    // ['IN-GJ','Gujarat', 34],
+    // ['IN-AP','Andhra Pradesh', 32],
+    // ['IN-OR','Orissa', 33],
+    // ['IN-TG','Telangana', 33],
+    // ['IN-KL','Kerala', 31],
+    // ['IN-JH','Jharkhand', 29],
+    // ['IN-AS','Assam', 28],
+    // ['IN-PB','Punjab', 30],
+    // ['IN-CT','Chhattisgarh', 33],
+    // ['IN-HR','Haryana', 30],
+    // ['IN-JK','Jammu and Kashmir', 20],
+    // ['IN-UT','Uttarakhand', 28],
+    // ['IN-HP','Himachal Pradesh', 17],
+    // ['IN-TR','Tripura', 31],
+    // ['IN-ML','Meghalaya', 21],
+    // ['IN-MN','Manipur', 22],
+    // ['IN-NL','Nagaland', 22],
+    // ['IN-GA','Goa', 32],
+    // ['IN-AR', 'Arunachal Pradesh', 33],
+    // ['IN-MZ','Mizoram', 23],
+    // ['IN-SK','Sikkim', 24],
+    // ['IN-DL','Delhi', 31],
+    // ['IN-PY','Puducherry', 33],
+    // ['IN-CH','Chandigarh', 30],
+    // ['IN-AN','Andaman and Nicobar Islands', 30],
+    // ['IN-DN','Dadra and Nagar Haveli', 30],
+    // ['IN-DD','Daman and Diu', 29],
+    // ['IN-LD','Lakshadweep', 31]
+// ]
+);
+
+      var opts = {
+        region: 'IN',
+        domain:'IN',
+        displayMode: 'regions',
+        colorAxis: {colors: ['#e5ef88', '#d4b114', '#e85a03']},
+        resolution: 'provinces',
+        /*backgroundColor: '#81d4fa',*/
+        /*datalessRegionColor: '#81d4fa',*/
+        defaultColor: '#f5f5f5',
+        width: 640, 
+        height: 480
+      };
+      var geochart = new google.visualization.GeoChart(
+          document.getElementById('chartOrder'));
+      geochart.draw(dataOrder, opts);
+    };
+
+})
+
+// <------------- India Order Map ---------------->
 
 
 let orderList = document.getElementById("orders-btn");
@@ -193,16 +349,88 @@ function renderorders(firstname,lastname,email,address,pincode,city,state) {
 
 
 
-admins.addEventListener("click", () => {
+admins.addEventListener("click", async () => {
     displayContainer.innerHTML = "";
+
+    let res = await fetch(`https://642537b39e0a30d92b2bb1bb.mockapi.io/login`);
+    let data = await res.json();
+    console.log(data);
     console.log("admins");
+    renderProfile(data)
+
+
+    function renderProfile(arr){
+        let a = ``;
+        arr.map((item)=>{
+            a += `
+            <div>
+            <img src = "${item.image}" alt = "err">
+            <h2>${item.firstname} ${item.lastname}</h2>
+            <h2>${item.email}</h2>
+            <h2>${item.department}<h2>
+            <h2>${item.mobile}<h2>
+            </div>
+            `
+        })
+        displayContainer.innerHTML = a;
+    }
 })
+
+// <-------------- Create Profile Section ---------------------->
+
 
 profile.addEventListener("click", () => {
     displayContainer.innerHTML = "";
+    displayContainer.innerHTML = `
+    <div>
+    <form>
+    <lable>FirstName</lable><br>
+    <input id="firstnameAdmin" type="text"><br>
+    <lable>LastName</lable><br>
+    <input id="lastnameAdmin" type="text"><br>
+    <lable>Email</lable><br>
+    <input id="emailAdmin" type="email"><br>
+    <lable>Phone No.</lable><br>
+    <input id="phoneAdmin" type="number"><br>
+    <lable>Department</lable><br>
+    <input id="departmentAdmin" type="text"><br>
+    <lable>Image</lable><br>
+    <input id="imageAdmin" type="text"><br>
+    <lable>Password</lable><br>
+    <input id="passwordAdmin" type="password"><br>
+    <input id="createAdmin" type="submit"><br>
+    </form>
+    </div>
+    `;
     console.log("profile");
+
+    let form = document.querySelector("form");
+    form.addEventListener("submit",async (e)=>{
+        e.preventDefault();
+
+        let adminObj = {
+    "image": form.imageAdmin.value,
+    "firstname": form.firstnameAdmin.value,
+    "surname": form.lastnameAdmin.value,
+    "mobile": form.phoneAdmin.value,
+    "email": form.emailAdmin.value,
+    "department": form.departmentAdmin.value,
+    "password": form.passwordAdmin.value
+        }
+
+       let res = await fetch(`https://642537b39e0a30d92b2bb1bb.mockapi.io/login`,{
+            method : "POST",
+            headers : {
+                "Content-Type" : "application/json"
+            },
+            body : JSON.stringify(adminObj)
+        })
+        let data = await res.json();
+        console.log(data);
+    })
 })
 
+// <-------------- Create Profile Section ---------------------->
 
 // <------------- Products CRUD Section Button ----------------->
 product.addEventListener("click", () => {
@@ -227,12 +455,15 @@ async function fetchData() {
     renderBtn(data)
 }
 
+// 
+
 
 function renderBtn(arr) {
     sideContainer.innerHTML = `<div id="crudBtns">
-        <button id="addHead" onclick = "this.nextElementSibling.classList.toggle('hide')">Add product</button>
-        <div id="addproduct">
+    <img id="logoImg"  src = "/assets/images/logo.png" alt= "err">
+        <button id="addHead" onclick = "this.nextElementSibling.classList.toggle('hide')" >Add Product</button>
 
+        <div id="addproduct" class='hide'>
         <label for="title">Product Title</label>
         <input type="text" name="" id="titleAdd">
         <label for="image1">Product Image1</label>
@@ -249,11 +480,22 @@ function renderBtn(arr) {
         <input type="number" name="" id="priceAdd">
         <label for="discount">Product Discount</label>
         <input type="text" name="" id="discountAdd">
+        <label for="stock">Product Stock</label>
+        <input type="text" name="" id="stockAdd">
+        <label for="category">Product Category</label>
+        <input type="text" name="" id="categoryAdd">
+        <label for="size">Product Size</label>
+        <input type="text" name="" id="sizeAdd">
+        <label for="brand">Product Brand</label>
+        <input type="text" name="" id="brandAdd">
         <button id="addProductBtn">Add</button>
+
+      
         </div>
+        <hr>
         
         <button onclick = "this.nextElementSibling.classList.toggle('hide')">Update Product</button>
-        <div id="update">
+        <div id="update" class='hide'>
         <label for="id">Product Id</label>
         <input type="number" name="" id="idProduct">
         <label for="title">Product Title</label>
@@ -272,36 +514,52 @@ function renderBtn(arr) {
         <input type="number" name="" id="priceUpdate">
         <label for="discount">Product Discount</label>
         <input type="text" name="" id="discountUpdate">
+
+        <label for="stock">Product Stock</label>
+        <input type="text" name="" id="stockUpdate">
+        <label for="category">Product Category</label>
+        <input type="text" name="" id="categoryUpdate">
+        <label for="size">Product Size</label>
+        <input type="text" name="" id="sizeUpdate">
+        <label for="">Product Category</label>
+        <input type="text" name="" id="categoryUpdate">
+        <label for="brand">Product Brand</label>
+        <input type="text" name="" id="brandUpdate">
         <button id="updateProductBtn">Update</button>
+        
         </div>
+        <hr>
 
         <button onclick = "this.nextElementSibling.classList.toggle('hide')">Update Key Value</button>
-        <div id="updateprice">
+        <div id="updateprice" class='hide'>
         <label for="id">Product Id</label>
         <input type="number" name="" id="ProductId">
         <label for="price">Product Price</label>
         <input type="number" name="" id="onlyPriceUpdate">
         <button id="updateOnlyPrice">Update Price</button>
         </div>
+        <hr>
         
         <button onclick = "this.nextElementSibling.classList.toggle('hide')">Remove Product</button>
-        <div id="removeproduct">
+        <div id="removeproduct" class='hide'>
         <label for="id">Product Id</label>
         <input type="number" name="" id="removeId">
         <button id="removeProductBtn">Remove Product</button>
         </div>
+        <hr>
         
         </div>`
     displayContainer.innerHTML = `
+    <div id="productTop"></div>
         <div id="product-container">
-        ${arr.map((item) => renderProducts(item.image1)).join("")}
+        ${arr.map((item) => renderProducts(item.id,item.image1,item.color,item.price,item.stock,item.brand,item.size,item.category,item.discount)).join("")}
         </div>
         `
 
-    function renderProducts(image) {
+    function renderProducts(id,image1,color,price,stock,brand,size,category,discount) {
         let card = `
-    <div id="products">
-    <div><img src="${image}" alt="err"> </div>
+    <div id="products" data-id=${id} class="eachdiv">
+    <div><img src="${image1}" alt="err"> </div>
     </div>
     `
         return card
@@ -311,6 +569,9 @@ function renderBtn(arr) {
   
   
     // <------------ Adding the Products CRUD -------------->
+
+
+    let eachDiv = document.querySelectorAll(".eachdiv");
 
     let addBtn = document.getElementById("addProductBtn");
     addBtn.addEventListener("click", async () => {
@@ -322,12 +583,16 @@ function renderBtn(arr) {
         let addImage4 = document.getElementById("image4Add").value;
         let addColor = document.getElementById("colorAdd").value;
         let addPrice = document.getElementById("priceAdd").value;
+        let addStock = document.getElementById("stockAdd").value;
+        let addBrand = document.getElementById("brandAdd").value;
+        let addSize = document.getElementById("sizeAdd").value;
+        let addCategory = document.getElementById("categoryAdd").value;
         let addDiscount = document.getElementById("discountAdd").value;
 
-        addProd(addTitle, addImage1, addImage2, addImage3, addImage4, addPrice, addColor, addDiscount)
+        addProd(addTitle, addImage1, addImage2, addImage3, addImage4, addPrice, addColor, addDiscount,addStock,addBrand,addSize,addCategory)
     })
 
-    async function addProd(addTitle, addImage1, addImage2, addImage3, addImage4, addPrice, addColor, addDiscount) {
+    async function addProd(addTitle, addImage1, addImage2, addImage3, addImage4, addPrice, addColor, addDiscount,addStock,addBrand,addSize,addCategory) {
         let addObj = {
             title: addTitle,
             image1: addImage1,
@@ -336,10 +601,14 @@ function renderBtn(arr) {
             image4: addImage4,
             price: addPrice,
             color: addColor,
-            discount: addDiscount
+            discount: addDiscount,
+            stock : addStock,
+            category : addCategory,
+            size : addSize,
+            brand : addBrand
         }
 
-        let res = fetch(`https://64214f5434d6cd4ebd6fd51c.mockapi.io/products`, {
+        let res = await fetch(`https://64214f5434d6cd4ebd6fd51c.mockapi.io/products`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -369,12 +638,17 @@ function renderBtn(arr) {
         let updateColor = document.getElementById("colorUpdate").value;
         let updatePrice = document.getElementById("priceUpdate").value;
         let updateDiscount = document.getElementById("discountUpdate").value;
+        let updateStock = document.getElementById("stockUpdate").value;
+        let updateBrand = document.getElementById("brandUpdate").value;
+        let updateSize = document.getElementById("sizeUpdate").value;
+        let updateCategory = document.getElementById("categoryUpdate").value;
 
-        updateAll(updateId, updateTitle, updateImage1, updateImage2, updateImage3, updateImage4, updateColor, updatePrice, updateDiscount)
+
+        updateAll(updateId, updateTitle, updateImage1, updateImage2, updateImage3, updateImage4, updateColor, updatePrice, updateDiscount,updateStock,updateBrand,updateSize,updateCategory)
 
     })
 
-    async function updateAll(updateId, updateTitle, updateImage1, updateImage2, updateImage3, updateImage4, updateColor, updatePrice, updateDiscount) {
+    async function updateAll(updateId, updateTitle, updateImage1, updateImage2, updateImage3, updateImage4, updateColor, updatePrice, updateDiscount,updateStock,updateBrand,updateSize,updateCategory) {
 
         let updateObj = {
             title: updateTitle,
@@ -384,7 +658,11 @@ function renderBtn(arr) {
             image4: updateImage4,
             price: updatePrice,
             color: updateColor,
-            discount: updateDiscount
+            discount: updateDiscount,
+            category: updateCategory,
+            stock: updateStock,
+            brand: updateBrand,
+            size: updateSize
         }
 
         let res = await fetch(`https://64214f5434d6cd4ebd6fd51c.mockapi.io/products/${updateId}`, {
@@ -454,26 +732,45 @@ function renderBtn(arr) {
 
     }
 
+
+    for (let each of eachDiv) {
+        each.addEventListener("click", async (e) => {
+            e.preventDefault()
+            let idofproduct = each.getAttribute("data-id")
+            let res = await fetch(`https://64214f5434d6cd4ebd6fd51c.mockapi.io/products/${idofproduct}`)
+            let data = await res.json();    
+            console.log(data);
+            // .then((res) => {
+            //         return res.json()
+            //     })
+                // .then((data) => {
+                    updateId = data.id;
+                    updateTitle = data.title;
+                    updateImage1 = data.image1;
+                    updateImage2 = data.image2;
+                    updateImage3 = data.image3;
+                    updateImage4 = data.image4;
+                    updatePrice = data.price;
+                    updateDiscount = data.discount;
+                    updateColor = data.color;
+                    updateCategory = data.category
+                    updateStock = data.stock;
+                    updateSize = data.size;
+                    updateBrand = data.brand;
+                   
+                    removedId = data.id;
+                    updateOnlyId = data.id;
+                    updateOnlyPrice = data.price;
+                // })
+        })
+        
+    }
+
     // <-------Remove Product CRUD------->
 
-
-    //   <-------- Toggle Side-Section--------->
-//   let addSectionOfCrud = document.getElementById("addproduct");
-//   let addToggleBtn = document.getElementById("addHead");
-  
-//   let xa = false;
-//   addToggleBtn.addEventListener("click", () => {
-//     //   xa != xa;
-//       if (xa == true) {
-//           addSectionOfCrud.style.display = "block";
-//       } else {
-//           addSectionOfCrud.style.display = "none";
-//       }
-//       console.log("check");
-//   })
-  
-//   <-------- Toggle Side-Section--------->
 }
+
+
 
 // <------------- Products CRUD Section Button ----------------->
 

@@ -1,19 +1,33 @@
+/* ------------- containers -------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 body{
     display: flex;
 }
 #side-container{
-    border:  solid red;
-    width: 25%;
-    height: 100vh;
-}
-#display-container{
-    border:  solid black;
-    width: 75%;
-    height: 100vh;
+    /* border:  solid blue; */
+    width: 45%;
+    /* height: 100vh; */
+    font-family: 'Open Sans', sans-serif;
+    /* background-color: rgb(238,238,238) */
 }
 
+
+#display-container{
+    /* border:  solid orange; */
+    width: 100%;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(238,238,238)
+}
+
+/* ------------- containers -------------------- */
+
+
+
 .side-buttons{
-    border:  solid pink;
+    /* border:  solid pink; */
     height: 50px;
     display: flex;
     justify-content: center;
@@ -27,19 +41,12 @@ body{
     border: none
 }
 
-#display-container{
-    /* display:  grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px; */
-    /* border: solid yellow; */
-}
-
 #products{
-
-    border:  solid blue;
+background-color: white;
+    /* border:  solid blue; */
 }
 #check{
-    border:  solid green;
+    /* border:  solid green; */
 }
 
 img{
@@ -47,63 +54,149 @@ img{
 }
 
 #operations{
-    border: solid pink;
+    /* border: solid pink; */
 }
 
 #crudBtns{
-    border: solid purple;
+    /* border: solid purple; */
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 #crudBtns button{
-    height: 50px;
+    background-color: white;
     width: 80%;
     margin-top: 60px;
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    /* box-shadow: rgb(203,84,154) 0px 0px 0px 3px; */
+    border-radius: 5px;
+    border: none;
+}
+
+hr{
+    width: 85%;
+    margin-top: 10px;
+    height: 4px;
+    background-color: rgb(203,84,154);
 }
 
 #product-container{
-    border: solid 2px brown;
+    /* border: solid 2px brown; */
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 20px;
 }
 
 #addproduct{
+    padding: 15px;
+    margin-top: 10px;
+    width: 90%;
     border: solid pink;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    display: grid;
+    background-color: white;
+    border-radius: 20px;
     /* display: none; */
 
 }
 
-#updateproduct{
+#addproduct label{
+    font-size: 14px;
+}
+
+#addproduct input{
+    margin-bottom: 10px;
+}
+
+#update{
+    padding: 15px;
+    margin-top: 10px;
+    width: 90%;
     border: solid pink;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    display: grid;
+    background-color: white;
+    border-radius: 20px;
     /* display: none; */
 
+}
+
+#update label{
+    font-size: 14px;
+}
+
+#update input{
+    margin-bottom: 10px;
 }
 
 #updateprice{
+    padding: 15px;
+    margin-top: 10px;
+    width: 90%;
     border: solid pink;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    display: grid;
+    background-color: white;
+    border-radius: 20px;
     /* display: none; */
+
+}
+
+#updateprice label{
+    font-size: 14px;
+}
+
+#updateprice input{
+    margin-bottom: 10px;
 }
 
 #removeproduct{
+    padding: 15px;
+    margin-top: 10px;
+    width: 90%;
     border: solid pink;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+    display: grid;
+    background-color: white;
+    border-radius: 20px;
     /* display: none; */
 }
 
-#chart{
+#removeproduct label{
+    font-size: 14px;
+}
+
+#removeproduct input{
+    margin-bottom: 10px;
+}
+
+
+#productTop{
+    /* border:  solid brown; */
+    height: 70px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 20px;
+}
+
+/*  -------------- Reports section ----------------- */
+
+
+
+/* #chart{
     border: solid red;
+} */
+
+#topdash{
+    /* border:  solid brown; */
+    height: 70px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #upperCharts{
@@ -113,21 +206,33 @@ img{
 
 #chartLower{
     margin-top: 100px;
-    border: solid red;
+    /* border: solid red; */
     height: 400px;
 }
 
+/*  -------------- Reports section ----------------- */
+
 .orderHeadings{
-    border: solid blue;
+    /* border: solid blue; */
 }
 
 #headings{
     border: solid pink;
     width: 100%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
 .hide{
     display: none !important;
-
 }
+
+
+#map{
+    /* border: solid red; */
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+
