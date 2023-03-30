@@ -83,6 +83,8 @@ main {
 .super-div{
     display: flex;
     flex-direction: row;
+    position: relative;
+    overflow: hidden;
 }
 .main-el{
     display: flex;
@@ -134,6 +136,7 @@ main {
     margin-top: 40px;
     border: 1px solid #e0e0e0;
     padding-bottom: 150px;
+  
 
 }
 .whole-container > .delete-div{
@@ -273,3 +276,91 @@ img {
     color: #ffffff;
 }
 
+/* Address CSS */
+.address-div{
+    display: flex;
+    flex-direction: column;
+    height: 602px;
+    width: 800px;
+    color: #575757;
+    position: absolute;
+    top: 38%;
+    left: 100%;
+    right: 0%;
+    transform: translate(-50%,-50%) scale(0.001);
+    visibility: hidden;
+    transition: 0.5s;
+
+ 
+    background-image: url(//cdn.fcglcdn.com/brainbees/images/n/main-bg.jpg);
+}
+.address-div div{
+   
+    padding-top: 10px;
+    width: 420px;
+    border: none !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    
+   writing-mode: horizontal-tb !important;
+    
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+.address-div>div>input{
+    border: none;
+    height: 40px;
+    width: 420px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.open-pop{
+    visibility: visible;
+    transform: translate(-50%,-50%) scale(1);
+    transition: 0.5s;
+}
+.button-div1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FF6133;
+}
+
+
+/* Payment Pop Up */
+#Maindiv{
+    display: flex;
+    flex-direction: row;
+}
+#dropdown{
+    display: flex;
+    flex-direction: column;
+}
+.creditCard{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.creditcard-popup{
+    visibility: visible;
+    transform: translate(-50%,-50%) scale(1);
+    transition: 0.5s;
+}
