@@ -2,6 +2,21 @@
 
 
 import { LSK } from "./main.js";
+// 
+let arr2=[{"id":"1","title":"Babyhug Cotton Half Sleeves T-Shirt Tom & Jerry Print","color":"Dark Blue","image1":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13014437a.jpg","price":"339.15","discount":"15% Off","stock":"In-stock","category":"Boys","brand":"Babyhug","size":"3-4 Y"},{"id":"2","title":"Pine Kids 100% Cotton Biowashed Half Sleeves T-Shirt Trumpet Print","color":"White & Blue","image1":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13094642a.jpg","image2":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13094642b.jpg","image3":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13094642c.jpg","image4":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13094642d.jpg","price":"424.15","discount":"15% Off","stock":"In-stock","category":"Boys","brand":"Pine Kids","size":"3-4 Y"}]
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // local storage-content
@@ -22,8 +37,11 @@ superdiv.classList.add("super-div")
 
 let wholecontainer=document.createElement("div")
 wholecontainer.classList.add("whole-container")
+let mainel=document.createElement("div")
+    mainel.classList.add("main-el")
 superdiv.append(wholecontainer)
 mainpage.append(superdiv)
+
 
 
 // Appending Address Of the Div
@@ -58,7 +76,7 @@ mainaddressdiv.append(namediv,housediv,statediv)
 wholecontainer.append(mainaddressdiv)
   }
 
-    if(arr.length!=0)
+    if(arr.length!=0&&arr2.length!=0)
     {
       address(arr)
     }
@@ -66,13 +84,37 @@ wholecontainer.append(mainaddressdiv)
    
 
 // starting of payment section
-// if(arr!=null)
-// {
-  let mainel=document.createElement("div")
-  mainel.classList.add("main-el")
-  function totalcardvalue()
+
+ 
+
+
+  function totalcardvalue(arr2)
   {
+   mainel.innerHTML=""
+    let totalcost=0
+    let totaldiscount=0
+    if(arr2.length!=0)
+    {
     
+    for(let i=0;i<arr2.length;i++)
+    {
+      totalcost+=Number(arr2[i].price)
+      
+      let data=arr2[i].discount.split(" ")
+       data=data[0][0]+data[0][1]
+         
+      totaldiscount+=Number(data)*Number(arr2[i].price)/100
+       
+    
+     
+    }
+    
+    let totalgst=totalcost*(10/100)
+    let totalpayment=totalcost+totaldiscount+totalgst
+    console.log(totalcost)
+    console.log(totaldiscount)
+    console.log(totalgst)
+
     let maz=document.createElement("h1")
     maz.innerText="Payment Information"
     let paymentsection=document.createElement("div")
@@ -91,9 +133,9 @@ wholecontainer.append(mainaddressdiv)
     let p6=document.createElement("p")
     let p7=document.createElement("p")
     let p8=document.createElement("p")
-    p5.innerText=` Rs 1612.00`
-    p6.innerText=` Rs  683.69`
-    p7.innerText=` Rs  30    `
+    p5.innerText=` Rs ${totalcost}`
+    p6.innerText=` Rs  ${totaldiscount}`
+    p7.innerText=` Rs  ${totalgst}   `
     p8.innerText=` Free`
 
 
@@ -106,24 +148,26 @@ paradiv2.append(p5,p6,p7,p8)
     let h2=document.createElement("h4")
     let h3=document.createElement("h4")
     h2.innerText="Final Payment"
-    h3.innerText=`Rs 958`
+    h3.innerText=`Rs    ${totalpayment}`
     finalpaymentdiv.append(h2,h3)
 
     mainel.append(maz,paymentsection,finalpaymentdiv)
     superdiv.append(mainel)
   }
-  totalcardvalue()
+  }
+  
+
+ 
 
 
-
-// }
 // ending of payment section div
 
 
 // ending of that section
-
-// if(arr!=null)
-// {
+ function bankoffer()
+ {
+ if(arr2!=null)
+ {
   let bankoffer=document.createElement("div")
   bankoffer.classList.add("bank-offer")
   let offertitle=document.createElement("div")
@@ -166,7 +210,8 @@ offerdetaildiv1.append(contentpara1)
 bankoffer.append(offertitle,offerdetaildiv,offerdetaildiv1)
 wholecontainer.append(bankoffer)
 
-
+ }
+}
 
                                                                                      
 // }
@@ -176,9 +221,18 @@ wholecontainer.append(bankoffer)
 
 // from here i will add dynamic data into the div
 
-function cardappend()
+function cardappend(arr2)
 {
+  wholecontainer.innerHTML=""
+  if(arr2.length!=0)
+  {
+    totalcardvalue(arr2)
+  address(arr)
+  bankoffer()
+  
 
+    for(let i=0;i<arr2.length;i++)
+      {
     let maindiv=document.createElement("div")
     maindiv.classList.add("card-block")
 let productdiv=document.createElement("div")
@@ -190,13 +244,40 @@ let pricediv=document.createElement("div")
 pricediv.classList.add("price-div")
 
 let img=document.createElement("img")
-img.src="https://cdn.fcglcdn.com/brainbees/images/products/thumb/cc18283a.webp"
+img.src=arr2[i].image1
 imagediv.append(img)
 
 let h1=document.createElement("h1")
 h1.classList.add("description")
-h1.innerText="Timios Non-Fried No-Maida Millet Masala flavoured Noodles - 190 gm (Pack of 2)"
+h1.innerText=arr2[i].title
+let button=document.createElement("button")
+button.classList.add("increase")
+let button2=document.createElement("button")
+button2.classList.add("decrease")
+button.innerText="+"
+button2.innerText="-"
+let head=document.createElement("p")
+let count=1
+button.addEventListener("click",function(e){
+  e.preventDefault()
 
+  count++
+  head.innerText=count
+
+})
+button2.addEventListener("click",function(e){
+  e.preventDefault()
+  if(count>1)
+  {
+    count--
+    head.innerText=count
+  }
+  else{
+    head.innerText=count
+  }
+})
+
+head.innerText=count
 contentdiv.append(h1)
 
 
@@ -213,23 +294,30 @@ originalprice.setAttribute("data-icon","")
 let itemprice=document.createElement("span")
 itemprice.classList.add("item-price")
 
-itemprice.innerText=550
+itemprice.innerText=arr2[i].price
 span3.append(originalprice,itemprice)
 
 let span4=document.createElement("span")
 span4.classList.add("off-tag")
-span4.innerText=`32% OFF`
+span4.innerText=arr2[i].discount
 off.append(span2,span3,span4)
 mrpandoff.append(off)
 let h2=document.createElement("h2")
-h2.innerText=`Rs ${itemprice.innerText*85/100}`
+let data=arr2[i].discount.split(" ")
+    data=data[0][0]+data[0][1]
+    data=Number(data)
+    data=100-data
+         let price=Number(arr2[i].price)
+         let actualcost=price*data/100
+         actualcost=actualcost.toFixed(2)
+h2.innerText=`Rs ${actualcost}`
 
 let mrpprice=document.createElement("div")
 mrpprice.classList.add("mrp-price")
 mrpprice.innerText="MRP Includes all taxes"
 
 mrpandoff.append(mrpprice)
-pricediv.append(h2,mrpandoff)
+pricediv.append(h2,mrpandoff,button,button2,head)
 
 productdiv.append(imagediv,contentdiv,pricediv)
 maindiv.append(productdiv)
@@ -241,6 +329,12 @@ deletediv.classList.add("delete-div")
 let deleteel=document.createElement("div")
 deleteel.innerText="REMOVE"
 
+deleteel.addEventListener("click",function(){
+  arr2.splice(i,1)
+  cardappend(arr2)
+  totalcardvalue(arr2)
+})
+
 let movetoshortlist=document.createElement("div")
 movetoshortlist.innerText="MOVE TO SHORTLIST"
 deletediv.append(deleteel,movetoshortlist)
@@ -250,13 +344,18 @@ console.log(wholecontainer)
 
 
 }
-cardappend()
+bottomdiv()
+  }
+}
+cardappend(arr2)
 
 
 
 
 // bottom div content
 
+function bottomdiv()
+{
 let bottompart=document.createElement("div")
 bottompart.classList.add("bottom-part")
 let deleiveryaddress=document.createElement("div")
@@ -278,9 +377,7 @@ deleiveryaddress.addEventListener("click",function(){
 
 let placeorder=document.createElement("div")
 placeorder.addEventListener('click',function(){
-    let format=document.getElementById("Formating")
-    format.classList.add("creditcard-popup")
-    console.log(format)
+    window.location.href="checkout.html"
 
 
 })
@@ -305,7 +402,7 @@ console.log("mazhar")
 
 // bottom div content end
 
-
+}
 
 
 
@@ -373,14 +470,16 @@ inputlocalitydiv.append(inputlocality)
   Flathousediv.append(flateHouse)
 
   let buttondiv=document.createElement("div")
-  buttondiv.classList.add("button-div1")
+  buttondiv.classList.add("button-div2")
   
   let cancelbtn=document.createElement("button")
+  cancelbtn.classList.add("cancel-button")
   cancelbtn.innerText="CANCEL"
   cancelbtn.addEventListener("click",function(){
     addressdiv.classList.remove("open-pop")
   })
   let savebutton=document.createElement("button")
+  savebutton.classList.add("save-button")
   savebutton.innerText="SAVE ADDRESS"
   savebutton.addEventListener("click",function(){
 
@@ -418,20 +517,6 @@ inputlocalitydiv.append(inputlocality)
 
 
  
-  let Maindivofcheckout=document.createElement("div")
-  
-  let headingtagdiv=document.createElement("div")
-  let headingtag=document.createElement("h1")
-  headingtag.innerText="Select Payment Method"
-  headingtagdiv.append(headingdiv)
-
-  // 
-  let CreditCardDiv=document.createElement("div")
-  let imageofcredit=document.createElement("img")
-  imageofcredit.classList.add("image-of-credit")
-
-  let creditcardheading=document.createElement("h2")
-  creditcardheading.innerText=" CREDIT/DEBIT CARDS"
 
   
 
