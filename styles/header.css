@@ -1,0 +1,132 @@
+
+header #nav1{
+    display: flex;
+    padding-top: 1%;
+    width: 100%;
+    /* height: 3vh; */
+    justify-content: space-between;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+   
+   }
+   header input{
+    
+       width: 350px;
+       height: 35px;
+       margin-top: 6px;
+       border-radius: 7px;
+       border: 1px solid #f92f2f;
+   }
+   header input:focus{
+   outline: #f92f2f    ;
+   }
+   header #inpbutton{
+       margin-left: -32px;
+       background-color: white;
+       border: none;
+       font-size: 15px;
+       color:#f92f2f;
+       margin-top: 11px;
+       height: 25px;
+   }
+   
+   
+   header #nav1>div{
+       display: flex;
+   }
+   header #nav1>div:nth-child(2){
+       margin: 18px 30px;
+   }
+   header #nav1>div:nth-child(2)>a{
+       text-decoration: none;
+       margin-right:6px;
+       color: grey;
+   }
+   header #nav1>div:nth-child(2)>a:hover{
+      text-decoration: underline;
+   }
+   
+   header .verticalline{
+       height: 17px;
+       width: 1.5px;
+       margin-top: 1px;
+       margin-right: 5px;
+       background-color: rgb(204, 200, 200);
+   }
+   header #nav2{
+       display: flex;
+       height: 6vh;
+       width: 100%;
+       justify-content: center;
+       gap: 14px;
+      background-color:#fed005;
+      align-items: center;
+      z-index: 5;
+   }
+   header #nav2 ul{
+       display: inline-flex;
+       list-style: none;
+       color: rgb(52, 48, 48);
+       z-index: 5;
+       
+   }
+   header #nav2 ul li{
+       padding: 5px 10px;
+       height: 35px;
+       margin-left: 10px;
+       z-index: 5;
+   }
+   header #nav2 ul li a{
+       text-decoration: none;
+       color: rgb(94, 86, 86);
+       font-weight: 600;
+       font-family: Calibri;
+       z-index: 5;
+   }
+   header .submenu-1{
+   display: none;
+   background-color:white;
+   z-index: 5;
+   
+   
+   }
+   header #nav2>ul>li:hover{
+       background-color:white;
+       border-radius: 1px;
+       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 5px 0px;
+       z-index: 5;
+   }
+   header #nav2>ul>li:last-child:hover{
+       background:none;
+       box-shadow: none;
+       z-index: 5;
+   }
+   header #nav2 ul li:hover .submenu-1{
+       display: flex;
+       position: absolute;
+       margin-top: 11px;
+       margin-left: -11vw;
+       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+       width: 100%;
+       z-index: 5;
+      
+   }
+   header #nav2 ul li:hover .submenu-1 ul{
+       display:block;
+       margin-left: 1vw;
+       margin-top: 40px;
+       width: 100%;
+       z-index: 5;
+   } 
+   header #nav2 ul li:hover .submenu-1 ul li {
+     margin-left: -10px;
+     width: 100%;
+   /* background-color: red; */
+   z-index: 5;
+   
+   
+   } 
+   header #nav2 ul li:hover .submenu-1>ul>li>a:hover{
+       text-decoration: underline;
+       z-index: 5;
+     
+     } 

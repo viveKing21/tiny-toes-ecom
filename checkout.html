@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Tiny Toes | Checkout</title>
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/checkout.css">
@@ -13,9 +14,100 @@
 <body>
     <header>
         <!-- Header & Navigation -->
+        <nav id="nav1">
+            <div>
+             <a href="#">
+                 <img src="./assets/images/logo.png" alt="" width="200px">
+             
+ 
+            </div>
+            <div>
+                
+            </div>
+            <label class="Myaccount" for="My account">My Account</label>
+            <select name="" id="Myaccount">
+                <option value=""></option>
+                <option value="">My Profile</option>
+                <option value="">Manage Return</option>
+                <option value="">Quick Reorder</option>
+                <option value="">Cash Refund</option>
+                <option value="">Guaranteed Savings</option>
+                <option value="">Intellikit Subscriptions</option>
+                <option value="">Gift Certificates</option>
+                <option value="">Invites & Credits</option>
+                <option value="">My Review &Uploads</option>
+                <option value="">Notify Me</option>
+                <option value="">Choose list</option>
+                <option value="">Logout</option>
+
+            </select>
+               
+         </nav>
     </header>
     <main>
         <!-- Page Content -->
+        <div id="Maindiv">
+
+
+
+
+
+
+
+
+            <div id="Formating"> 
+                     <div id="CreditCard">
+                    <h1 id="heading">CREDIT/DEBIT CARDS</h1>
+                     
+                     <form id="PayNow"action="">
+                        <div id="dropdown">
+                            <div id="cardnumber">
+                             <input class="cardno" type="text" maxlength="16" placeholder="Card Number"  required>
+                             </div>
+                             <div id="Name On card">
+                                 <input class="nameoncard" type="text" maxlength="40" placeholder="Name on Card" required>
+                             </div>
+                             <div id="expiry&Cvv">
+                                 <input class="expiry"type="date" name="" id="" required>
+                                 <input class="cvv" type="number" name="" id="" maxlength="4" required placeholder="CVV" >
+                             </div>
+                             <div id="button">
+                                 <button >PAY Now</button>
+                             </div>
+                             </form>
+                          </div>
+                
+    
+                    </div>
+                    <div id="Upipayment">
+
+                    <div id="headingofUpi">
+                        <h1>UPI PAYMENTS</h1>
+                    </div>
+                    <div id="inputofupi">
+                     <label for="">Please provide valid UPI handle i.e (Virtual Payment Address)</label>
+                     <input class="email" id="inputemail" type="email" required placeholder="Enter your upi" maxlength="50">
+
+                    </div>
+                        <button id="PayNow1">PAY NOW</button>
+
+                    </div>   
+                     
+                
+                 <div id="PayTm">
+                    <span class="quick_icon paytmsprite quick_iconsprite"></span>
+                   <h1>PAYTM WALLET</h1>
+
+                    <div>
+                        <label for="">Link your wallet using mobile no:</label>
+                        <input class="mobileno"type="number" name="" id="" placeholder="Enter mobile no" maxlength="10">
+                    </div>
+                    <div>
+                        <button id="PayNow2">Pay Now</button>
+                    </div>
+                 </div>
+                </div>
+          </div>
     </main>
     <footer>
          <!-- Footer -->
