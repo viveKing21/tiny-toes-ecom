@@ -1,5 +1,6 @@
 import { LSK } from "./main.js";
 
+
 let filter=document.getElementById("filter")
 let form=document.getElementById("form")
 let category_filter=document.querySelector("#Filter_girl")
@@ -42,6 +43,12 @@ async function fetchProducts() {
     try {
         let data = await fetch(`https://64214f5434d6cd4ebd6fd51c.mockapi.io/products?${query.toString()}`);
         let response = await data.json();
+
+
+document.addEventListener("DOMContentLoaded",function(){
+    async function fecthProducts(url){
+        let data= await fetch(url);
+        let response= await data.json();
 
         console.log(response)
 
@@ -150,6 +157,7 @@ async function fetchProducts() {
     } catch (err) {
         console.log(err);
     }
+
 }
 fetchProducts();
 
@@ -198,3 +206,9 @@ function renderingdata(data){
   }
 
   
+
+    fecthProducts("https://64214f5434d6cd4ebd6fd51c.mockapi.io/products")
+})
+
+
+
