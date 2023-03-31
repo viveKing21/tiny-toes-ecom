@@ -11,6 +11,12 @@
     border-bottom: 2px solid rgb(246, 108, 22);
     width: 270px;
 }
+.register:focus{
+    border-bottom:3px solid red;
+    background-color: none;
+    outline: none;
+    height: 20px;
+}
 #registerBtn{
     width: 270px;
     margin-top: 2vh;
@@ -25,11 +31,4 @@
 }
 #registerBtn:hover{
     cursor:pointer;
-}
-
-    
-
-.register:focus{
-    outline: none;
-    height: 20px;
 }

@@ -5,12 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Tiny Toes | Home page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <script src="https://kit.fontawesome.com/70c6beacbc.js" crossorigin="anonymous"></script>
     <script src="/scripts/index.js" type="module" defer></script>
+  
 
 </head>
 <body>
@@ -23,28 +27,34 @@
             <input type="text" placeholder="Search for Category,Brand or Product">
             <button id="inpbutton"><i class="fa-solid fa-magnifying-glass "></i></button>
            </div>
-           <div>
- <a href="#"><i class="fa-solid fa-location-crosshairs"  style="color: orange"></i>Select location</a>
-            <div class="verticalline"></div>
-          <a href="#">Stores & Preschools</a>
-          <div class="verticalline"></div>
+           <div>    
           <a href="#">Support</a>
           <div class="verticalline"></div>
           <a href="#">Track Order</a>
-          <div class="verticalline"></div>
-          <a href="#">FirstCry Parenting</a>
           <div class="verticalline"></div>
           <a href="./signin.html">Login</a>
           <div class="verticalline"></div>
           <a href="./signup.html">Register</a>
           <div class="verticalline"></div>
-          <a href="#"><i class="fa-solid fa-heart " style="color: orange"></i>Shortlist</a>
-          <div class="verticalline"></div>
-    <a href="#" style="font-size: 18px;font-weight: 800;"><i class="fa fa-cart-shopping" style="font-size: 24px;color:#4f4a49;" ></i><h3 style="display:inline;margin-left: 4px;margin-top: -100px;">Cart</h3></a>
-            
-    
-           </div>
+          <a href="#" id="cart" >
+            <i class="fa fa-cart-shopping" style="font-size: 30px;margin-top: -0.7vh;margin-left: 1vw;"></i>
+            </a>
+          <div id="user" >
+          <a href="#" ><i class="fa-solid fa-user"style="font-size: 30px;color:grey;margin-top:-0.7vh;margin-left:0.5vw;"></i>
+            <div class="submenu-1">
+                <ul>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#" id="logout">Logout</a></li>
+                </ul>
+            </div>
+        </a>
+    </div>
+</div>
         </nav>
+<p style="display: block;margin:-4vh 2vw 0px 0px;float:right;font-family: calibri;color: rgb(54, 46, 46);">Welcome <span id="welcome" style="color: orange; font-weight: 800;">guest7296</span></p>
+
+<p style="display: block;margin:-10.8vh 4.9vw 0px 0px;float:right ;"><span id="item-count" style="color: rgb(255, 0, 0); font-weight: 800;font-size: 20px;">0</span></p>
+
     <div id="nav2">
        <ul>
         <li><a href="#">BOY FASHION</a>
@@ -103,11 +113,9 @@
 <li><a href="#">Mark & Mia</a></li>  
 </ul>
 <ul>
-    <li><img src="./assets/indexImage/first cry navbar image.jpg" alt="" width="550px" style="padding-right: 5vw;"></li>
+    <li><img src="./assets/indexImage/first cry navbar image.jpg" alt="" width="600px" style="padding-right: 5vw;"></li>
 </ul>
             </div>
-
-
          </li>
         <li><a href="#">GIRL FASHION</a></li>
         <li><a href="#">FOOTWEAR</a></li>
@@ -120,22 +128,22 @@
         <li><a href="#">MOMS</a></li>
         <li><a href="#">HEALTH</a></li>
         <li><a href="#">BOUTIQUES</a></li>
-        <li><a href="#" ><img src="./assets/indexImage/club_logo.png" alt="" width="55px"></a></li>
-        <li style="margin-top: -10px;" ><img src="./assets/indexImage/FC-menu-carters-logo.webp" alt="" width="80%"></a></li>
+        <li id="lilogo"><a href="#" ><img src="./assets/indexImage/club_logo.png" alt="" width="55px"></a></li>
+        <li style="margin-top:-1.6vh;" id="lilogo"><img src="./assets/indexImage/FC-menu-carters-logo.webp" alt="" width="80%"></a></li>
        
         </ul> 
 </div>
     </header>
     <main>
-      <div id="slider">
+      <div id="slider" style="aspect-ratio: 16/9;">
        <figure>
- <img src="./assets/indexImage/imagesliderapic1.webp" alt=""height="420px">
-<img src="./assets/indexImage/imagesliderapic2.webp" alt="" >
-<img src="./assets/indexImage/imagesliderapic3.webp" alt="" height="420px">
-<img src="./assets/indexImage/imagesliderapic4.webp" alt="" height="420px">
-<img src="./assets/indexImage/imagesliderapic5.webp" alt="" height="420px">
+ 
+ <img src="./assets/indexImage/imagesliderapic2.gif" alt="" height="400vh" >
+<img src="./assets/indexImage/imagesliderapic3.webp" alt="" height="400vh">
+<img src="./assets/indexImage/imagesliderapic4.webp" alt="" height="400vh">
+<img src="./assets/indexImage/imagesliderapic5.webp" alt="" height="400vh">
 
-<img src="./assets/indexImage/imagesliderapic1.webp" alt="" height="420px" >
+ <img src="./assets/indexImage/imagesliderapic2.gif" alt="" height="400vh" >
        </figure>
       </div>
       <div id="premiumMain">

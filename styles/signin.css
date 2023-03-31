@@ -25,7 +25,9 @@ background-color:rgb(246, 108, 22) ;
 #registerBtn:hover{
       cursor:pointer;
 }
-
+.register:focus{
+      border-bottom:3px solid red;
+  }
  
 
 .register:focus{
