@@ -112,14 +112,14 @@ width: 80vw;
     display: block;
     /* box-shadow: 0px 2px 4px 0px #00000052; */
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    position: absolute;
+    position:absolute;
     border-radius: 5px;
     width: 70px;
     text-align: left;
     margin-top: -2px;
     height: 11vh;
     right: 0;
-    z-index: 5;
+    z-index: 15;
 
   
 }
@@ -310,7 +310,7 @@ z-index: 5;
     float: left;
     width: 20%;
     height: auto;
-     max-height: 80vh; 
+   max-height: 80vh; 
     object-fit: cover 
   }  
   @keyframes slider{
@@ -445,10 +445,10 @@ display: none;
     margin-top: 5vh;
     object-fit: contain;
 }
-.item-count{
-display: block;
-margin:-10.8vh 4.9vw 0px 0px;
-float:right ;
+#item-count{
+position:absolute;
+margin:-2.4vh 0px 0px 0px;
+float: right;
 }
 
 .sidebar{
@@ -575,9 +575,123 @@ float:right ;
 .sidebar-container .content{
     overflow-y: auto;
 }
+@media only screen and (max-width:1100px) {
+    #nav2>ul>li:nth-child(1),#nav2>ul>li:nth-child(2){
+            display: none;
+    }
+  
+}
+@media only screen and (max-width:850px) {
 
-@media only screen and (max-width: 1000px){
+    #nav2>ul>li:nth-child(9){
+        display: none;
+}
+}
+
+@media only screen and (max-width: 800px){
    .sidebar{
     display: block;
    }
+
+   #nav1>div:nth-child(2)>a:nth-child(1),#nav1>div:nth-child(2)>div:nth-child(2),#nav1>div:nth-child(2)>a:nth-child(3),#nav1>div:nth-child(2)>div:nth-child(4){
+    display: none;
+   }
+     #ulfooter{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+     }
+     #premium{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+     }
+    #nav2{
+        display: none;
+    }
 }
+@media only screen and (max-width: 500px){
+    .sidebar{
+     display: block;
+    }
+    #nav1>div:nth-child(2){
+        display: flex;
+        
+    }
+    #premiumMain>h2{
+        font-size: 22px;
+        margin-left: 15vw;
+    }
+      #ulfooter{
+         display: grid;
+         grid-template-columns: repeat(3,1fr);
+      }
+      #ulfooter>ul>li{
+        font-size: 16px;
+      }
+      #ulfooter>ul{
+      margin-left:-8vw;
+      }
+      input{
+        display: none;
+      }
+      #inpbutton{
+        display: none;
+      }
+      #premium{
+         display: grid;
+         grid-template-columns: repeat(2,1fr);
+      }
+      #imgfooter>img{
+         display: none;
+      }
+      .card>h3{
+        font-size: 15px;
+      }
+
+ }
+ @media only screen and (max-width:450px) {
+    #ulfooter{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+     }
+ }
+ @media only screen and (max-width: 400px){
+    .sidebar{
+     display: block;
+    }
+    #nav1>div:nth-child(2)>a:nth-child(7){
+        display: none;
+    }
+      #ulfooter{
+         display: grid;
+         grid-template-columns: repeat(2,1fr);
+      }
+      #ulfooter>ul>li{
+        font-size: 16px;
+      }
+      #ulfooter>ul{
+      margin-left:-8vw;
+      }
+      #premiumMain>h2{
+        font-size: 18px;
+        margin-left: 15vw;
+      }
+      #premium{
+         display: grid;
+         grid-template-columns: repeat(1,1fr);
+      }
+      #imgfooter>img{
+         display: none;
+      }
+      .card>h3{
+        font-size: 15px;
+      }
+
+ }
+ @media only screen and (max-width:300px) {
+    #ulfooter{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+ }
+
+ 
