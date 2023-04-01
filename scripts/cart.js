@@ -11,7 +11,7 @@ let arr2=JSON.parse(localStorage.getItem("carts")) || []
 arr2 = arr2.filter(({uid}) => uid == userlogin)
 
 
-
+console.log(arr2)
 
 
 
