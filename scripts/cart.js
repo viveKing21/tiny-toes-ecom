@@ -10,6 +10,7 @@ let arr2=JSON.parse(localStorage.getItem("carts")) || []
 
 arr2 = arr2.filter(({uid}) => uid == userlogin)
 
+let totalprice
 
 console.log(arr2)
 
@@ -125,6 +126,7 @@ wholecontainer.append(mainaddressdiv)
     totaldiscount=totaldiscount.toFixed(2)
     totalgst=totalgst.toFixed(2)
     totalpayment=totalpayment.toFixed(2)
+    totalprice=totalpayment
   
     
 
@@ -410,7 +412,9 @@ e.preventDefault()
     
     obj1.createdAt=`${currentday}-${currentmonth}-${currentyear}`
 
-     obj1.user_id=userlogin.user_id
+     obj1.uid=userlogin.user_id
+     obj1.price=totalprice;
+     obj1.status="processing"
     obj1.billing_address=[]
     obj1.billing_address.push(arr[0])
    
