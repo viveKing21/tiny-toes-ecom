@@ -5,11 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Tiny Toes | Home page</title>
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="styles/admin.css">
-    <script src="scripts/admin.js" type="module" defer></script>
+    <!-- <script src="scripts/admin.js" type="module"  defer></script> -->
 </head>
 <body>
+    <div id="side-container">
+        <img src="/assets/images/logo.png" alt="err">
+        <div class="side-buttons">
+            <button id="report-btn">DashBoard</button>
+            <!-- <hr> -->
+            <button id="product-btn">Products</button>
+            <!-- <hr> -->
+            <button id="orders-btn">Orders</button>
+            <!-- <hr> -->
+            <button id="admins-btn">Admins</button>
+            <!-- <hr> -->
+            <button id="profile-btn" onclick = "this.nextElementSibling.classList.toggle('hide')">Create Profile</button>
+            <!-- <hr> -->
+            <div id="createAdmin" class='hide' style = "border:solid red" >
+                <form>
+                <lable>First Name</lable><br>
+                <input id="firstnameAdmin" type="text"><br>
+                <lable>Last Name</lable><br>
+                <input id="lastnameAdmin" type="text"><br>
+                <lable>Email</lable><br>
+                <input id="emailAdmin" type="email"><br>
+                <lable>Phone No.</lable><br>
+                <input id="phoneAdmin" type="number"><br>
+                <lable>Department</lable><br>
+                <input id="departmentAdmin" type="text"><br>
+                <lable>Image</lable><br>
+                <input id="imageAdmin" type="text"><br>
+                <lable>Password</lable><br>
+                <input id="passwordAdmin" type="password"><br>
+                <input id="createAdminBtn" type="submit"><br>
+                </form>
+                </div>
+        </div>
+      
+        <!-- <div class="side-buttons">
+           
+        </div>
+        <hr class = "dashHr">
+        <div class="side-buttons">
+            
+        </div>
+        <hr class = "dashHr">
+        <div class="side-buttons">
+          
+        </div >
+        <hr class = "dashHr">
+        <div class="side-buttons">
+            
+        </div>
+        <hr class = "dashHr"> -->
+    </div>
+    <div id="display-container">
+        <!-- <div id="chart">
+            <div id="donutChart1">
+    <div id="donutchart"></div>
+            </div>
+        </div> -->
+    
+        <div id="product-container">
+            <div id="products">
+            <!-- <----All product cards----->
+            </div>
+        <!-- </div> -->
+    </div>
+    
 </body>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="scripts/admin.js"></script>
+
 </html>
+
+
+
+

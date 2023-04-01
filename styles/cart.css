@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+#nav1{
+    display: flex;
+    padding-top: 1%;
+    width: 100%;
+    /* height: 3vh; */
+    justify-content: space-between;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: #fff;
+    font-family: Roboto-Regular;
+   
+   }
+   #nav1 img{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+   }
+   #Myaccount{
+    width: 25px;
+    color: #616161;
+    border: 0px;
+    direction: rtl;
+    text-align: left;
+   }
+ 
+  
+
+body{
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+main {
+    line-height: 1;
+    background-image: url(//cdn.fcglcdn.com/brainbees/images/n/main-bg.jpg);
+    background-repeat: repeat;
+}
+
+/* offer css */
+.bank-offer{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 1px 0 #ccc;
+    border: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+
+}
+.offer-title{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    font-family: "Roboto-Medium";
+    font-size: 14px;
+    color: #212121;
+    line-height: 20px;
+    padding-left: 10px;
+}
+.offer-title img{
+   width: 16px;
+   height: 16.57px;
+}
+.offer-detail{
+    display: block;
+    padding-left: 10px;
+    
+}
+.content-para{
+    display: inline;
+    font-family: "Roboto-Regular";
+    font-size: 16px;
+    color: #424242;
+    line-height: 18px;
+    padding-top: 0px;
+}
+/* offer css */
+.super-div{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: hidden;
+}
+.main-el{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    padding-left: 24px;
+    padding-right: 24px;
+    background: #fff;
+    border-radius: 3px 0 3px 3px;;
+    width: 30%;
+    box-shadow: 1px 1px 1px 0 #ccc;
+    margin: auto;
+    margin-left: 3%;
+    margin-top: 5%;
+    margin-right: 4%;
+    border: 1px solid #e0e0e0;
+    padding-bottom: 150px;
+    font-family: "Roboto-Medium";
+    font-size: 15px;
+    color: #424242;
+    line-height: 21px;
+
+}
+.payment-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.final-payment{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 27px;
+    
+}
+
+.whole-container{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    padding-left: 24px;
+    padding-right: 24px;
+    background: #fff;
+    border-radius: 3px 0 3px 3px;;
+    width: 60%;
+    box-shadow: 1px 1px 1px 0 #ccc;
+    margin: auto;
+   
+    margin-top: 40px;
+    border: 1px solid #e0e0e0;
+    padding-bottom: 150px;
+  
+
+}
+.whole-container > .delete-div{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   margin-top: 18px;
+   border-top: 1px solid #e0e0e0;
+   padding-top: 2%;
+   padding-left: 5%;
+   padding-bottom: 10%;
+   width: calc(100% - 3px);
+   clear: both;
+   float: left;
+   font-style: bold;
+   font-size: 15px;
+   color: #212121;
+   text-align: center;
+}
+
+.increase,.decrease{
+    background-color: rgb(0, 119, 255);
+    margin-left: 5px;
+    color: #fff;
+    width: 45px;
+    height: 30px;
+    border: none;
+}
+
+
+img {
+    max-width: 112px;
+    max-height: 136px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+
+.product-card{
+    display: grid;
+    grid-template-columns: 0.7fr 1.7fr 1.3fr;
+    
+   padding: 15px;
+    
+        
+    
+}
+.content-div{
+   
+   
+    width: 100%;
+    padding-bottom: 11px;
+
+    padding-top: 20px;
+    position: relative;
+    border-radius: 3px;
+   
+}
+.content-div h1{
+    font-family: "Roboto-Medium";
+    font-size: 16px!important;
+    color: #424242!important;
+    line-height: 22px!important;
+   
+}
+.description{
+    padding-bottom: 30px;
+}
+.price-div{
+    width: 100%;
+    padding-right: 70px;
+    padding-left: 10px;
+    padding-top: 10px;
+    
+}
+.off{
+    font-size: 17px;
+    padding-right: 50px;
+    margin: auto;
+}
+.rupee-sign{
+    margin-left: 5px;
+}
+.item-price{
+    margin-left: 5px;
+}
+.off-tag{
+    margin-left: 5px;
+}
+.mrp-price{
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    font-family: "Roboto-Regular";
+    font-size: 14px!important;
+    color: #757575;
+    line-height: 20px;
+}
+.bottom-part{
+    display: grid;
+    grid-template-columns: 1.9fr 1.1fr;
+    height: 100px;
+   padding: 20px;
+}
+.bottom-part button{
+    width: 60%;
+}
+.delivery-address{
+    text-transform: uppercase;
+    text-align: center;
+    background: #FF6133;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.14);
+    font-family: "Roboto-Medium";
+    font-size: 11px;
+    color: #ffffff;
+    height: 60px;
+    margin-right: 20px;
+   
+}
+.place-order{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #9e9e9e !important;
+    height: 60px;
+   
+}
+
+.total{
+    padding: 10px;
+    padding-left: 20px;
+    font-family: "Roboto-Regular";
+    font-size: 16px;
+    color: #ffffff;
+}
+.total-amount
+{
+    padding-left: 20px;
+    font-family: "Roboto-Regular";
+    font-size: 16px;
+    color: #ffffff;
+}
+.place-order-text{
+    padding: 10px;
+    padding-right: 20px;
+    font-family: "Roboto-Regular";
+    font-size: 20px;
+    color: #ffffff;
+}
+
+/* Address CSS */
+.address-div{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 800px;
+    color: #575757;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    right: 0%;
+    transform: translate(-50%,-50%) scale(0.001);
+    visibility: hidden;
+    transition: 0.5s;
+
+    box-shadow: 1px 1px 1px 0 #ccc;
+    background-image: url(//cdn.fcglcdn.com/brainbees/images/n/main-bg.jpg);
+}
+.address-div div{
+    margin-left: 20px;
+    padding-top: 10px;
+    width: 420px;
+    border: none !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    padding-left: 20px;
+   writing-mode: horizontal-tb !important;
+    
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+.address-div>div>input{
+    border: none;
+    height: 40px;
+    width: 420px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.open-pop{
+    visibility: visible;
+    transform: translate(-50%,-50%) scale(1);
+    transition: 0.5s;
+}
+.button-div2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FF6133;
+    padding-bottom: 40px;
+}
+.address-div button{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.cancel-button{
+    margin-left: 60px;
+    margin-right: 90px;
+    background-color: #FF6133;
+    border: none;
+    width: 100px;
+    height: 25px;
+}
+.save-button{
+    background-color: #FF6133;
+    border: #FF6133;
+    height: 25px;
+}
+#state{
+   
+    direction: rtl;
+    text-align: left;
+    width: 180px;
+}
+
+/* Payment Pop Up */
+
+@media screen and (max-width: 900px) {
+    .product-card{
+        grid-template-columns: repeat(1,1fr);
+        width: 100%;
+    }
+    .super-div{
+        flex-direction: column;
+        width: 100%;
+    }
+    .whole-container{
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+    .main-el{
+        
+        margin: 0px;
+        width: 100%;
+    }
+    .main-address{
+        padding-left: 10px;
+    }
+    #nav1{
+        padding: 0px;
+        padding-top: 10px;
+        margin: 0px;
+        justify-content: space-around;
+    }
+    .bottom-part{
+        grid-template-columns: repeat(1,1fr);
+        padding: 0px;
+    }
+    .bottom-part div{
+        
+        margin-bottom: 10px;
+        height: 40px;
+        width: 90%;
+        margin: auto;
+        
+    }
+    .bottom-part>.delivery-address h1{
+        text-align: center;
+      padding-bottom: 8px;
+    }
+}
