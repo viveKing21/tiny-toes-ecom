@@ -15,20 +15,53 @@
     <div id="side-container">
         <img src="/assets/images/logo.png" alt="err">
         <div class="side-buttons">
-            <button id="report-btn">Reports</button>
-        </div>
-        <div class="side-buttons">
+            <button id="report-btn">DashBoard</button>
+            <!-- <hr> -->
             <button id="product-btn">Products</button>
-        </div>
-        <div class="side-buttons">
+            <!-- <hr> -->
             <button id="orders-btn">Orders</button>
-        </div>
-        <div class="side-buttons">
+            <!-- <hr> -->
             <button id="admins-btn">Admins</button>
-        </div >
-        <div class="side-buttons">
-            <button id="profile-btn">Create Profile</button>
+            <!-- <hr> -->
+            <button id="profile-btn" onclick = "this.nextElementSibling.classList.toggle('hide')">Create Profile</button>
+            <!-- <hr> -->
+            <div id="createAdmin" class='hide' style = "border:solid red" >
+                <form>
+                <lable>First Name</lable><br>
+                <input id="firstnameAdmin" type="text"><br>
+                <lable>Last Name</lable><br>
+                <input id="lastnameAdmin" type="text"><br>
+                <lable>Email</lable><br>
+                <input id="emailAdmin" type="email"><br>
+                <lable>Phone No.</lable><br>
+                <input id="phoneAdmin" type="number"><br>
+                <lable>Department</lable><br>
+                <input id="departmentAdmin" type="text"><br>
+                <lable>Image</lable><br>
+                <input id="imageAdmin" type="text"><br>
+                <lable>Password</lable><br>
+                <input id="passwordAdmin" type="password"><br>
+                <input id="createAdminBtn" type="submit"><br>
+                </form>
+                </div>
         </div>
+      
+        <!-- <div class="side-buttons">
+           
+        </div>
+        <hr class = "dashHr">
+        <div class="side-buttons">
+            
+        </div>
+        <hr class = "dashHr">
+        <div class="side-buttons">
+          
+        </div >
+        <hr class = "dashHr">
+        <div class="side-buttons">
+            
+        </div>
+        <hr class = "dashHr"> -->
     </div>
     <div id="display-container">
         <!-- <div id="chart">
