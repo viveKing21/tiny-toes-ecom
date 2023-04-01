@@ -202,62 +202,62 @@ function renderDash(data) {
 
 // <----------- order-details & Orders Section----------->
 let body = document.querySelector("tbody");
-// let orderData = JSON.parse(localStorage.getItem("Address")) || [];
+let orderData = JSON.parse(localStorage.getItem("orders")) || [];
 
 
-var orderData = [{
-    id: 1,
-    firstname: "ansh",
-    lastname: "check",
-    email: "ddscs",
-    address: "cscscs",
-    pincode: 1233,
-    city: "dcscs",
-    state: "Rajasthan"
-},
-{
-    id: 2,
-    firstname: "ansh",
-    lastname: "check",
-    email: "ddscs",
-    address: "cscscs",
-    pincode: 1233,
-    city: "dcscs",
-    state: "Delhi"
-},
-{
-    id: 3,
-    firstname: "ansh",
-    lastname: "check",
-    email: "ddscs",
-    address: "cscscs",
-    pincode: 1233,
-    city: "dcscs",
-    state: "Punjab"
-},
-{
-    id: 4,
-    firstname: "ansh",
-    lastname: "check",
-    email: "ddscs",
-    address: "cscscs",
-    pincode: 1233,
-    city: "dcscs",
-    state: "Madhya Pradesh"
-},
-{
-    id: 5,
-    firstname: "ansh",
-    lastname: "check",
-    email: "ddscs",
-    address: "cscscs",
-    pincode: 1233,
-    city: "dcscs",
-    state: "Delhi"
-}
+// var orderData = [{
+//     id: 1,
+//     firstname: "ansh",
+//     lastname: "check",
+//     email: "ddscs",
+//     address: "cscscs",
+//     pincode: 1233,
+//     city: "dcscs",
+//     state: "Rajasthan"
+// },
+// {
+//     id: 2,
+//     firstname: "ansh",
+//     lastname: "check",
+//     email: "ddscs",
+//     address: "cscscs",
+//     pincode: 1233,
+//     city: "dcscs",
+//     state: "Delhi"
+// },
+// {
+//     id: 3,
+//     firstname: "ansh",
+//     lastname: "check",
+//     email: "ddscs",
+//     address: "cscscs",
+//     pincode: 1233,
+//     city: "dcscs",
+//     state: "Punjab"
+// },
+// {
+//     id: 4,
+//     firstname: "ansh",
+//     lastname: "check",
+//     email: "ddscs",
+//     address: "cscscs",
+//     pincode: 1233,
+//     city: "dcscs",
+//     state: "Madhya Pradesh"
+// },
+// {
+//     id: 5,
+//     firstname: "ansh",
+//     lastname: "check",
+//     email: "ddscs",
+//     address: "cscscs",
+//     pincode: 1233,
+//     city: "dcscs",
+//     state: "Delhi"
+// }
 
 
-]
+// ]
 
 orders.addEventListener("click", () => {
     displayContainer.innerHTML = "";
