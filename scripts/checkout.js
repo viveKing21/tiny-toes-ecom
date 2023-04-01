@@ -1,33 +1,65 @@
 import { LSK } from "./main.js";
 
-let dropdown=document.getElementById("dropdown")
-let heading=document.getElementById("heading")
-heading.addEventListener("click",function(){
-    dropdown.classList.add("drop-show")
-    console.log("ma")
-    console.log(dropdown)
+// local storage content
+
+
+
+let obj1=JSON.parse(localStorage.getItem("currentorder"))
+  if(obj1.billing_address
+    ==undefined)
+  {
+      obj1={}
+  }
+console.log(obj1)
+
+
+let arr4=JSON.parse(localStorage.getItem("Orders"))
+  if(arr4==null)
+  {
+    arr4=[]
+  }
+
+
+
+
+
+
+
+let name=document.querySelector("#PayNow")
+let name2=document.querySelector("#PayNow1")
+let name3=document.querySelector("#PayNow2")
+let cardno=document.querySelector(".cardno")
+let nameoncard=document.querySelector(".nameoncard")
+let expiry=document.querySelector(".expiry")
+let cvv=document.querySelector(".cvv")
+let email=document.querySelector(".email")
+let mobileno=document.querySelector(".mobileno")
+
+
+
+name.addEventListener("submit",function(e){
+    e.preventDefault()
+    console.log("mazhar")
+    if(cardno.value!=""&&nameoncard.value!=""&&expiry.value!=""&&cvv.value!="")
+    {
+        arr4.push(obj1)
+        localStorage.setItem("Orders",JSON.stringify(arr4))
+        alert("Your order is now placed")
+        
+    }
+    else{
+        alert("Please fill all the details")
+    }
+
 })
 
-let id=document.getElementById("PayNow")
-let id1=document.getElementById("PayNow1")
-let id2=document.getElementById("PayNow2")
-let cardno=document.querySelector("cardno")
-let nameoncard=document.querySelector("nameoncard")
-let expiry=document.querySelector("expiry")
-let cvv=document.querySelector("cvv")
-let email=document.querySelector("email")
-let mobileno=document.querySelector("mobileno")
-
-
-id.addEventListener("click",function(e){
+name2.addEventListener("click",function(e){
     e.preventDefault()
-    console.log(cardno.value)
-})
-
-id1.addEventListener("click",function(e){
-    e.preventDefault()
+    console.log("mazhar")
     if(email.value!="")
     {
+        arr4.push(obj1)
+        localStorage.setItem("Orders",JSON.stringify(arr4))
         alert("Your order is now placed")
     }
     else{
@@ -35,10 +67,13 @@ id1.addEventListener("click",function(e){
     }
 })
 
-id2.addEventListener("click",function(e){
+name3.addEventListener("click",function(e){
     e.preventDefault()
     if(mobileno.value!="")
     {
+        arr4.push(obj1)
+        localStorage.setItem("Orders",JSON.stringify(arr4))
+
         alert("Your order is now placed")
     }
     else{

@@ -25,7 +25,7 @@
     color: #616161;
     border: 0px;
     direction: rtl;
-    text-align: right;
+    text-align: left;
    }
  
   
@@ -371,6 +371,12 @@ img {
     background-color: #FF6133;
     border: #FF6133;
     height: 25px;
+}
+#state{
+   
+    direction: rtl;
+    text-align: left;
+    width: 180px;
 }
 
 /* Payment Pop Up */

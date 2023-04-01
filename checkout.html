@@ -22,7 +22,7 @@
  
             </div>
             <div>
-                
+                <link rel="stylesheet" href="checkout.html">
             </div>
             <label class="Myaccount" for="My account">My Account</label>
             <select name="" id="Myaccount">
@@ -60,53 +60,55 @@
                     <h1 id="heading">CREDIT/DEBIT CARDS</h1>
                      
                      <form id="PayNow"action="">
-                        <div id="dropdown">
-                            <div id="cardnumber">
+                        
+                          
                              <input class="cardno" type="text" maxlength="16" placeholder="Card Number"  required>
-                             </div>
-                             <div id="Name On card">
-                                 <input class="nameoncard" type="text" maxlength="40" placeholder="Name on Card" required>
-                             </div>
-                             <div id="expiry&Cvv">
+                           
+                         
+                                 <input class="nameoncard" type="text" maxlength="25" placeholder="Name on Card" required>
+                          
+                            
                                  <input class="expiry"type="date" name="" id="" required>
-                                 <input class="cvv" type="number" name="" id="" maxlength="4" required placeholder="CVV" >
-                             </div>
-                             <div id="button">
+                                 <input class="cvv" type="text" name="" id=""  required placeholder="CVV" maxlength="4" >
+                           
                                  <button >PAY Now</button>
-                             </div>
+                             
                              </form>
                           </div>
                 
     
-                    </div>
+                
                     <div id="Upipayment">
-
-                    <div id="headingofUpi">
+                    
+                        <form action=""id="PayNow1">
+                 
                         <h1>UPI PAYMENTS</h1>
-                    </div>
-                    <div id="inputofupi">
+                   
+                
                      <label for="">Please provide valid UPI handle i.e (Virtual Payment Address)</label>
-                     <input class="email" id="inputemail" type="email" required placeholder="Enter your upi" maxlength="50">
+                     <input class="email" id="inputemail" type="email" required placeholder="Enter your upi" maxlength="40">
 
-                    </div>
-                        <button id="PayNow1">PAY NOW</button>
-
+                   
+                        <button >PAY NOW</button>
+                    </form>
                     </div>   
                      
                 
                  <div id="PayTm">
-                    <span class="quick_icon paytmsprite quick_iconsprite"></span>
+                    <form action="" id="PayNow2"> 
+                    
                    <h1>PAYTM WALLET</h1>
 
-                    <div>
+                 
                         <label for="">Link your wallet using mobile no:</label>
                         <input class="mobileno"type="number" name="" id="" placeholder="Enter mobile no" maxlength="10">
-                    </div>
-                    <div>
-                        <button id="PayNow2">Pay Now</button>
-                    </div>
+                    
+                    
+                        <button >Pay Now</button>
+                    </form>
+                   
                  </div>
-                </div>
+                
           </div>
     </main>
     <footer>

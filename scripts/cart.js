@@ -3,7 +3,7 @@
 
 import { LSK } from "./main.js";
 // 
-let arr2=[{"id":"1","title":"Babyhug Cotton Half Sleeves T-Shirt Tom & Jerry Print","color":"Dark Blue","image1":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13014437a.jpg","price":"339.15","discount":"15% Off","stock":"In-stock","category":"Boys","brand":"Babyhug","size":"3-4 Y"},{"id":"2","title":"Pine Kids 100% Cotton Biowashed Half Sleeves T-Shirt Trumpet Print","color":"White & Blue","image1":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13094642a.jpg","image2":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13094642b.jpg","image3":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13094642c.jpg","image4":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13094642d.jpg","price":"424.15","discount":"15% Off","stock":"In-stock","category":"Boys","brand":"Pine Kids","size":"3-4 Y"}]
+let arr2=[{"id":"1","title":"Babyhug Cotton Half Sleeves T-Shirt Tom & Jerry Print","qty":"1","color":"Dark Blue","image1":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13014437a.jpg","price":"339.15","discount":"15% Off","stock":"In-stock","category":"Boys","brand":"Babyhug","size":"3-4 Y"},{"id":"2","title":"Pine Kids 100% Cotton Biowashed Half Sleeves T-Shirt Trumpet Print","color":"White & Blue","image1":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13094642a.jpg","image2":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13094642b.jpg","image3":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13094642c.jpg","image4":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13094642d.jpg","price":"424.15","discount":"15% Off","qty":"1","stock":"In-stock","category":"Boys","brand":"Pine Kids","size":"3-4 Y"}]
 
 
 
@@ -25,9 +25,14 @@ let arr=JSON.parse(localStorage.getItem("Address"))
   {
     arr=[]
   }
+  
+  let obj1={}
+ 
+  
+  let userlogin=JSON.parse(localStorage.getItem("logged"))
 
   // important section of div
-
+let state=document.getElementById("state")
 
 let mainpage=document.querySelector("main")
 let superdiv=document.createElement("div")
@@ -49,7 +54,8 @@ mainpage.append(superdiv)
 
   function address(arr)
   {
-  
+    if(arr.length!=0&&arr2.length!=0)
+    {
 let mainaddressdiv=document.createElement("div")
 mainaddressdiv.classList.add("main-address")
 let namediv=document.createElement("div")
@@ -64,22 +70,24 @@ namediv.append(h3,buttondiv1)
 
 let housediv=document.createElement("div")
 let par=document.createElement("p")
-par.innerText=`${arr[0].Houseno}${arr[0].locality}${arr[0].city}`
+par.innerText=`${arr[0].Houseno}--${arr[0].locality}--${arr[0].city}`
 housediv.append(par)
 
 let statediv=document.createElement("div")
 let statepar=document.createElement("p")
-statepar.innerText=`${arr[0].pincode}${arr[0].state}`
+statepar.innerText=`${arr[0].pincode}--${arr[0].state}`
 statediv.append(statepar)
 
 mainaddressdiv.append(namediv,housediv,statediv)
 wholecontainer.append(mainaddressdiv)
-  }
-
-    if(arr.length!=0&&arr2.length!=0)
-    {
-      address(arr)
     }
+    
+  }
+ 
+
+    
+      
+    
 
    
 
@@ -98,12 +106,13 @@ wholecontainer.append(mainaddressdiv)
     
     for(let i=0;i<arr2.length;i++)
     {
-      totalcost+=Number(arr2[i].price)
+      totalcost+=Number(arr2[i].price)*arr2[i].qty
       
       let data=arr2[i].discount.split(" ")
        data=data[0][0]+data[0][1]
          
       totaldiscount+=Number(data)*Number(arr2[i].price)/100
+      totaldiscount*=Number(arr2[i].qty)
        
     
      
@@ -111,9 +120,14 @@ wholecontainer.append(mainaddressdiv)
     
     let totalgst=totalcost*(10/100)
     let totalpayment=totalcost+totaldiscount+totalgst
-    console.log(totalcost)
-    console.log(totaldiscount)
-    console.log(totalgst)
+
+    
+    totalcost=totalcost.toFixed(2)
+    totaldiscount=totaldiscount.toFixed(2)
+    totalgst=totalgst.toFixed(2)
+    totalpayment=totalpayment.toFixed(2)
+  
+    
 
     let maz=document.createElement("h1")
     maz.innerText="Payment Information"
@@ -227,9 +241,9 @@ function cardappend(arr2)
   if(arr2.length!=0)
   {
     totalcardvalue(arr2)
-  address(arr)
+    address(arr)
   bankoffer()
-  
+    
 
     for(let i=0;i<arr2.length;i++)
       {
@@ -257,27 +271,29 @@ button2.classList.add("decrease")
 button.innerText="+"
 button2.innerText="-"
 let head=document.createElement("p")
-let count=1
+
 button.addEventListener("click",function(e){
   e.preventDefault()
 
-  count++
-  head.innerText=count
+  arr2[i].qty++
+  head.innerText=arr2[i].qty
+  totalcardvalue(arr2)
 
 })
 button2.addEventListener("click",function(e){
   e.preventDefault()
-  if(count>1)
+  if(arr2[i].qty>1)
   {
-    count--
-    head.innerText=count
+    arr2[i].qty--
+    head.innerText=arr2[i].qty
   }
   else{
-    head.innerText=count
+    head.innerText=arr2[i].qty
   }
+  totalcardvalue(arr2)
 })
 
-head.innerText=count
+head.innerText=arr2[i].qty
 contentdiv.append(h1)
 
 
@@ -373,11 +389,40 @@ deleiveryaddress.addEventListener("click",function(){
 
 
 
-
+let current_id=0
 
 let placeorder=document.createElement("div")
-placeorder.addEventListener('click',function(){
+placeorder.addEventListener('click',function(e){
+e.preventDefault()
+  if(arr.length!=0)
+  {
+  
+    obj1["product-id"]=[]
+    for(let i=0;i<arr2.length;i++)
+    {
+      obj1["product-id"].push(arr2[i].id)
+    }
+    current_id++
+    obj1.id=current_id
+    let currentdate=new Date()
+    let currentday=currentdate.getDate()
+    let currentmonth=currentdate.getMonth()+1
+    let currentyear=currentdate.getFullYear()
+    
+    obj1.createdAt=`${currentday}-${currentmonth}-${currentyear}`
+
+    // obj1.user_id=userlogin.id
+    obj1.billing_address=[]
+    obj1.billing_address.push(arr[0])
+   
+    localStorage.setItem("currentorder",JSON.stringify(obj1))
+
     window.location.href="checkout.html"
+  }
+  else{
+    alert("please enter your address for checkout")
+  }
+    
 
 
 })
@@ -389,7 +434,7 @@ placeorder.classList.add("place-order")
  let p2=document.createElement("div")
  p2.classList.add("total-amount")
  p1.innerText="Total"
- p2.innerText=150
+
  divtotal.append(p1,p2)
  let placeorder2=document.createElement("div")
  placeorder2.classList.add("place-order-text")
@@ -449,11 +494,11 @@ let addressdiv=document.createElement("div")
     inputcitydiv.append(inputcity)
 
     let inputStateDiv=document.createElement("div")
-  let  inputstate=document.createElement("input")
-  inputstate.setAttribute("type","text")
-  inputstate.setAttribute("placeholder","State")
-  inputstate.setAttribute("required","")
-  inputStateDiv.append(inputstate)
+    let label=document.createElement("label")
+    label.innerText="Please Select your state"
+    let input=document.createElement("input")
+    inputStateDiv.append(label,state)
+  
 
   let inputlocalitydiv=document.createElement("div")
   let inputlocality=document.createElement("input")
@@ -483,21 +528,22 @@ inputlocalitydiv.append(inputlocality)
   savebutton.innerText="SAVE ADDRESS"
   savebutton.addEventListener("click",function(){
 
-    if(inputname.value!=""&&inputmobile.value!=""&&inputpincode.value!=""&&inputcity.value!=""&&inputstate.value!=""&&inputlocality.value!=""&&flateHouse.value!="")
+    if(inputname.value!=""&&inputmobile.value!=""&&inputpincode.value!=""&&inputcity.value!=""&&state.value!=""&&inputlocality.value!=""&&flateHouse.value!="")
     {
     let obj={}
     obj.name=inputname.value;
     obj.mobileNo=inputmobile.value;
     obj.pincode=inputpincode.value;
     obj.city=inputcity.value;
-    obj.state=inputstate.value;
+    obj.state=state.value;
     obj.locality=inputlocality.value;
     obj.Houseno=flateHouse.value;
-
+     
+    arr.pop()
     arr.push(obj)
     localStorage.setItem("Address",JSON.stringify(arr))
     alert("Address Saved")
-  
+  address(arr)
     
   }
   
