@@ -45,6 +45,7 @@ name.addEventListener("submit",function(e){
         arr4.push(obj1)
         localStorage.setItem("orders",JSON.stringify(arr4))
         alert("Your order is now placed")
+        window.location="index.html"
         
     }
     else{
@@ -61,6 +62,7 @@ name2.addEventListener("click",function(e){
         arr4.push(obj1)
         localStorage.setItem("orders",JSON.stringify(arr4))
         alert("Your order is now placed")
+        window.location="index.html"
     }
     else{
         alert("Please fill all the details")
@@ -75,8 +77,10 @@ name3.addEventListener("click",function(e){
         localStorage.setItem("orders",JSON.stringify(arr4))
 
         alert("Your order is now placed")
+         window.location="index.html"
     }
     else{
         alert("Please fill all the details")
+           
     }
 })
