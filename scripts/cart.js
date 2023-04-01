@@ -3,11 +3,12 @@
 
 import { LSK } from "./main.js";
 // 
-let arr2=JSON.parse(localStorage.getItem("carts"))
-if(arr2==null)
-{
-  arr2=[]
-}
+let userlogin=JSON.parse(localStorage.getItem("logged"))
+if(userlogin==null)  window.location="/signin.html"
+
+let arr2=JSON.parse(localStorage.getItem("carts")) || []
+
+arr2 = arr2.filter(({uid}) => uid == userlogin)
 
 
 
@@ -19,22 +20,15 @@ if(arr2==null)
 
 
 
-
+  
 
 
 
 // local storage-content
-let arr=JSON.parse(localStorage.getItem("Address"))
-  if(arr==null)
-  {
-    arr=[]
-  }
+let arr=JSON.parse(localStorage.getItem("Address")) || []
   
   let obj1={}
  
-  
-  let userlogin=JSON.parse(localStorage.getItem("logged"))
-
   // important section of div
 let state=document.getElementById("state")
 
@@ -415,7 +409,7 @@ e.preventDefault()
     
     obj1.createdAt=`${currentday}-${currentmonth}-${currentyear}`
 
-    // obj1.user_id=userlogin.id
+     obj1.user_id=userlogin.id
     obj1.billing_address=[]
     obj1.billing_address.push(arr[0])
    
