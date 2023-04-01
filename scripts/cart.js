@@ -20,6 +20,7 @@ arr2 = arr2.filter(({uid}) => uid == userlogin)
 
 
 
+
   
 
 
@@ -409,7 +410,7 @@ e.preventDefault()
     
     obj1.createdAt=`${currentday}-${currentmonth}-${currentyear}`
 
-     obj1.user_id=userlogin.id
+     obj1.user_id=userlogin.user_id
     obj1.billing_address=[]
     obj1.billing_address.push(arr[0])
    

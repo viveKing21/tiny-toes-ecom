@@ -13,7 +13,7 @@ let obj1=JSON.parse(localStorage.getItem("currentorder"))
 console.log(obj1)
 
 
-let arr4=JSON.parse(localStorage.getItem("Orders"))
+let arr4=JSON.parse(localStorage.getItem("orders"))
   if(arr4==null)
   {
     arr4=[]
@@ -43,7 +43,7 @@ name.addEventListener("submit",function(e){
     if(cardno.value!=""&&nameoncard.value!=""&&expiry.value!=""&&cvv.value!="")
     {
         arr4.push(obj1)
-        localStorage.setItem("Orders",JSON.stringify(arr4))
+        localStorage.setItem("orders",JSON.stringify(arr4))
         alert("Your order is now placed")
         
     }
@@ -59,7 +59,7 @@ name2.addEventListener("click",function(e){
     if(email.value!="")
     {
         arr4.push(obj1)
-        localStorage.setItem("Orders",JSON.stringify(arr4))
+        localStorage.setItem("orders",JSON.stringify(arr4))
         alert("Your order is now placed")
     }
     else{
@@ -72,7 +72,7 @@ name3.addEventListener("click",function(e){
     if(mobileno.value!="")
     {
         arr4.push(obj1)
-        localStorage.setItem("Orders",JSON.stringify(arr4))
+        localStorage.setItem("orders",JSON.stringify(arr4))
 
         alert("Your order is now placed")
     }
