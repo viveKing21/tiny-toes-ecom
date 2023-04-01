@@ -23,7 +23,7 @@ body {
     width: 100%;
     padding: 0 2rem;
     
-    border: 2px solid red ;
+    /* : 2px solid red ;border */
 }
 
 .products {
@@ -136,30 +136,29 @@ body {
 }
 
 #filter{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     width: 30%;
-
-
+ 
 }
 #Display{
     display: flex;
 }
 #Filter_category{
-    border: 2px solid green;
+    
     background-color: gainsboro;
     width: 90%;
     height: 35px ;
     text-align: center;
 }
 #Filter_Brand{
-    border: 2px solid green;
+    
     background-color: gainsboro;
     width: 90%;
     height: 35px ;
     text-align: center;
 }
 #filter_size{
-    border: 2px solid green;
+    
     background-color: gainsboro;
     width: 90%;
     height: 35px ;
@@ -167,7 +166,7 @@ body {
 }
 
 #filter_price{
-    border: 2px solid green;
+    
     background-color: gainsboro;
     width: 90%;
     height: 35px ;
@@ -291,4 +290,89 @@ body {
      }
 
      /* hover css */
+     
+     #Filter_category{
+        
+        margin-bottom: 50px;
+        padding: 5px;
+        margin-left: 20px;
+     }
+     #Filter_girl{
+        padding: 5px;
+        margin:15px;
+        border: none; 
+        
+        
+     }
+     #Filter_boy{
+        padding: 5px;
+        margin-right: 2px;
+        border: none;
+     }
+     #Filter_Brand{
+       
+        margin-bottom: 50px;
+        padding: 5px;
+        margin-left: 20px;
+     }
+     #Brand_select{
+        margin-top: 25px;
+        width: 100px;
+        
+     }
 
+     #filter_size{
+        
+        margin-bottom: 50px;
+        padding: 5px;
+        margin-left: 20px;
+     }
+     
+     #filter_size button {
+         padding: 5px;
+        margin-right: 2px;
+        margin-top: 20px;
+        border: none;
+     }
+     #span{
+        display: flex;
+        gap: 10px;
+        margin-left: 55px;
+     }
+
+     #filter_price{
+         
+        margin-bottom: 50px;
+        padding: 5px;
+        margin-left: 20px;
+        
+     }
+ #filter_price input{
+    width: 20px;
+    
+ }
+ /* #filter_price div{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ } */
+
+ #pagination{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+ }
+ #pagination button {
+    padding: 5px 10px 5px 10px;
+    align-items: center;
+    background-color: white ;
+    font-weight: 500;
+    border-radius: 90%;
+
+ }
+ 

@@ -1,6 +1,5 @@
 import { LSK } from "./main.js";
 
-
 let filter=document.getElementById("filter")
 let form=document.getElementById("form")
 let category_filter=document.querySelector("#Filter_girl")
@@ -12,6 +11,12 @@ let size_3=document.getElementById("size_3")
 let size_4=document.getElementById("size_4")
 let size_5=document.getElementById("size_5")
 let paginationContainer = document.getElementById("pagination")
+let Sort_filter=document.getElementById("Sort_filter")
+
+
+
+
+let lowtohigh = []
 
 
 
@@ -43,14 +48,26 @@ async function fetchProducts() {
     try {
         let data = await fetch(`https://64214f5434d6cd4ebd6fd51c.mockapi.io/products?${query.toString()}`);
         let response = await data.json();
+        lowtohigh = response
+
+        console.log(lowtohigh)
 
 
-document.addEventListener("DOMContentLoaded",function(){
-    async function fecthProducts(url){
-        let data= await fetch(url);
-        let response= await data.json();
 
-        console.log(response)
+
+        Sort_filter.addEventListener("change",()=>{
+            if(Brand_select.value==""){
+                products.innerHTML = renderingdata(response)
+            }else if(Brand_select.value=="Low to High"){
+                let filtered=lowtohigh.sort((a,b)=>{
+                    console.log(a.price-b.price)
+                })
+                products.innerHTML = renderingdata(filtered)
+            }
+        })
+
+
+        
 
         paginationGenerate()
         products.innerHTML=renderingdata(response)
@@ -113,6 +130,8 @@ document.addEventListener("DOMContentLoaded",function(){
             }
             
           })
+
+          
           size_2.addEventListener("click",()=>{
             let filtered=response.filter((element)=>{
                 if(element.size=="2-3 Y"){
@@ -157,7 +176,6 @@ document.addEventListener("DOMContentLoaded",function(){
     } catch (err) {
         console.log(err);
     }
-
 }
 fetchProducts();
 
@@ -205,10 +223,5 @@ function renderingdata(data){
       `
   }
 
+
   
-
-    fecthProducts("https://64214f5434d6cd4ebd6fd51c.mockapi.io/products")
-})
-
-
-
