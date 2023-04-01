@@ -1,0 +1,39 @@
+#Main{
+   display: grid;
+   grid-template-columns: repeat(1,1fr);
+    margin-left: 40vw;
+    margin-top: 3vh;
+    gap: 25px;
+   
+}
+.register{
+    border: none;
+    border-bottom: 2px solid rgb(246, 108, 22);
+    width: 270px;
+}
+.register:focus{
+    border-bottom:3px solid red;
+    background-color: none;
+    outline: none;
+    height: 20px;
+}
+#registerBtn{
+    width: 270px;
+    margin-top: 2vh;
+    height: 38px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 800;
+    font-family: calibri;
+   color: white;
+   background-color:rgb(246, 108, 22) ;
+}
+#registerBtn:hover{
+    cursor:pointer;
+}
+@media only screen and (max-width:500px) {
+    #Main{
+          margin-left: 10vw;
+    }
+}
