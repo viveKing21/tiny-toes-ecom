@@ -563,29 +563,29 @@ function renderBtn(arr) {
 
         <div id="addproduct" class='hide'>
         <label for="title">Product Title</label>
-        <input type="text" name="" id="titleAdd">
+        <input type="text" name="" id="titleAdd" class = "inputForm">
         <label for="image1">Product Image1</label>
-        <input type="text" name="" id="image1Add">
+        <input type="text" name="" id="image1Add" class = "inputForm">
         <label for="image2">Product Image2</label>
-        <input type="text" name="" id="image2Add">
+        <input type="text" name="" id="image2Add" class = "inputForm">
         <label for="image3">Product Image3</label>
-        <input type="text" name="" id="image3Add">
+        <input type="text" name="" id="image3Add" class = "inputForm">
         <label for="image4">Product Image4</label>
-        <input type="text" name="" id="image4Add">
+        <input type="text" name="" id="image4Add" class = "inputForm">
         <label for="color">Product Color</label>
-        <input type="text" name="" id="colorAdd">
+        <input type="text" name="" id="colorAdd" class = "inputForm">
         <label for="price">Product Price</label>
-        <input type="number" name="" id="priceAdd">
+        <input type="number" name="" id="priceAdd" class = "inputForm">
         <label for="discount">Product Discount</label>
-        <input type="text" name="" id="discountAdd">
+        <input type="text" name="" id="discountAdd" class = "inputForm">
         <label for="stock">Product Stock</label>
-        <input type="text" name="" id="stockAdd">
+        <input type="text" name="" id="stockAdd" class = "inputForm">
         <label for="category">Product Category</label>
-        <input type="text" name="" id="categoryAdd">
+        <input type="text" name="" id="categoryAdd" class = "inputForm">
         <label for="size">Product Size</label>
-        <input type="text" name="" id="sizeAdd">
+        <input type="text" name="" id="sizeAdd" class = "inputForm">
         <label for="brand">Product Brand</label>
-        <input type="text" name="" id="brandAdd">
+        <input type="text" name="" id="brandAdd" class = "inputForm">
         <button class= "crudoprBtn" id="addProductBtn">Add</button>
 
       
@@ -748,8 +748,8 @@ function renderBtn(arr) {
 
     updateBtn.addEventListener("click", async () => {
 
-let updateId = document.getElementById("idProduct").value
-let updateTitle = document.getElementById("titleUpdate").value
+        let updateId = document.getElementById("idProduct").value
+        let updateTitle = document.getElementById("titleUpdate").value
         let updateImage1 = document.getElementById("image1Update").value
         let updateImage2 = document.getElementById("image2Update").value
         let updateImage3 = document.getElementById("image3Update").value

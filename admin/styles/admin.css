@@ -214,6 +214,7 @@ hr{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 20px;
+
 }
 
 #addproduct{
@@ -232,6 +233,11 @@ hr{
 #addproduct label{
     font-size: 14px;
 }
+
+/* .inputForm{
+    margin-bottom: 10px;
+    font-size: 18px;
+} */
 
 #addproduct input{
     margin-bottom: 10px;
