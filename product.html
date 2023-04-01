@@ -147,8 +147,10 @@
              
                  <div class="Product_filter">
                 <div id="Filter_category">
-                <h3>Filter by Category</h3>
+                <h3><u>Filter by Category</u></h3>
+                <br>
                 <hr>
+               
                 <button id="Filter_girl">Girls</button>
                 <button id="Filter_boy">Boys</button>
                 
@@ -171,14 +173,14 @@
              <br>
              <div id="filter_size">
                  <h3>Filter by Size</h3>
-                <hr>
                 
+                <span id="span">
                 <button id="size_2">2-3y</button>
                 <button id="size_3">3-4y</button>
                 <br>
                 <button id="size_4">4-5y</button>
                 <button id="size_5">5-6y</button>
-             
+                    </span>
              
              
              
@@ -186,40 +188,16 @@
              <br>
              
              <br>
-             <div id="filter_price">
-                 <h3>Filter by Price</h3> 
-                 <hr>
-                 <p>
-                     <input type="checkbox" id="price1">
-                     <label for="price1">100 to 200
-                     </label>
-                     </p>
-                     <p>
-                     <input type="checkbox" id="price2">
-                     <label for="price2">200 to 400
-                     </label>
-                     </p>
-                     <p>
-                     <input type="checkbox" id="price3">
-                     <label for="price3">400 to 500
-                     </label>
-                     </p>
-                     <p>
-                     <input type="checkbox" id="price4">
-                     <label for="price4">500 to 700
-                     </label>
-                     </p>
-                     <p>
-                     <input type="checkbox" id="price5">
-                     <label for="price5">700 to 1000
-                     </label>
-                     </p>
-                     <p>
-                     <input type="checkbox" id="price6">
-                     <label for="price6">1000 to 1200
-                     </label>
-                     </p>
-             </div>
+        <div id="Sort">
+            <h3>Sort By Price</h3>
+            <select name="" id="Sort_filter"> 
+            <option value="">All</option>    
+             <option value="Low to High">Low to High</option>
+             <option value="High to Low">High to Low</option>
+        </select>
+
+
+        </div>
  
     
     </div>
@@ -227,7 +205,9 @@
             
         <div class="products">
         </div>
-        <div id="pagination"></div>
+        <div id="pagination">
+
+        </div>
         </div>
     </div>
     
