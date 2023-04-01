@@ -32,3 +32,8 @@
 #registerBtn:hover{
     cursor:pointer;
 }
+@media only screen and (max-width:500px) {
+    #Main{
+          margin-left: 10vw;
+    }
+}

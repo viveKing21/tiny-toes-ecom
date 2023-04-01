@@ -2,7 +2,7 @@
 grid-template-columns: repeat(1,1fr);
  margin-left: 40vw;
  margin-top: 3vh;
- gap: 25px;
+ gap: 30px;
 
 }
 .register{
@@ -12,15 +12,16 @@ grid-template-columns: repeat(1,1fr);
 }
 #registerBtn{
  width: 270px;
- margin-top: 2vh;
- height: 38px;
+ margin-top:18px;
+ height: 40px;
  border: none;
  border-radius: 6px;
- font-size: 18px;
+ font-size: 24px;
  font-weight: 800;
  font-family: calibri;
 color: white;
 background-color:rgb(246, 108, 22) ;
+margin-bottom: 10px;
 }
 #registerBtn:hover{
       cursor:pointer;
@@ -32,5 +33,14 @@ background-color:rgb(246, 108, 22) ;
 
 .register:focus{
  outline: none;
- height: 20px;
+ height: 40px;
+}
+
+@media only screen and (max-width:500px) {
+      #Main{
+             margin-left: 10vw;
+      }
+     
+            
+            
 }
