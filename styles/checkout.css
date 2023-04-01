@@ -52,8 +52,8 @@ main {
     background-color: #fff;
 }
 #Formating div{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-right: 50px;
 }
 
 #Formating input{
@@ -115,15 +115,21 @@ main {
 
 @media screen and (max-width: 900px) {
     #nav1{
+        padding-right: 20px;
         padding: 0px;
         padding-top: 10px;
         margin: 0px;
-        justify-content: space-around;
+       justify-content: space-around;
     }
     #Formating{
         width: 100%;
+        margin: 0px;
+        padding: 0px;
     }
-
+    #Formating div{
+        width: 80%;
+    }
+  
 
 }
 
