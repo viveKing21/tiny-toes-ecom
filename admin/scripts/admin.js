@@ -9,7 +9,9 @@ let displayContainer = document.getElementById("display-container");
 // <--------- display -------->
 
 
-if(prompt("Username") !== "Ansh" || prompt("Password") !== "ansh"){
+if(sessionStorage.getItem("login") == null && (prompt("Username") !== "Ansh" || prompt("Password") !== "ansh")){
+
+sessionStorage.setItem("login",1)
 location = "/"
 }
 
@@ -651,17 +653,29 @@ function renderBtn(arr) {
         <h1>Products</h1>
         </div id="search-bar">
         <div id="product-container">
-        ${arr.map((item) => renderProducts(item.id, item.image1, item.color, item.price, item.stock, item.brand, item.size, item.category, item.discount)).join("")}
+        ${arr.map((item) => renderProducts(item.id, item.image1, item.title,item.brand, item.category, item.color,  item.discount, item.size, item.price)).join("")}
         </div>
         `
 
-            
+        // <div><img src="${image1}" alt="err"> </div>
 
-    function renderProducts(id, image1, color, price, stock, brand, size, category, discount) {
+    function renderProducts(id, image1,title,brand,category, color, discount, size, price  ) {
         let card = `
     <div id="products" data-id=${id} class="eachdiv">
-    <div><img src="${image1}" alt="err"> </div>
+    <img src="${image1}" alt="${category}" class="product-img">
+    <div class="product-content">
+    <h3 class="product-tittle">${title.length > 20 ? title.substring(0,20).concat('...'):title}</h3>
+    <h6 class="product-brand">${brand}</h6>
+    <h4 class="product-category">${category}</h4>
+    <h5 class="product-color">Color: ${color}</h5>
+    <h5 class="product-discount">${discount}</h5>
+    <h6 class="product-size">Size: ${size}</h6>
+    <div class="product-price-container">
+    <h3 class="product-price">₹${price}</h3>
     </div>
+    </div>
+    </div>
+    
     `
         return card
     }
