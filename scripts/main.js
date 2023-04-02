@@ -18,6 +18,8 @@ export const currency = (digit) => {
 // header code
 
 try{
+    let uid = localStorage.getItem("logged")
+
     var log=JSON.parse(localStorage.getItem("logged"))
 var user=JSON.parse(localStorage.getItem("users"))
 var logout=document.getElementById("logout")
@@ -69,9 +71,11 @@ var wlcm=document.getElementById("welcome")
         }, t)
     }
 
-    let count = document.getElementById("item-count")
-    let carts = JSON.parse(localStorage.getItem("carts"))
-    count.textContent = carts.length
+    if(uid){
+        let count = document.getElementById("item-count")
+        let carts = JSON.parse(localStorage.getItem("carts"))
+        count.textContent = carts.filter(cart => cart.uid == uid).length
+    }
 }
 catch(e){
     
