@@ -96,7 +96,7 @@ main .product img{
 }
 
 main .product .product-hover{
-    width: 95%;
+    width: 100%;
     padding: 10px;
 }
 
@@ -167,6 +167,15 @@ main #Filter_category{
     height: 35px ;
     text-align: center;
 }
+main #Filter_category button ,#filter_size button{ 
+    padding: 10px;
+    font-weight: 550;
+    
+}
+
+main #Brand_select , #Sort_filter{
+    padding: 5px;
+}
 main #Filter_Brand{
     
     background-color: gainsboro;
@@ -181,6 +190,7 @@ main #filter_size{
     height: 35px ;
     text-align: center;
 }
+
 
 main #filter_price{
     
@@ -348,7 +358,7 @@ main #nav1{
      }
      
     main  #filter_size button {
-         padding: 5px;
+         padding: 6px;
         margin-right: 2px;
         margin-top: 20px;
         border: none;
@@ -356,6 +366,7 @@ main #nav1{
      main #span{
         display: flex;
         gap: 10px;
+        margin-left: 20px;
         /* margin-left: 55px; */
      }
 
@@ -401,5 +412,21 @@ main #nav1{
  }
 main #pagination button:hover{
     scale: 1.1;
+ }
+ #sort_content{
+    margin-bottom: 20px;
+    padding: 5px;
+    margin-left: 20px; 
+    /* border: 2px solid red; */
+    background-color: gainsboro;
+    text-align: center;
+    
+ }
+ #Sort{
+    align-items: center;
+ }
+
+ #Sort_filter{
+    margin-left: 100px;
  }
  
