@@ -345,7 +345,7 @@ deleteel.innerText="REMOVE"
 
 deleteel.addEventListener("click",function(){
   arr2.splice(i,1)
-  localStorage.set("carts", arr2)
+  localStorage.setItem("carts", arr2)
   cardappend(arr2)
   totalcardvalue(arr2)
 })
