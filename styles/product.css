@@ -429,4 +429,7 @@ main #pagination button:hover{
  #Sort_filter{
     margin-left: 100px;
  }
+.product-discount{
+    color: red;
+ }
  
