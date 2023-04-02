@@ -410,7 +410,7 @@ e.preventDefault()
     
     obj1.createdAt=`${currentday}-${currentmonth}-${currentyear}`
 
-     obj1.uid=userlogin.user_id
+     obj1.uid=userlogin
      obj1.price=totalprice;
      obj1.status="processing"
     obj1.billing_address=[]
