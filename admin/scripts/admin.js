@@ -9,11 +9,17 @@ let displayContainer = document.getElementById("display-container");
 // <--------- display -------->
 
 
-if(sessionStorage.getItem("login") == null && (prompt("Username") !== "Ansh" || prompt("Password") !== "ansh")){
 
-sessionStorage.setItem("login",1)
-location = "/"
-}
+
+
+    if(sessionStorage.getItem("login") == null && (prompt("Username") == "Ansh" && prompt("Password") == "ansh")){
+        sessionStorage.setItem("login",1)
+        }
+        if(sessionStorage.getItem("login") == null){
+            location = "/"
+        }
+
+
 
 // <---------- Reports Charts & Reports Section ------------->
 
@@ -202,86 +208,97 @@ function renderDash(data) {
 
 // <----------- order-details & Orders Section----------->
 let body = document.querySelector("tbody");
-// let orderData = JSON.parse(localStorage.getItem("Address")) || [];
+let orderData = JSON.parse(localStorage.getItem("orders")) || [];
+
+console.log("orders" , orderData);
 
 
-var orderData = [{
-    id: 1,
-    firstname: "ansh",
-    lastname: "check",
-    email: "ddscs",
-    address: "cscscs",
-    pincode: 1233,
-    city: "dcscs",
-    state: "Rajasthan"
-},
-{
-    id: 2,
-    firstname: "ansh",
-    lastname: "check",
-    email: "ddscs",
-    address: "cscscs",
-    pincode: 1233,
-    city: "dcscs",
-    state: "Delhi"
-},
-{
-    id: 3,
-    firstname: "ansh",
-    lastname: "check",
-    email: "ddscs",
-    address: "cscscs",
-    pincode: 1233,
-    city: "dcscs",
-    state: "Punjab"
-},
-{
-    id: 4,
-    firstname: "ansh",
-    lastname: "check",
-    email: "ddscs",
-    address: "cscscs",
-    pincode: 1233,
-    city: "dcscs",
-    state: "Madhya Pradesh"
-},
-{
-    id: 5,
-    firstname: "ansh",
-    lastname: "check",
-    email: "ddscs",
-    address: "cscscs",
-    pincode: 1233,
-    city: "dcscs",
-    state: "Delhi"
-}
+// var orderData = [ {
+//     id: 1,
+//     uid : 1,
+//     firstname: "ansh",
+//     lastname: "check",
+//     email: "ddscs",
+//     address: "cscscs",
+//     pincode: 1233,
+//     city: "dcscs",
+//     state: "Rajasthan"
+// },
+// {
+//     id: 2,
+//     uid : 2,
+//     firstname: "ansh",
+//     lastname: "check",
+//     email: "ddscs",
+//     address: "cscscs",
+//     pincode: 1233,
+//     city: "dcscs",
+//     state: "Delhi"
+// },
+// {
+//     id: 3,
+//     uid : 3,
+//     firstname: "ansh",
+//     lastname: "check",
+//     email: "ddscs",
+//     address: "cscscs",
+//     pincode: 1233,
+//     city: "dcscs",
+//     state: "Punjab"
+// },
+// {
+//     id: 4,
+//     uid : 4,
+//     firstname: "ansh",
+//     lastname: "check",
+//     email: "ddscs",
+//     address: "cscscs",
+//     pincode: 1233,
+//     city: "dcscs",
+//     state: "Madhya Pradesh"
+// },
+// {
+//     id: 5,
+//     uid : 5,
+//     firstname: "ansh",
+//     lastname: "check",
+//     email: "ddscs",
+//     address: "cscscs",
+//     pincode: 1233,
+//     city: "dcscs",
+//     state: "Delhi"
+// }
 
 
-]
+// ]
 
 orders.addEventListener("click", () => {
     displayContainer.innerHTML = "";
     displayContainer.innerHTML = `
     <div id="topOrder">
         <h1>Order Status</h1>
+        <select name="" id="statusSelect"> 
+                 <option value="">All</option>
+                 <option value="processed">Processed</option>
+                 <option value="delivered">Delivered</option>
+                 <option value="returned">Returned</option>
+                </select>
         </div>
 
     <table>
     <thead >
       <tr>
         <th class="orderHeadings">Product Id</th>
-        <th class="orderHeadings">First Name</th>
-        <th class="orderHeadings">Last Name</th>
-        <th class="orderHeadings">E-mail</th>
+        <th class="orderHeadings">User Id</th>
+        <th class="orderHeadings">Name</th>
         <th class="orderHeadings">Address</th>
-        <th class="orderHeadings">Pincode</th>
         <th class="orderHeadings">City</th>
         <th class="orderHeadings">State</th>
         <th class="orderHeadings">Product Status</th>
       </tr>
     </thead>
     <tbody>
-    ${orderData.map((item) => renderorders(item.id, item.firstname, item.lastname, item.email, item.address, item.pincode, item.city, item.state)).join("")}
+    ${orderData.map((item) => renderorders(item.id, item.uid, item.billing_address[0].name, item.billing_address[0].Houseno, item.billing_address[0].locality, item.billing_address[0].pincode, item.billing_address[0].city, item.billing_address[0].state,)).join("")}
     </tbody>
     </table>
 
@@ -318,7 +335,24 @@ orders.addEventListener("click", () => {
         })
     })
 
-    
+    let statusSelect = document.getElementById("statusSelect");
+    statusSelect.forEach((el)=>{
+        el.addEventListener("change", (e) => {
+            if (el.value == "processed") {
+                console.log("processed");
+                console.log(e)
+            } else if (el.value == "delivered") {
+                console.log("delivered");
+                el.style.backgroundColor = "green";
+            } else if (el.value == "returned") {
+                console.log("returned");
+                el.style.backgroundColor = "red";
+            } else if (el.value == "") {
+                console.log("not selected");
+                el.style.backgroundColor = "";
+            }
+        })
+    })
 
 
     // <------------- India Order Map ---------------->
@@ -326,11 +360,11 @@ orders.addEventListener("click", () => {
     let obj = {}
     let Arr = [['State', 'Popularity']]
     orderData.map((item) => {
-        if (obj[item.state] == undefined) {
-            obj[item.state] = 1;
+        if (obj[item.billing_address[0].state] == undefined) {
+            obj[item.billing_address[0].state] = 1;
         }
         else {
-            obj[item.state]++;
+            obj[item.billing_address[0].state]++;
         }
     })
 
@@ -414,16 +448,14 @@ orders.addEventListener("click", () => {
 
 let orderList = document.getElementById("orders-btn");
 
-function renderorders(id, firstname, lastname, email, address, pincode, city, state) {
+function renderorders(id, uid,  firstname, houseNo,locality, pincode, city, state) {
     let orderTable = `
     <tbody>
     <tr>
     <td>${id}</td>
+    <td>${uid}</td>
     <td>${firstname}</td>
-    <td>${lastname}</td>
-    <td>${email}</td>
-    <td>${address}</td>
-    <td>${pincode}</td>
+    <td>${houseNo} ${locality} ${pincode}</td>
     <td>${city}</td>
     <td>${state}</td>
     <td> <select id="statusOrder" class="status-Order">
@@ -453,7 +485,7 @@ admins.addEventListener("click", async () => {
     // renderProfile(data)
 
     displayContainer.innerHTML = `
-    <div id="profileTop">Admin Profile</div>
+    <div id="profileTop"><h1>Admin Profile</h1></div>
     <div id="parent">
     ${data.map((item)=>renderProfile(item.image,item.firstname,item.surname,item.email,item.department,item.mobile)).join("")}
     </div>
@@ -546,6 +578,7 @@ product.addEventListener("click", () => {
 
 var checkArr = [];
 
+
 async function fetchData() {
 
     let res = await fetch("https://64214f5434d6cd4ebd6fd51c.mockapi.io/products");
@@ -556,36 +589,37 @@ async function fetchData() {
 }
 
 
+
 function renderBtn(arr) {
     sideContainer.innerHTML = `<div id="crudBtns">
-    <img id="logoImg"  src = "/assets/images/logo.png" alt= "err">
+    <img id="logoImg" onclick="location.href='';" src = "/assets/images/logo.png" alt= "err">
         <button id="addHead" onclick = "this.nextElementSibling.classList.toggle('hide')" >Add Product</button>
 
         <div id="addproduct" class='hide'>
         <label for="title">Product Title</label>
-        <input type="text" name="" id="titleAdd">
+        <input type="text" name="" id="titleAdd" class = "inputForm">
         <label for="image1">Product Image1</label>
-        <input type="text" name="" id="image1Add">
+        <input type="text" name="" id="image1Add" class = "inputForm">
         <label for="image2">Product Image2</label>
-        <input type="text" name="" id="image2Add">
+        <input type="text" name="" id="image2Add" class = "inputForm">
         <label for="image3">Product Image3</label>
-        <input type="text" name="" id="image3Add">
+        <input type="text" name="" id="image3Add" class = "inputForm">
         <label for="image4">Product Image4</label>
-        <input type="text" name="" id="image4Add">
+        <input type="text" name="" id="image4Add" class = "inputForm">
         <label for="color">Product Color</label>
-        <input type="text" name="" id="colorAdd">
+        <input type="text" name="" id="colorAdd" class = "inputForm">
         <label for="price">Product Price</label>
-        <input type="number" name="" id="priceAdd">
+        <input type="number" name="" id="priceAdd" class = "inputForm">
         <label for="discount">Product Discount</label>
-        <input type="text" name="" id="discountAdd">
+        <input type="text" name="" id="discountAdd" class = "inputForm">
         <label for="stock">Product Stock</label>
-        <input type="text" name="" id="stockAdd">
+        <input type="text" name="" id="stockAdd" class = "inputForm">
         <label for="category">Product Category</label>
-        <input type="text" name="" id="categoryAdd">
+        <input type="text" name="" id="categoryAdd" class = "inputForm">
         <label for="size">Product Size</label>
-        <input type="text" name="" id="sizeAdd">
+        <input type="text" name="" id="sizeAdd" class = "inputForm">
         <label for="brand">Product Brand</label>
-        <input type="text" name="" id="brandAdd">
+        <input type="text" name="" id="brandAdd" class = "inputForm">
         <button class= "crudoprBtn" id="addProductBtn">Add</button>
 
       
@@ -595,7 +629,7 @@ function renderBtn(arr) {
         <button id="updateHead" onclick = "this.nextElementSibling.classList.toggle('hide')">Update Product</button>
         <div id="update" class='hide'>
         <label for="id">Product Id</label>
-        <input type="number" name="" id="idProduct">
+        <input type="text" name="" id="idProduct">
         <label for="title">Product Title</label>
         <input type="text" name="" id="titleUpdate">
         <label for="image1">Product Image1</label>
@@ -646,10 +680,6 @@ function renderBtn(arr) {
         </div>`
     displayContainer.innerHTML = `
     <div id="topdash">
-    <div>
-    <input oninput="search()" id="search-inp" type = "text"></input>
-    <button>Search</button>
-    </div>
         <h1>Products</h1>
         </div id="search-bar">
         <div id="product-container">
@@ -680,8 +710,6 @@ function renderBtn(arr) {
         return card
     }
 
- 
-
 
 
 
@@ -689,8 +717,8 @@ function renderBtn(arr) {
 
     // <------------ Adding the Products CRUD -------------->
 
+    let eachDiv = document.querySelectorAll(".eachdiv")
 
-    let eachDiv = document.querySelectorAll(".eachdiv");
 
     let addBtn = document.getElementById("addProductBtn");
     addBtn.addEventListener("click", async () => {
@@ -748,8 +776,8 @@ function renderBtn(arr) {
 
     updateBtn.addEventListener("click", async () => {
 
-let updateId = document.getElementById("idProduct").value
-let updateTitle = document.getElementById("titleUpdate").value
+        let updateId = document.getElementById("idProduct").value
+        let updateTitle = document.getElementById("titleUpdate").value
         let updateImage1 = document.getElementById("image1Update").value
         let updateImage2 = document.getElementById("image2Update").value
         let updateImage3 = document.getElementById("image3Update").value
@@ -855,38 +883,72 @@ let updateTitle = document.getElementById("titleUpdate").value
 
     }
 
+    // for (let each of eachDiv) {
+    //     each.addEventListener("click", async (e) => {
+    //         e.preventDefault()
+    //         let idofproduct = each.getAttribute("data-id")
+    //         let res = await fetch(`https://64214f5434d6cd4ebd6fd51c.mockapi.io/products/${idofproduct}`)
+    //         let data = await res.json();
+    //         console.log(data);
+    //         // .then((res) => {
+    //         //         return res.json()
+    //         //     })
+    //         // .then((data) => {
+    //         updateId.value = data.id;
+    //         updateTitle.value = data.title;
+    //         updateImage1.value = data.image1;
+    //         updateImage2.value = data.image2;
+    //         updateImage3.value = data.image3;
+    //         updateImage4.value = data.image4;
+    //         updatePrice.value = data.price;
+    //         updateDiscount.value = data.discount;
+    //         updateColor.value = data.color;
+    //         updateCategory.value = data.category
+    //         updateStock.value = data.stock;
+    //         updateSize.value = data.size;
+    //         updateBrand.value = data.brand;
+
+    //         removedId.value = data.id;
+    //         updateOnlyId.value = data.id;
+    //         updateOnlyPrice.value = data.price;
+    //         // })
+    //     })
+
+    // }
+
+
     for (let each of eachDiv) {
-        each.addEventListener("click", async (e) => {
+        each.addEventListener("click", (e) => {
             e.preventDefault()
             let idofproduct = each.getAttribute("data-id")
-            let res = await fetch(`https://64214f5434d6cd4ebd6fd51c.mockapi.io/products/${idofproduct}`)
-            let data = await res.json();
-            console.log(data);
-            // .then((res) => {
-            //         return res.json()
-            //     })
-            // .then((data) => {
-            updateId.value = data.id;
-            updateTitle.value = data.title;
-            updateImage1.value = data.image1;
-            updateImage2.value = data.image2;
-            updateImage3.value = data.image3;
-            updateImage4.value = data.image4;
-            updatePrice.value = data.price;
-            updateDiscount.value = data.discount;
-            updateColor.value = data.color;
-            updateCategory.value = data.category
-            updateStock.value = data.stock;
-            updateSize.value = data.size;
-            updateBrand.value = data.brand;
+            fetch(`https://64214f5434d6cd4ebd6fd51c.mockapi.io/products/${idofproduct}`)
+                .then((res) => {
+                    return res.json()
+                })
+                .then((data) => {
+                    updateId.innerText = data.id;
+                    updateTitle.value = data.title;
+                    updateImage1.value = data.image1;
+                    updateImage2.value = data.image2;
+                    updateImage3.value = data.image3;
+                    updateImage4.value = data.image4;
+                    updateBrand.value = data.brand;
+                    updatePrice.value = data.price;
+                    updateDiscount.value = data.discount;
+                    updateColor.value = data.color;
+                    updateStock.value = data.Stock;
+                    updateSize.value=data.size;
+                    updateCategory.value=data.category;
+                    removeProductId.value = data.id;
+                    updateOnlyId.value = data.id;
+                    updateOnlyPrice.value = data.price;
 
-            removedId.value = data.id;
-            updateOnlyId.value = data.id;
-            updateOnlyPrice.value = data.price;
-            // })
+                })
         })
-
     }
+
+
+
 
     // <-------Remove Product CRUD------->
 

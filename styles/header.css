@@ -46,7 +46,7 @@ display: block;
 margin:-10.8vh 4.9vw 0px 0px;
 float:right ;
 }
-#nav1{
+header #nav1{
     display: flex;
     padding-top: 1%;
     width: 100%;
@@ -58,7 +58,7 @@ float:right ;
    }
        
    
-   input{
+   header   input{
     
        width: 24vw;
        height: 5vh;
@@ -66,10 +66,10 @@ float:right ;
        border-radius: 7px;
        border: 1px solid #f92f2f;
    }
-   input:focus{
+   header  input:focus{
    outline: #f92f2f    ;
    }
-   #inpbutton{
+   header  #inpbutton{
        margin-left: -2vw;
        background-color: white;
        border: none;
@@ -80,29 +80,29 @@ float:right ;
    }
    
    
-   #nav1>div{
+   header  #nav1>div{
        display: flex;
    }
-   #nav1>div:nth-child(2){
+   header  #nav1>div:nth-child(2){
        margin: 2vh 2vw;
    }
-   #nav1>div:nth-child(2)>a{
+   header #nav1>div:nth-child(2)>a{
        text-decoration: none;
        margin-right:1vw;
        color: grey;
    }
-   #nav1>div:nth-child(2)>a:hover{
+   header #nav1>div:nth-child(2)>a:hover{
       text-decoration: underline;
    }
    
-   .verticalline{
+   header .verticalline{
        height: 17px;
        width: 1.5px;
        margin-top: 1px;
        margin-right: 5px;
        background-color: rgb(204, 200, 200);
    }
-   #nav2{
+   header #nav2{
        display: flex;
        height: 6vh;
        width: 100%;
@@ -113,7 +113,7 @@ float:right ;
       z-index: 5;
    }
    
-   #nav2 ul{
+   header #nav2 ul{
        display: inline-flex;
        list-style: none;
        color: rgb(52, 48, 48);
@@ -122,7 +122,7 @@ float:right ;
    } 
        
    
-   #nav2 ul li{
+   header #nav2 ul li{
        padding: 0.6vh 0.5vw;
        height: 4vh;
        margin-left: 1vw;
@@ -133,7 +133,7 @@ float:right ;
      
       
    
-   #nav2 ul li a{
+   header #nav2 ul li a{
        text-decoration: none;
        color: rgb(94, 86, 86);
        font-weight: 800;
@@ -141,7 +141,7 @@ float:right ;
        font-family: Calibri;
        z-index: 5;
    }
-   .submenu-1{
+   header .submenu-1{
    display: none;
    background-color:white;
    height: 60vh;
@@ -150,12 +150,12 @@ float:right ;
    
    
    } 
-   #user a{
+   header #user a{
        text-decoration: none;
        color: rgb(46, 43, 43);
        height: 40px;
    }
-   #user:hover .submenu-1{
+   header #user:hover .submenu-1{
        display: block;
        /* box-shadow: 0px 2px 4px 0px #00000052; */
        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -166,38 +166,38 @@ float:right ;
        margin-top: -2px;
        height: 11vh;
        right: 0;
-       z-index: 5;
+       z-index: 100;
    
      
    }
-   #user:hover .submenu-1 ul li{
+   header #user:hover .submenu-1 ul li{
        margin-left: -30px;
        list-style: none;
        margin-bottom: 4px;
        height: 20px;
    }
-   #user:hover .submenu-1 ul li a{
+   header  #user:hover .submenu-1 ul li a{
        text-decoration: none;
        color:rgb(46, 43, 43) ;
    } 
-   #user:hover .submenu-1 ul li a:hover{
+   header #user:hover .submenu-1 ul li a:hover{
        text-decoration: underline;
        color:#f92f2f ;
    } 
    
    
-   #nav2>ul>li:hover{
+   header #nav2>ul>li:hover{
        background-color:white;
        border-radius: 1px;
        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 5px 0px;
        z-index: 5;
    }
-   #nav2>ul>li:last-child:hover{
+   header  #nav2>ul>li:last-child:hover{
        background:none;
        box-shadow: none;
        z-index: 5;
    }
-   #nav2 ul li:hover .submenu-1{
+   header #nav2 ul li:hover .submenu-1{
        display: flex;
        position: absolute;
        margin-top: 1vh;
@@ -208,7 +208,7 @@ float:right ;
        padding:0vh 2vw;
        height: 70vh;
    } 
-    #nav2 ul li:nth-child(4):hover .submenu-1{
+   header #nav2 ul li:nth-child(4):hover .submenu-1{
        display: flex;
        position: absolute;
        margin-top: 1vh;
@@ -218,7 +218,7 @@ float:right ;
        z-index: 5;
        padding:0vh 2vw;
    }    
-   #nav2 ul li:nth-child(5):hover .submenu-1{
+   header #nav2 ul li:nth-child(5):hover .submenu-1{
        display: flex;
        position: absolute;
        margin-top: 1vh;
@@ -228,7 +228,7 @@ float:right ;
        z-index: 5;
        padding:0vh 2vw;
    }  
-   #nav2 ul li:nth-child(6):hover .submenu-1{
+   header  #nav2 ul li:nth-child(6):hover .submenu-1{
        display: flex;
        position: absolute;
        margin-top: 1vh;
@@ -238,7 +238,7 @@ float:right ;
        z-index: 5;
        padding:0vh 2vw;
    }  
-   #nav2 ul li:nth-child(7):hover .submenu-1{
+   header #nav2 ul li:nth-child(7):hover .submenu-1{
        display: flex;
        position: absolute;
        margin-top: 1vh;
@@ -248,7 +248,7 @@ float:right ;
        z-index: 5;
        padding:0vh 2vw;
    }  
-   #nav2 ul li:nth-child(8):hover .submenu-1{
+   header #nav2 ul li:nth-child(8):hover .submenu-1{
        display: flex;
        position: absolute;
        margin-top: 1vh;
@@ -258,7 +258,7 @@ float:right ;
        z-index: 5;
        padding:0vh 2vw;
    }  
-   #nav2 ul li:nth-child(9):hover .submenu-1{
+   header #nav2 ul li:nth-child(9):hover .submenu-1{
        display: flex;
        position: absolute;
        margin-top: 1vh;
@@ -268,7 +268,7 @@ float:right ;
        z-index: 5;
        padding:0vh 2vw;
    }  
-   #nav2 ul li:nth-child(10):hover .submenu-1{
+   header #nav2 ul li:nth-child(10):hover .submenu-1{
        display: flex;
        position: absolute;
        margin-top: 1vh;
@@ -278,7 +278,7 @@ float:right ;
        z-index: 5;
        padding:0vh 2vw;
    }  
-   #nav2 ul li:nth-child(11):hover .submenu-1{
+   header #nav2 ul li:nth-child(11):hover .submenu-1{
        display: flex;
        position: absolute;
        margin-top: 1vh;
@@ -288,7 +288,7 @@ float:right ;
        z-index: 5;
        padding:0vh 2vw;
    }  
-   #nav2 ul li:nth-child(12):hover .submenu-1{
+   header  #nav2 ul li:nth-child(12):hover .submenu-1{
        display: flex;
        position: absolute;
        margin-top: 0vh;
@@ -300,7 +300,7 @@ float:right ;
    }  
     
    
-   #nav2 ul li:hover .submenu-1 ul{
+   header #nav2 ul li:hover .submenu-1 ul{
        display:block;
        margin-top: 30px;
        width: 13vw;
@@ -309,7 +309,7 @@ float:right ;
       
        
    } 
-   #nav2 ul li:hover .submenu-1 ul li {
+   header #nav2 ul li:hover .submenu-1 ul li {
      margin-left: -10px;
      width: 100%;
      margin-top: 3.5vh;  
@@ -320,7 +320,7 @@ float:right ;
    
    
    } 
-   #nav2 ul li:hover .submenu-1>ul>li>a:hover{
+   header  #nav2 ul li:hover .submenu-1>ul>li>a:hover{
        text-decoration: underline;
        color: orange;
        z-index: 5;
@@ -332,7 +332,7 @@ float:right ;
        z-index: 5;
        font-size: 15px;
      }
-     #nav2 ul li:hover .submenu-1>ul>li:nth-child(1)>a{
+     header #nav2 ul li:hover .submenu-1>ul>li:nth-child(1)>a{
        text-decoration:none;
        color:orange;
        z-index: 5;
@@ -340,102 +340,277 @@ float:right ;
      }
      
 @media only screen and (max-width:1100px) {
-    #nav2>ul>li:nth-child(1),#nav2>ul>li:nth-child(2){
+    header #nav2>ul>li:nth-child(1),#nav2>ul>li:nth-child(2){
             display: none;
     }
 }
 
 
 @media only screen and (max-width: 800px){
-   .sidebar{
+    header .sidebar{
     display: block;
    }
 
-   #nav1>div:nth-child(2)>a:nth-child(1),#nav1>div:nth-child(2)>div:nth-child(2),#nav1>div:nth-child(2)>a:nth-child(3),#nav1>div:nth-child(2)>div:nth-child(4){
+   header #nav1>div:nth-child(2)>a:nth-child(1),#nav1>div:nth-child(2)>div:nth-child(2),#nav1>div:nth-child(2)>a:nth-child(3),#nav1>div:nth-child(2)>div:nth-child(4){
     display: none;
    }
-     #ulfooter{
+   header #ulfooter{
         display: grid;
         grid-template-columns: repeat(2,1fr);
      }
-     #premium{
+     header  #premium{
         display: grid;
         grid-template-columns: repeat(2,1fr);
      }
-    #nav2{
+     header #nav2{
         display: none;
     }
 }
 @media only screen and (max-width: 500px){
-    .sidebar{
+    header  .sidebar{
      display: block;
     }
-    #nav1>div:nth-child(2){
+    header  #nav1>div:nth-child(2){
         display: flex;
         
     }
-    #premiumMain>h2{
+    header #premiumMain>h2{
         font-size: 22px;
         margin-left: 15vw;
     }
-      #ulfooter{
+    header #ulfooter{
          display: grid;
          grid-template-columns: repeat(3,1fr);
       }
-      #ulfooter>ul>li{
+      header  #ulfooter>ul>li{
         font-size: 16px;
       }
-      #ulfooter>ul{
+      header #ulfooter>ul{
       margin-left:-8vw;
       }
-      input{
+      header input{
         display: none;
       }
-      #inpbutton{
+      header  #inpbutton{
         display: none;
       }
-      #premium{
+      header  #premium{
          display: grid;
          grid-template-columns: repeat(2,1fr);
       }
-      #imgfooter>img{
+      header #imgfooter>img{
          display: none;
       }
-      .card>h3{
+      header .card>h3{
         font-size: 15px;
       }
 
  }
  @media only screen and (max-width: 400px){
-    .sidebar{
+    header .sidebar{
      display: block;
     }
-    #nav1>div:nth-child(2)>a:nth-child(7){
+    header  #nav1>div:nth-child(2)>a:nth-child(7){
         display: none;
     }
-      #ulfooter{
+    header  #ulfooter{
          display: grid;
          grid-template-columns: repeat(2,1fr);
       }
-      #ulfooter>ul>li{
+      header  #ulfooter>ul>li{
         font-size: 16px;
       }
-      #ulfooter>ul{
+      header  #ulfooter>ul{
       margin-left:-8vw;
       }
-      #premiumMain>h2{
+      header  #premiumMain>h2{
         font-size: 18px;
         margin-left: 15vw;
       }
-      #premium{
+      header  #premium{
          display: grid;
          grid-template-columns: repeat(1,1fr);
       }
-      #imgfooter>img{
+      header  #imgfooter>img{
          display: none;
       }
-      .card>h3{
+      header  .card>h3{
         font-size: 15px;
       }
 
  }
+
+ 
+
+.sidebar{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.125);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display:none;
+    transition: all 0.4s;
+    background-color: rgba(0, 0, 0, 0);
+    pointer-events: none;
+}
+.sidebar.open{
+    background-color: rgba(0, 0, 0, 0.125);
+    pointer-events: all;
+}
+.sidebar-container{
+    width: 90%;
+    background-color: #f5f5f5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all .4s;
+    transform: translateX(-100%);
+}
+.sidebar.open .sidebar-container{
+    transform: translateX(0%);
+}
+.sidebar-container .title{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.sidebar-container span{
+    cursor: pointer;
+}
+.sidebar-container .title span{
+    cursor: pointer;
+    color: gray;
+}
+.sidebar-container .sidebar-items{
+    background-color: white;
+    overflow-y: auto;
+}
+.sidebar-container .sidebar-items .item > .item-heading{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-top: 1px solid #dcdcdc;
+    border-left: none;
+    border-right: none;
+    align-items: center;
+    font-weight: bold;
+    margin: 0;
+    font-size: 18px;
+}
+.sidebar-container .sidebar-items .item:last-of-type{
+    border-bottom: 1px solid #dcdcdc;
+}
+.sidebar-container .sidebar-items .item ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+.sidebar-container .sidebar-items .item  ul li{
+    color: black;
+    border-top: 1px solid #dcdcdc;
+}
+.sidebar-container .sidebar-items .item ul > li > *:first-child{
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidebar-container .sidebar-items .item  ul li .item-heading{
+    padding-left: 30px ;
+}
+.sidebar-container .sidebar-items .item  ul li ul li{
+    border: none;
+    border-top: 1px solid #dcdcdc;
+}
+.sidebar-container .sidebar-items .item  ul li ul .item-heading{
+    padding-left: 50px ;
+}
+.sidebar-container .sidebar-items .item a{
+    text-decoration: none;
+    color: black;
+}
+.sidebar-container .sidebar-items .item .item-heading.open + ul{
+    display: block;
+}
+.sidebar-container .other-option ul{
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-container .other-option ul li{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.sidebar-container .other-option ul li a{
+    text-decoration: none;
+    color: black;
+}
+.sidebar-container .other-option div{
+    padding: 0 10px;
+    display: flex;
+    color: gray;
+}
+.sidebar-container .other-option div hr{
+    flex: 1;
+    background-color: black;
+    height: 1px;
+}
+.sidebar-container .content{
+    overflow-y: auto;
+}
+
+ 
+#nav1 .bar{
+    padding: 10px;
+    display: none;
+}
+
+
+@media only screen and (max-width: 800px){
+    :is(.sidebar, #nav1 .bar){
+     display: block;
+    }
+}
+
+.search-box{
+    position: relative;
+}
+.search-box .search-items{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 6px 0px #00000042;
+    z-index: 100;
+    overflow-y: auto;
+    max-height: 300px;
+}
+.search-box .search-items .search-item{
+    padding: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    border-top: 1px solid rgb(231, 231, 231);
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+}
+.search-box .search-items .search-item:first-child{
+    border: none;
+}
+.search-box .search-items .search-item:hover{
+    background-color: rgb(244, 244, 244);
+}
+.search-box .search-items:empty{
+    display: none;
+}

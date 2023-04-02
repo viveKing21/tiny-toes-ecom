@@ -1,17 +1,20 @@
-footer #footer{
+
+#footer{
     padding: 4vh 5vw;
 } 
-footer #bodyfooter{
-    display: flex;
+#bodyfooter{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
     background-color: #e0f0fa;
     padding: 8vh;
 }
    
-footer #ulfooter{
-    display: flex;
+#ulfooter{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
     gap: 40px;
 }
-footer #ulfooter>ul>li{
+#ulfooter>ul>li{
     font-size: 15px;
     font-family: calibri;
     font-weight: 500;
@@ -19,21 +22,146 @@ footer #ulfooter>ul>li{
     list-style: none;
     margin-bottom: 6px;
 }
-footer #ulfooter>ul>li:hover{
+#ulfooter>ul>li:hover{
     cursor: pointer;
     text-decoration: underline;
 }
-footer #ulfooter>ul>li:nth-child(1){
+#ulfooter>ul>li:nth-child(1){
     font-size: 16px;
     font-family: calibri;
     font-weight: 600;
     color: rgb(93, 83, 83);
     list-style: none;
 }
-footer #imgfooter{
+#imgfooter{
     margin-left: 10vw;
 }
-footer #imgfooter>img{
+#imgfooter>img{
     display:block;
     margin-top: 5vh;
+    object-fit: contain;
 }
+#item-count{
+position:absolute;
+margin:-2.4vh 0px 0px 0px;
+float: right;
+}
+
+@media only screen and (max-width:1100px) {
+    #nav2>ul>li:nth-child(1),#nav2>ul>li:nth-child(2){
+            display: none;
+    }
+  
+}
+@media only screen and (max-width:850px) {
+
+    #nav2>ul>li:nth-child(9){
+        display: none;
+}
+}
+
+@media only screen and (max-width: 800px){
+   :is(.sidebar, #nav1 .bar){
+    display: block;
+   }
+
+   #nav1>div:nth-child(2)>a:nth-child(1),#nav1>div:nth-child(2)>div:nth-child(2),#nav1>div:nth-child(2)>a:nth-child(3),#nav1>div:nth-child(2)>div:nth-child(4){
+    display: none;
+   }
+     #ulfooter{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+     }
+     #premium{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+     }
+    #nav2{
+        display: none;
+    }
+}
+@media only screen and (max-width: 500px){
+    .sidebar{
+     display: block;
+    }
+    #nav1>div:nth-child(2){
+        display: flex;
+        
+    }
+    #premiumMain>h2{
+        font-size: 22px;
+        margin-left: 15vw;
+    }
+      #ulfooter{
+         display: grid;
+         grid-template-columns: repeat(3,1fr);
+      }
+      #ulfooter>ul>li{
+        font-size: 16px;
+      }
+      #ulfooter>ul{
+      margin-left:-8vw;
+      }
+      input{
+        display: none;
+      }
+      #inpbutton{
+        display: none;
+      }
+      #premium{
+         display: grid;
+         grid-template-columns: repeat(2,1fr);
+      }
+      #imgfooter>img{
+         display: none;
+      }
+      .card>h3{
+        font-size: 15px;
+      }
+
+ }
+ @media only screen and (max-width:450px) {
+    #ulfooter{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+     }
+ }
+ @media only screen and (max-width: 400px){
+    .sidebar{
+     display: block;
+    }
+    #nav1>div:nth-child(2)>a:nth-child(7){
+        display: none;
+    }
+      #ulfooter{
+         display: grid;
+         grid-template-columns: repeat(2,1fr);
+      }
+      #ulfooter>ul>li{
+        font-size: 16px;
+      }
+      #ulfooter>ul{
+      margin-left:-8vw;
+      }
+      #premiumMain>h2{
+        font-size: 18px;
+        margin-left: 15vw;
+      }
+      #premium{
+         display: grid;
+         grid-template-columns: repeat(1,1fr);
+      }
+      #imgfooter>img{
+         display: none;
+      }
+      .card>h3{
+        font-size: 15px;
+      }
+
+ }
+ @media only screen and (max-width:300px) {
+    #ulfooter{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+ }

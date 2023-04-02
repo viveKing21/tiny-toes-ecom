@@ -3,34 +3,31 @@
 
 import { LSK } from "./main.js";
 // 
-let arr2=[{"id":"1","title":"Babyhug Cotton Half Sleeves T-Shirt Tom & Jerry Print","qty":"1","color":"Dark Blue","image1":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13014437a.jpg","price":"339.15","discount":"15% Off","stock":"In-stock","category":"Boys","brand":"Babyhug","size":"3-4 Y"},{"id":"2","title":"Pine Kids 100% Cotton Biowashed Half Sleeves T-Shirt Trumpet Print","color":"White & Blue","image1":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13094642a.jpg","image2":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13094642b.jpg","image3":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13094642c.jpg","image4":"https://cdn.fcglcdn.com/brainbees/images/products/438x531/13094642d.jpg","price":"424.15","discount":"15% Off","qty":"1","stock":"In-stock","category":"Boys","brand":"Pine Kids","size":"3-4 Y"}]
+let userlogin=JSON.parse(localStorage.getItem("logged"))
+if(userlogin==null)  window.location="/signin.html"
+
+let arr2=JSON.parse(localStorage.getItem("carts")) || []
+
+arr2 = arr2.filter(({uid}) => uid == userlogin)
+
+let totalprice
+
+console.log(arr2)
 
 
 
 
 
 
-
-
-
-
-
-
+  
 
 
 
 // local storage-content
-let arr=JSON.parse(localStorage.getItem("Address"))
-  if(arr==null)
-  {
-    arr=[]
-  }
+let arr=JSON.parse(localStorage.getItem("Address")) || []
   
   let obj1={}
  
-  
-  let userlogin=JSON.parse(localStorage.getItem("logged"))
-
   // important section of div
 let state=document.getElementById("state")
 
@@ -126,6 +123,7 @@ wholecontainer.append(mainaddressdiv)
     totaldiscount=totaldiscount.toFixed(2)
     totalgst=totalgst.toFixed(2)
     totalpayment=totalpayment.toFixed(2)
+    totalprice=totalpayment
   
     
 
@@ -347,6 +345,7 @@ deleteel.innerText="REMOVE"
 
 deleteel.addEventListener("click",function(){
   arr2.splice(i,1)
+  localStorage.setItem("carts", JSON.stringify(arr2))
   cardappend(arr2)
   totalcardvalue(arr2)
 })
@@ -411,7 +410,9 @@ e.preventDefault()
     
     obj1.createdAt=`${currentday}-${currentmonth}-${currentyear}`
 
-    // obj1.user_id=userlogin.id
+     obj1.uid=userlogin
+     obj1.price=totalprice;
+     obj1.status="processing"
     obj1.billing_address=[]
     obj1.billing_address.push(arr[0])
    

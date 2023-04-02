@@ -3,7 +3,7 @@ import { LSK } from "./main.js";
 var email=document.getElementById("email")
 var conPswrd=document.getElementById("password")
 var continuBtn=document.getElementById("registerBtn")
-  var user=JSON.parse(localStorage.getItem("user"))||[]
+  var user=JSON.parse(localStorage.getItem("users"))||[]
  
 continuBtn.addEventListener("click",function(){
    var  flag=true

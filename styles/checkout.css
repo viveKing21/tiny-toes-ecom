@@ -42,6 +42,7 @@ main {
     align-items: center;
    justify-content: center;
    margin: auto;
+   text-align: center;
    
    
 }
@@ -54,6 +55,9 @@ main {
 #Formating div{
     padding-left: 30px;
     padding-right: 50px;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 30px;
 }
 
 #Formating input{
@@ -65,7 +69,7 @@ main {
 #Formating button{
     margin-top: 20px;
     width: 80%;
-    margin-left: 10%;
+    margin-left: 4%;
     height: 45px;
     color: #fff;
     background-color: #ff7043;;
@@ -73,6 +77,8 @@ main {
 #Formating h1{
      width: 90%;
     text-align: center;
+    margin: auto;
+    padding-bottom: 10px;
 
 }
 #dropdown{
