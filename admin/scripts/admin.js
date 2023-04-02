@@ -9,11 +9,15 @@ let displayContainer = document.getElementById("display-container");
 // <--------- display -------->
 
 
-if(sessionStorage.getItem("login") == null && (prompt("Username") !== "Ansh" || prompt("Password") !== "ansh")){
 
-sessionStorage.setItem("login",1)
-location = "/"
-}
+
+
+    // if(sessionStorage.getItem("login") == null && (prompt("Username") == "Ansh" || prompt("Password") == "ansh")){
+    //     sessionStorage.setItem("login",1)
+    //     location = "/"
+    //     }
+
+
 
 // <---------- Reports Charts & Reports Section ------------->
 
@@ -202,62 +206,69 @@ function renderDash(data) {
 
 // <----------- order-details & Orders Section----------->
 let body = document.querySelector("tbody");
-let orderData = JSON.parse(localStorage.getItem("orders")) || [];
+// let orderData = JSON.parse(localStorage.getItem("orders")) || [];
+
+// console.log("orders" , orderData);
 
 
-// var orderData = [{
-//     id: 1,
-//     firstname: "ansh",
-//     lastname: "check",
-//     email: "ddscs",
-//     address: "cscscs",
-//     pincode: 1233,
-//     city: "dcscs",
-//     state: "Rajasthan"
-// },
-// {
-//     id: 2,
-//     firstname: "ansh",
-//     lastname: "check",
-//     email: "ddscs",
-//     address: "cscscs",
-//     pincode: 1233,
-//     city: "dcscs",
-//     state: "Delhi"
-// },
-// {
-//     id: 3,
-//     firstname: "ansh",
-//     lastname: "check",
-//     email: "ddscs",
-//     address: "cscscs",
-//     pincode: 1233,
-//     city: "dcscs",
-//     state: "Punjab"
-// },
-// {
-//     id: 4,
-//     firstname: "ansh",
-//     lastname: "check",
-//     email: "ddscs",
-//     address: "cscscs",
-//     pincode: 1233,
-//     city: "dcscs",
-//     state: "Madhya Pradesh"
-// },
-// {
-//     id: 5,
-//     firstname: "ansh",
-//     lastname: "check",
-//     email: "ddscs",
-//     address: "cscscs",
-//     pincode: 1233,
-//     city: "dcscs",
-//     state: "Delhi"
-// }
+var orderData = [ {
+    id: 1,
+    uid : 1,
+    firstname: "ansh",
+    lastname: "check",
+    email: "ddscs",
+    address: "cscscs",
+    pincode: 1233,
+    city: "dcscs",
+    state: "Rajasthan"
+},
+{
+    id: 2,
+    uid : 2,
+    firstname: "ansh",
+    lastname: "check",
+    email: "ddscs",
+    address: "cscscs",
+    pincode: 1233,
+    city: "dcscs",
+    state: "Delhi"
+},
+{
+    id: 3,
+    uid : 3,
+    firstname: "ansh",
+    lastname: "check",
+    email: "ddscs",
+    address: "cscscs",
+    pincode: 1233,
+    city: "dcscs",
+    state: "Punjab"
+},
+{
+    id: 4,
+    uid : 4,
+    firstname: "ansh",
+    lastname: "check",
+    email: "ddscs",
+    address: "cscscs",
+    pincode: 1233,
+    city: "dcscs",
+    state: "Madhya Pradesh"
+},
+{
+    id: 5,
+    uid : 5,
+    firstname: "ansh",
+    lastname: "check",
+    email: "ddscs",
+    address: "cscscs",
+    pincode: 1233,
+    city: "dcscs",
+    state: "Delhi"
+}
 
 
-// ]
+]
 
 orders.addEventListener("click", () => {
     displayContainer.innerHTML = "";
@@ -270,18 +281,17 @@ orders.addEventListener("click", () => {
     <thead >
       <tr>
         <th class="orderHeadings">Product Id</th>
-        <th class="orderHeadings">First Name</th>
-        <th class="orderHeadings">Last Name</th>
-        <th class="orderHeadings">E-mail</th>
+        <th class="orderHeadings">User Id</th>
+        <th class="orderHeadings">Name</th>
         <th class="orderHeadings">Address</th>
-        <th class="orderHeadings">Pincode</th>
+
         <th class="orderHeadings">City</th>
         <th class="orderHeadings">State</th>
         <th class="orderHeadings">Product Status</th>
       </tr>
     </thead>
     <tbody>
-    ${orderData.map((item) => renderorders(item.id, item.firstname, item.lastname, item.email, item.address, item.pincode, item.city, item.state)).join("")}
+    ${orderData.map((item) => renderorders(item.id, item.uid, item.firstname, item.lastname, item.address, item.pincode, item.city, item.state)).join("")}
     </tbody>
     </table>
 
@@ -317,8 +327,6 @@ orders.addEventListener("click", () => {
             }
         })
     })
-
-    
 
 
     // <------------- India Order Map ---------------->
@@ -414,16 +422,14 @@ orders.addEventListener("click", () => {
 
 let orderList = document.getElementById("orders-btn");
 
-function renderorders(id, firstname, lastname, email, address, pincode, city, state) {
+function renderorders(id, uid, firstname, lastname, address, pincode, city, state) {
     let orderTable = `
     <tbody>
     <tr>
     <td>${id}</td>
-    <td>${firstname}</td>
-    <td>${lastname}</td>
-    <td>${email}</td>
-    <td>${address}</td>
-    <td>${pincode}</td>
+    <td>${uid}</td>
+    <td>${firstname} ${lastname}</td>
+    <td>${address} ${pincode}</td>
     <td>${city}</td>
     <td>${state}</td>
     <td> <select id="statusOrder" class="status-Order">
@@ -556,9 +562,10 @@ async function fetchData() {
 }
 
 
+
 function renderBtn(arr) {
     sideContainer.innerHTML = `<div id="crudBtns">
-    <img id="logoImg"  src = "/assets/images/logo.png" alt= "err">
+    <img id="logoImg" onclick="location.href='';" src = "/assets/images/logo.png" alt= "err">
         <button id="addHead" onclick = "this.nextElementSibling.classList.toggle('hide')" >Add Product</button>
 
         <div id="addproduct" class='hide'>
@@ -646,10 +653,6 @@ function renderBtn(arr) {
         </div>`
     displayContainer.innerHTML = `
     <div id="topdash">
-    <div>
-    <input oninput="search()" id="search-inp" type = "text"></input>
-    <button>Search</button>
-    </div>
         <h1>Products</h1>
         </div id="search-bar">
         <div id="product-container">
@@ -679,8 +682,6 @@ function renderBtn(arr) {
     `
         return card
     }
-
- 
 
 
 
