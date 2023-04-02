@@ -8,132 +8,1436 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Tiny Toes | Products</title>
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/header.css">
     <link rel="stylesheet" href="/styles/product.css">
     <script src="scripts/product.js" type="module" defer></script>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
+    
     <header>
-        <!-- Header & Navigation -->
-        
-    
-            <nav id="nav1">
-               <div>
-                <a href="#">
-                    <img src="./assets/images/logo.png" alt="" width="200px">
-                </a>
-                <input type="text" placeholder="Search for Category,Brand or Product">
-                <button id="inpbutton"><i class="fa-solid fa-magnifying-glass "></i></button>
-               </div>
-               <div>
-     <a href="#"><i class="fa-solid fa-location-crosshairs"  style="color: orange"></i>Select location</a>
-                <div class="verticalline"></div>
-              <a href="#">Stores & Preschools</a>
-              <div class="verticalline"></div>
-              <a href="#">Support</a>
-              <div class="verticalline"></div>
-              <a href="#">Track Order</a>
-              <div class="verticalline"></div>
-              <a href="#">FirstCry Parenting</a>
-              <div class="verticalline"></div>
-              <a href="#">Login</a>
-              <div class="verticalline"></div>
-              <a href="#">Register</a>
-              <div class="verticalline"></div>
-              <a href="#"><i class="fa-solid fa-heart " style="color: orange"></i>Shortlist</a>
-              <div class="verticalline"></div>
-        <a href="#" style="font-size: 18px;font-weight: 800;"><i class="fa-solid fa-cart-shopping" style="font-size: 25px;" ></i><h3 style="display:inline;margin-left: 4px;margin-top: -100px;">Cart</h3></a>
-    
-               </div>
-            </nav>
-        <div id="nav2">
-           <ul>
-            <li><a href="#">BOY FASHION</a>
-                <div class="submenu-1">
-     <ul>
-          <li><a href="#" style="font-weight: 800;font-size: 16px;">SHOP BY CATEGORY</a></li>
-    <li><a href="#">Sets & Suits <span style="color: red">NEW</span> </a></li>
-    <li><a href="#">T-shirts <span style="color: red">NEW</span></a></li>
-    <li><a href="#">Shorts <span style="color: red">NEW</span></a></li>
-    <li><a href="#">Nightwear</a></li>
-    <li><a href="#">Jeans & Trousers</a></li>
-    <li><a href="#">Onesies <span style="color: red">NEW</span></a></li>
-    <li><a href="#">Shirts NEW</a></li>
-    <li><a href="#">Party Wear</a></li>
-    <li><a href="#">Pajamas  <span style="color: red">NEW</span></a></li>
-    <li><a href="#">Ethnic Wear</a></li>
-    
-     </ul>
-    <ul>
-        <li><a href="#">SHOP BY COLLECTION</a></li>
-    <li><a href="#">Sunglasses </a></li>
-    <li><a href="#">Summer Caps</a></li>
-    <li><a href="#">Hair Bands <span style="color: red">NEW</span></a></li>
-    <li><a href="#">Hair Clips</a></li>
-    <li><a href="#">Watches <span style="color: red">NEW</span></a></li>
-    <li><a href="#">Jewellery</a></li>
-    <li><a href="#">Bags <span style="color: red">NEW</span></a></li>
-    <li><a href="#">Kids Umbrellas</a></li>
-    </ul>
-    <ul>
-    <li><a href="#">SHOP BY AGE</a></li>  
-    <li><a href="#">Preemie/Tine Preemie</a></li>
-    <li><a href="#">New Born (0-3 M)</a></li>
-    <li><a href="#">3-6 Months</a></li>
-    <li><a href="#">6-9 Months</a></li>
-    <li><a href="#">9-12 Months</a></li>
-    <li><a href="#">12-18 Months</a></li>
-    <li><a href="#">18-24 Months</a></li>
-    <li><a href="#">2 to 4 Years</a></li>
-    <li><a href="#">4 to 6 Years</a></li>
-    <li><a href="#">6 to 8 Years</a></li>
-    <li><a href="#">8+ Years</a></li>
-    </ul>
-    <ul>
-    <li><a href="#">SHOP BY BRANDS</a></li>
-    <li><a href="#">Babyhug</a></li>
-    <li><a href="#">Babyoye</a></li>
-    <li><a href="#">Kookie Kids</a></li>
-    <li><a href="#">Carter's</a></li>
-    <li><a href="#">Pine Kids</a></li>
-    <li><a href="#">Cute Walk</a></li>
-    <li><a href="#">Honeyhap</a></li>
-    <li><a href="#">OLLINGTON ST.</a></li>
-    <li><a href="#">Doodle Poodle</a></li>
-    <li><a href="#">Primo Gino</a></li>
-    <li><a href="#">Mark & Mia</a></li>  
-    </ul>
-    <ul>
-        <li><img src="./assets/indexImage/first cry navbar image.jpg" alt="" width="550px" style="padding-right: 5vw;"></li>
-    </ul>
+
+        <div class="sidebar">
+            <div class="sidebar-container">
+                <div class="title">
+                    <div class="text">
+                        Menu
+                    </div>
+                    <div class="button">
+                        <span class="material-symbols-outlined">close</span>
+                    </div>
                 </div>
-    
-    
-             </li>
-            <li><a href="#">GIRL FASHION</a></li>
-            <li><a href="#">FOOTWEAR</a></li>
-            <li><a href="#">TOYS</a></li>
-            <li><a href="#">DIAPERING</a></li>
-            <li><a href="#">GEAR</a></li>
-            <li><a href="#">FEEDING</a></li>
-            <li><a href="#">BATH</a></li>
-            <li><a href="#">NURSERY</a></li>
-            <li><a href="#">MOMS</a></li>
-            <li><a href="#">HEALTH</a></li>
-            <li><a href="#">BOUTIQUES</a></li>
-            <li><a href="#" >Club</a></li>
-            <li> <a href="#" style="background-color:rgb(91, 91, 230);font-size: 22px;color: white;padding: 9px 12px;margin: 0px 0px 1px -14px ;">Carter's</a></li>
-            </ul> 
+                <div class="content">
+                    <div class="sidebar-items">
+                        <div class="item">
+                            <div class="item-heading">
+                                <div class="text">Footwear</div>
+                                <span class="material-symbols-outlined">add</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Sets & Suits</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">T-Shirts</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Nightwear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Jeans & Trousers</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Onesies</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Shirts New</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Party Wear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Pajamas</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="item-heading">
+                                <div class="text">Toys</div>
+                                <span class="material-symbols-outlined">add</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Sets & Suits</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">T-Shirts</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Nightwear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Jeans & Trousers</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Onesies</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Shirts New</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Party Wear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Pajamas</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="item-heading">
+                                <div class="text">Diapering</div>
+                                <span class="material-symbols-outlined">add</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Sets & Suits</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">T-Shirts</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Nightwear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Jeans & Trousers</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Onesies</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Shirts New</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Party Wear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Pajamas</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="item-heading">
+                                <div class="text">Gear</div>
+                                <span class="material-symbols-outlined">add</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Sets & Suits</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">T-Shirts</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Nightwear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Jeans & Trousers</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Onesies</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Shirts New</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Party Wear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Pajamas</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="item-heading">
+                                <div class="text">Gear</div>
+                                <span class="material-symbols-outlined">add</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Sets & Suits</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">T-Shirts</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Nightwear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Jeans & Trousers</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Onesies</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Shirts New</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Party Wear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Pajamas</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="item-heading">
+                                <div class="text">Feeding</div>
+                                <span class="material-symbols-outlined">add</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Sets & Suits</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">T-Shirts</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Nightwear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Jeans & Trousers</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Onesies</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Shirts New</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Party Wear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Pajamas</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="item-heading">
+                                <div class="text">Bath</div>
+                                <span class="material-symbols-outlined">add</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Sets & Suits</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">T-Shirts</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Nightwear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Jeans & Trousers</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Onesies</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Shirts New</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Party Wear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Pajamas</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="item-heading">
+                                <div class="text">Nursery</div>
+                                <span class="material-symbols-outlined">add</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Sets & Suits</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">T-Shirts</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Nightwear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Jeans & Trousers</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Onesies</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Shirts New</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Party Wear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Pajamas</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="item-heading">
+                                <div class="text">Moms</div>
+                                <span class="material-symbols-outlined">add</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Sets & Suits</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">T-Shirts</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Nightwear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Jeans & Trousers</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Onesies</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Shirts New</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Party Wear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Pajamas</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="item-heading">
+                                <div class="text">Health</div>
+                                <span class="material-symbols-outlined">add</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Sets & Suits</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">T-Shirts</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Nightwear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Jeans & Trousers</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Onesies</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Shirts New</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Party Wear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Pajamas</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <div class="item-heading">
+                                <div class="text">Boutiques</div>
+                                <span class="material-symbols-outlined">add</span>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Sets & Suits</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">T-Shirts</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Nightwear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Jeans & Trousers</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Onesies</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Shirts New</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Party Wear</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item-heading not-expandable">
+                                        <a href="product.html">Pajamas</a>
+                                        <span class="material-symbols-outlined" style="visibility: hidden; pointer-events: none;">add</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="other-option">
+                        <ul>
+                            <li><a href="">Home Page</a></li>
+                            <li><a href="">B.O. Rewards</a></li>
+                            <li><a href="">Coupons</a></li>
+                            <li><a href="">Gift Cards</a></li>
+                            <li><a href="">Wish List</a></li>
+                            <li><a href="">Registry</a></li>
+                        </ul>
+                        <div>
+                            <div>HELP & SETTINGS</div> <hr/>
+                        </div>
+                        <ul>
+                            <li><a href="">My Account - Sign in</a></li>
+                            <li><span class="material-symbols-outlined" style="font-size: 20px;">location_on</span><a href="">Find A Store</a></li>
+                            <li><a href="">Find My Order</a></li>
+                            <li><a href="">Customer Service</a></li>
+                            <li><a href="">FAQs</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <nav id="nav1">
+           <div>
+            <span class="material-symbols-outlined bar">menu</span>
+            <a href="/">
+                <img src="./assets/images/logo.png" alt="" width="200px">
+            </a>
+            <div class="search-box">
+                <input type="text" placeholder="Search for Category,Brand or Product">
+                <div class="search-items"></div>
+            </div>
+            <button id="inpbutton"><i class="fa-solid fa-magnifying-glass "></i></button>
+           </div>
+           <div>    
+          <a href="#">Support</a>
+          <div class="verticalline"></div>
+          <a href="/user/orders.html">Track Order</a>
+          <div class="verticalline"></div>
+          <a href="./signin.html" id="loginview">Login</a>
+          <div class="verticalline"></div>
+          <a href="./signup.html" id="registerview">Register</a>
+          <div class="verticalline"></div>
+          <a href="/cart.html" id="cart" >
+            <i class="fa fa-cart-shopping" style="font-size: 30px;margin-top: -0.7vh;margin-left: 1vw;"></i><span id="item-count" style="color: rgb(255, 0, 0); font-weight: 800;font-size: 20px;">0</span>
+            </a>
+          <div id="user" >
+          <a href="#" ><i class="fa-solid fa-user"style="font-size: 30px;color:grey;margin-top:-0.7vh;margin-left:0.5vw;"></i>
+            <div class="submenu-1">
+                <ul>
+                    <li><a href="/user/profile.html">Account</a></li>
+                    <li><a href="#" id="logout">Logout</a></li>
+                </ul>
+            </div>
+        </a>
     </div>
-        
-    
-        
+</div>
+        </nav>
+<p style="display: block;margin:-4vh 2vw 0px 0px;float:right;font-family: calibri;color: rgb(54, 46, 46);">Welcome <span id="welcome" style="color: orange; font-weight: 800;">guest7296</span></p>
 
 
 
+    <div id="nav2">
+       <ul>
+        <li><a href="#">BOY FASHION</a>
+            <div class="submenu-1">
+ <ul>
+      <li><a href="#" >SHOP BY CATEGORY</a></li>
+<li><a href="#">Sets & Suits <span style="color: red">NEW</span> </a></li>
+<li><a href="./product.html">T-shirts <span style="color: red">NEW</span></a></li>
+<li><a href="#">Shorts <span style="color: red">NEW</span></a></li>
+<li><a href="#">Nightwear</a></li>
+<li><a href="#">Jeans & Trousers</a></li>
+<li><a href="#">Onesies <span style="color: red">NEW</span></a></li>
+<li><a href="#">Shirts NEW</a></li>
+<li><a href="#">Party Wear</a></li>
+<li><a href="#">Pajamas  <span style="color: red">NEW</span></a></li>
+<li><a href="#">Ethnic Wear</a></li>
 
-
-
+ </ul>
+<ul>
+    <li><a href="#">SHOP BY COLLECTION</a></li>
+<li><a href="#">Sunglasses </a></li>
+<li><a href="#">Summer Caps</a></li>
+<li><a href="#">Hair Bands <span style="color: red">NEW</span></a></li>
+<li><a href="#">Hair Clips</a></li>
+<li><a href="#">Watches <span style="color: red">NEW</span></a></li>
+<li><a href="#">Jewellery</a></li>
+<li><a href="#">Bags <span style="color: red">NEW</span></a></li>
+<li><a href="#">Kids Umbrellas</a></li>
+</ul>
+<ul>
+<li><a href="#">SHOP BY AGE</a></li>  
+<li><a href="#">Preemie/Tine</a></li>
+<li><a href="#">New Born (0-3 M)</a></li>
+<li><a href="#">3-6 Months</a></li>
+<li><a href="#">6-9 Months</a></li>
+<li><a href="#">9-12 Months</a></li>
+<li><a href="#">12-18 Months</a></li>
+<li><a href="#">18-24 Months</a></li>
+<li><a href="#">2 to 4 Years</a></li>
+<li><a href="#">4 to 6 Years</a></li>
+<li><a href="#">6 to 8 Years</a></li>
+<li><a href="#">8+ Years</a></li>
+</ul>
+<ul>
+<li><a href="#">SHOP BY BRANDS</a></li>
+<li><a href="#">Babyhug</a></li>
+<li><a href="#">Babyoye</a></li>
+<li><a href="#">Kookie Kids</a></li>
+<li><a href="#">Carter's</a></li>
+<li><a href="#">Pine Kids</a></li>
+<li><a href="#">Cute Walk</a></li>
+<li><a href="#">Honeyhap</a></li>
+<li><a href="#">OLLINGTON ST.</a></li>
+<li><a href="#">Doodle Poodle</a></li>
+<li><a href="#">Primo Gino</a></li>
+<li><a href="#">Mark & Mia</a></li>  
+</ul>
+<ul>
+    <li>
+        <div style="width:300%"><img src="./assets/indexImage/first cry navbar image.jpg" alt="" width="100%" ></div></li>
+</ul>
+            </div>
+         </li>
+        <li><a href="#">GIRL FASHION</a>
+            <div class="submenu-1">
+                <ul>
+                     <li><a href="#">SHOP BY CATEGORY</a></li>
+               <li><a href="#">Sets & Suits <span style="color: red">NEW</span> </a></li>
+               <li><a href="./product.html">T-shirts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shorts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Nightwear</a></li>
+               <li><a href="#">Jeans & Trousers</a></li>
+               <li><a href="#">Onesies <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shirts NEW</a></li>
+               <li><a href="#">Party Wear</a></li>
+               <li><a href="#">Pajamas  <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Ethnic Wear</a></li>
+               
+                </ul>
+               <ul>
+                   <li><a href="#">SHOP BY COLLECTION</a></li>
+               <li><a href="#">Sunglasses </a></li>
+               <li><a href="#">Summer Caps</a></li>
+               <li><a href="#">Hair Bands <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Hair Clips</a></li>
+               <li><a href="#">Watches <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Jewellery</a></li>
+               <li><a href="#">Bags <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Kids Umbrellas</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY AGE</a></li>  
+               <li><a href="#">Preemie/Tine</a></li>
+               <li><a href="#">New Born (0-3 M)</a></li>
+               <li><a href="#">3-6 Months</a></li>
+               <li><a href="#">6-9 Months</a></li>
+               <li><a href="#">9-12 Months</a></li>
+               <li><a href="#">12-18 Months</a></li>
+               <li><a href="#">18-24 Months</a></li>
+               <li><a href="#">2 to 4 Years</a></li>
+               <li><a href="#">4 to 6 Years</a></li>
+               <li><a href="#">6 to 8 Years</a></li>
+               <li><a href="#">8+ Years</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY BRANDS</a></li>
+               <li><a href="#">Babyhug</a></li>
+               <li><a href="#">Babyoye</a></li>
+               <li><a href="#">Kookie Kids</a></li>
+               <li><a href="#">Carter's</a></li>
+               <li><a href="#">Pine Kids</a></li>
+               <li><a href="#">Cute Walk</a></li>
+               <li><a href="#">Honeyhap</a></li>
+               <li><a href="#">OLLINGTON ST.</a></li>
+               <li><a href="#">Doodle Poodle</a></li>
+               <li><a href="#">Primo Gino</a></li>
+               <li><a href="#">Mark & Mia</a></li>  
+               </ul>
+               <ul>
+                <li>
+                    <div style="width:300%"><img src="./assets/indexImage/girlfashion.jpg" alt="" width="100%" ></div></li>
+               </ul>
+                           </div></li>
+        <li><a href="#">FOOTWEAR</a>
+            <div class="submenu-1">
+                <ul>
+                     <li><a href="#">SHOP BY CATEGORY</a></li>
+               <li><a href="#">Sets & Suits <span style="color: red">NEW</span> </a></li>
+               <li><a href="#">T-shirts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shorts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Nightwear</a></li>
+               <li><a href="#">Jeans & Trousers</a></li>
+               <li><a href="#">Onesies <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shirts NEW</a></li>
+               <li><a href="#">Party Wear</a></li>
+               <li><a href="#">Pajamas  <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Ethnic Wear</a></li>
+               
+                </ul>
+               <ul>
+                   <li><a href="#">SHOP BY COLLECTION</a></li>
+               <li><a href="#">Sunglasses </a></li>
+               <li><a href="#">Summer Caps</a></li>
+               <li><a href="#">Hair Bands <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Hair Clips</a></li>
+               <li><a href="#">Watches <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Jewellery</a></li>
+               <li><a href="#">Bags <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Kids Umbrellas</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY AGE</a></li>  
+               <li><a href="#">Preemie/Tine</a></li>
+               <li><a href="#">New Born (0-3 M)</a></li>
+               <li><a href="#">3-6 Months</a></li>
+               <li><a href="#">6-9 Months</a></li>
+               <li><a href="#">9-12 Months</a></li>
+               <li><a href="#">12-18 Months</a></li>
+               <li><a href="#">18-24 Months</a></li>
+               <li><a href="#">2 to 4 Years</a></li>
+               <li><a href="#">4 to 6 Years</a></li>
+               <li><a href="#">6 to 8 Years</a></li>
+               <li><a href="#">8+ Years</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY BRANDS</a></li>
+               <li><a href="#">Babyhug</a></li>
+               <li><a href="#">Babyoye</a></li>
+               <li><a href="#">Kookie Kids</a></li>
+               <li><a href="#">Carter's</a></li>
+               <li><a href="#">Pine Kids</a></li>
+               <li><a href="#">Cute Walk</a></li>
+               <li><a href="#">Honeyhap</a></li>
+               <li><a href="#">OLLINGTON ST.</a></li>
+               <li><a href="#">Doodle Poodle</a></li>
+               <li><a href="#">Primo Gino</a></li>
+               <li><a href="#">Mark & Mia</a></li>  
+               </ul>
+               <ul>
+                <li>
+                    <div style="width:300%"><img src="./assets/indexImage/footwear.jpg" alt="" width="100%" ></div></li>
+               </ul>
+                           </div></li>
+        <li><a href="#">TOYS</a>
+            <div class="submenu-1">
+                <ul>
+                     <li><a href="#">SHOP BY CATEGORY</a></li>
+               <li><a href="#">Sets & Suits <span style="color: red">NEW</span> </a></li>
+               <li><a href="#">T-shirts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shorts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Nightwear</a></li>
+               <li><a href="#">Jeans & Trousers</a></li>
+               <li><a href="#">Onesies <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shirts NEW</a></li>
+               <li><a href="#">Party Wear</a></li>
+               <li><a href="#">Pajamas  <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Ethnic Wear</a></li>
+               
+                </ul>
+               <ul>
+                   <li><a href="#">SHOP BY COLLECTION</a></li>
+               <li><a href="#">Sunglasses </a></li>
+               <li><a href="#">Summer Caps</a></li>
+               <li><a href="#">Hair Bands <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Hair Clips</a></li>
+               <li><a href="#">Watches <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Jewellery</a></li>
+               <li><a href="#">Bags <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Kids Umbrellas</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY AGE</a></li>  
+               <li><a href="#">Preemie/Tine</a></li>
+               <li><a href="#">New Born (0-3 M)</a></li>
+               <li><a href="#">3-6 Months</a></li>
+               <li><a href="#">6-9 Months</a></li>
+               <li><a href="#">9-12 Months</a></li>
+               <li><a href="#">12-18 Months</a></li>
+               <li><a href="#">18-24 Months</a></li>
+               <li><a href="#">2 to 4 Years</a></li>
+               <li><a href="#">4 to 6 Years</a></li>
+               <li><a href="#">6 to 8 Years</a></li>
+               <li><a href="#">8+ Years</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY BRANDS</a></li>
+               <li><a href="#">Babyhug</a></li>
+               <li><a href="#">Babyoye</a></li>
+               <li><a href="#">Kookie Kids</a></li>
+               <li><a href="#">Carter's</a></li>
+               <li><a href="#">Pine Kids</a></li>
+               <li><a href="#">Cute Walk</a></li>
+               <li><a href="#">Honeyhap</a></li>
+               <li><a href="#">OLLINGTON ST.</a></li>
+               <li><a href="#">Doodle Poodle</a></li>
+               <li><a href="#">Primo Gino</a></li>
+               <li><a href="#">Mark & Mia</a></li>  
+               </ul>
+               <ul>
+                <li>
+                    <div style="width:300%"><img src="./assets/indexImage/toys.jpg" alt="" width="100%" ></div></li>
+               </ul>
+                           </div></li>
+        <li><a href="#">DIAPERING</a>
+            <div class="submenu-1">
+                <ul>
+                     <li><a href="#">SHOP BY CATEGORY</a></li>
+               <li><a href="#">Sets & Suits <span style="color: red">NEW</span> </a></li>
+               <li><a href="#">T-shirts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shorts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Nightwear</a></li>
+               <li><a href="#">Jeans & Trousers</a></li>
+               <li><a href="#">Onesies <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shirts NEW</a></li>
+               <li><a href="#">Party Wear</a></li>
+               <li><a href="#">Pajamas  <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Ethnic Wear</a></li>
+               
+                </ul>
+               <ul>
+                   <li><a href="#">SHOP BY COLLECTION</a></li>
+               <li><a href="#">Sunglasses </a></li>
+               <li><a href="#">Summer Caps</a></li>
+               <li><a href="#">Hair Bands <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Hair Clips</a></li>
+               <li><a href="#">Watches <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Jewellery</a></li>
+               <li><a href="#">Bags <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Kids Umbrellas</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY AGE</a></li>  
+               <li><a href="#">Preemie/Tine</a></li>
+               <li><a href="#">New Born (0-3 M)</a></li>
+               <li><a href="#">3-6 Months</a></li>
+               <li><a href="#">6-9 Months</a></li>
+               <li><a href="#">9-12 Months</a></li>
+               <li><a href="#">12-18 Months</a></li>
+               <li><a href="#">18-24 Months</a></li>
+               <li><a href="#">2 to 4 Years</a></li>
+               <li><a href="#">4 to 6 Years</a></li>
+               <li><a href="#">6 to 8 Years</a></li>
+               <li><a href="#">8+ Years</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY BRANDS</a></li>
+               <li><a href="#">Babyhug</a></li>
+               <li><a href="#">Babyoye</a></li>
+               <li><a href="#">Kookie Kids</a></li>
+               <li><a href="#">Carter's</a></li>
+               <li><a href="#">Pine Kids</a></li>
+               <li><a href="#">Cute Walk</a></li>
+               <li><a href="#">Honeyhap</a></li>
+               <li><a href="#">OLLINGTON ST.</a></li>
+               <li><a href="#">Doodle Poodle</a></li>
+               <li><a href="#">Primo Gino</a></li>
+               <li><a href="#">Mark & Mia</a></li>  
+               </ul>
+               <ul>
+                <li>
+                    <div style="width:300%"><img src="./assets/indexImage/first cry navbar image.jpg" alt="" width="100%" ></div></li>
+               </ul>
+                           </div></li>
+        <li><a href="#">GEAR</a>
+            <div class="submenu-1">
+                <ul>
+                     <li><a href="#">SHOP BY CATEGORY</a></li>
+               <li><a href="#">Sets & Suits <span style="color: red">NEW</span> </a></li>
+               <li><a href="#">T-shirts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shorts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Nightwear</a></li>
+               <li><a href="#">Jeans & Trousers</a></li>
+               <li><a href="#">Onesies <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shirts NEW</a></li>
+               <li><a href="#">Party Wear</a></li>
+               <li><a href="#">Pajamas  <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Ethnic Wear</a></li>
+               
+                </ul>
+               <ul>
+                   <li><a href="#">SHOP BY COLLECTION</a></li>
+               <li><a href="#">Sunglasses </a></li>
+               <li><a href="#">Summer Caps</a></li>
+               <li><a href="#">Hair Bands <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Hair Clips</a></li>
+               <li><a href="#">Watches <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Jewellery</a></li>
+               <li><a href="#">Bags <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Kids Umbrellas</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY AGE</a></li>  
+               <li><a href="#">Preemie/Tine</a></li>
+               <li><a href="#">New Born (0-3 M)</a></li>
+               <li><a href="#">3-6 Months</a></li>
+               <li><a href="#">6-9 Months</a></li>
+               <li><a href="#">9-12 Months</a></li>
+               <li><a href="#">12-18 Months</a></li>
+               <li><a href="#">18-24 Months</a></li>
+               <li><a href="#">2 to 4 Years</a></li>
+               <li><a href="#">4 to 6 Years</a></li>
+               <li><a href="#">6 to 8 Years</a></li>
+               <li><a href="#">8+ Years</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY BRANDS</a></li>
+               <li><a href="#">Babyhug</a></li>
+               <li><a href="#">Babyoye</a></li>
+               <li><a href="#">Kookie Kids</a></li>
+               <li><a href="#">Carter's</a></li>
+               <li><a href="#">Pine Kids</a></li>
+               <li><a href="#">Cute Walk</a></li>
+               <li><a href="#">Honeyhap</a></li>
+               <li><a href="#">OLLINGTON ST.</a></li>
+               <li><a href="#">Doodle Poodle</a></li>
+               <li><a href="#">Primo Gino</a></li>
+               <li><a href="#">Mark & Mia</a></li>  
+               </ul>
+               <ul>
+                <li>
+                    <div style="width:300%"><img src="./assets/indexImage/first cry navbar image.jpg" alt="" width="100%" ></div></li>
+               </ul>
+                           </div></li>
+        <li><a href="#">FEEDING</a>
+            <div class="submenu-1">
+                <ul>
+                     <li><a href="#">SHOP BY CATEGORY</a></li>
+               <li><a href="#">Sets & Suits <span style="color: red">NEW</span> </a></li>
+               <li><a href="#">T-shirts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shorts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Nightwear</a></li>
+               <li><a href="#">Jeans & Trousers</a></li>
+               <li><a href="#">Onesies <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shirts NEW</a></li>
+               <li><a href="#">Party Wear</a></li>
+               <li><a href="#">Pajamas  <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Ethnic Wear</a></li>
+               
+                </ul>
+               <ul>
+                   <li><a href="#">SHOP BY COLLECTION</a></li>
+               <li><a href="#">Sunglasses </a></li>
+               <li><a href="#">Summer Caps</a></li>
+               <li><a href="#">Hair Bands <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Hair Clips</a></li>
+               <li><a href="#">Watches <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Jewellery</a></li>
+               <li><a href="#">Bags <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Kids Umbrellas</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY AGE</a></li>  
+               <li><a href="#">Preemie/Tine</a></li>
+               <li><a href="#">New Born (0-3 M)</a></li>
+               <li><a href="#">3-6 Months</a></li>
+               <li><a href="#">6-9 Months</a></li>
+               <li><a href="#">9-12 Months</a></li>
+               <li><a href="#">12-18 Months</a></li>
+               <li><a href="#">18-24 Months</a></li>
+               <li><a href="#">2 to 4 Years</a></li>
+               <li><a href="#">4 to 6 Years</a></li>
+               <li><a href="#">6 to 8 Years</a></li>
+               <li><a href="#">8+ Years</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY BRANDS</a></li>
+               <li><a href="#">Babyhug</a></li>
+               <li><a href="#">Babyoye</a></li>
+               <li><a href="#">Kookie Kids</a></li>
+               <li><a href="#">Carter's</a></li>
+               <li><a href="#">Pine Kids</a></li>
+               <li><a href="#">Cute Walk</a></li>
+               <li><a href="#">Honeyhap</a></li>
+               <li><a href="#">OLLINGTON ST.</a></li>
+               <li><a href="#">Doodle Poodle</a></li>
+               <li><a href="#">Primo Gino</a></li>
+               <li><a href="#">Mark & Mia</a></li>  
+               </ul>
+               <ul>
+                <li>
+                    <div style="width:300%"><img src="./assets/indexImage/first cry navbar image.jpg" alt="" width="100%" ></div></li>
+               </ul>
+                           </div></li>
+        <li><a href="#">BATH</a>
+            <div class="submenu-1">
+                <ul>
+                     <li><a href="#">SHOP BY CATEGORY</a></li>
+               <li><a href="#">Sets & Suits <span style="color: red">NEW</span> </a></li>
+               <li><a href="#">T-shirts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shorts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Nightwear</a></li>
+               <li><a href="#">Jeans & Trousers</a></li>
+               <li><a href="#">Onesies <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shirts NEW</a></li>
+               <li><a href="#">Party Wear</a></li>
+               <li><a href="#">Pajamas  <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Ethnic Wear</a></li>
+               
+                </ul>
+               <ul>
+                   <li><a href="#">SHOP BY COLLECTION</a></li>
+               <li><a href="#">Sunglasses </a></li>
+               <li><a href="#">Summer Caps</a></li>
+               <li><a href="#">Hair Bands <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Hair Clips</a></li>
+               <li><a href="#">Watches <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Jewellery</a></li>
+               <li><a href="#">Bags <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Kids Umbrellas</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY AGE</a></li>  
+               <li><a href="#">Preemie/Tine</a></li>
+               <li><a href="#">New Born (0-3 M)</a></li>
+               <li><a href="#">3-6 Months</a></li>
+               <li><a href="#">6-9 Months</a></li>
+               <li><a href="#">9-12 Months</a></li>
+               <li><a href="#">12-18 Months</a></li>
+               <li><a href="#">18-24 Months</a></li>
+               <li><a href="#">2 to 4 Years</a></li>
+               <li><a href="#">4 to 6 Years</a></li>
+               <li><a href="#">6 to 8 Years</a></li>
+               <li><a href="#">8+ Years</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY BRANDS</a></li>
+               <li><a href="#">Babyhug</a></li>
+               <li><a href="#">Babyoye</a></li>
+               <li><a href="#">Kookie Kids</a></li>
+               <li><a href="#">Carter's</a></li>
+               <li><a href="#">Pine Kids</a></li>
+               <li><a href="#">Cute Walk</a></li>
+               <li><a href="#">Honeyhap</a></li>
+               <li><a href="#">OLLINGTON ST.</a></li>
+               <li><a href="#">Doodle Poodle</a></li>
+               <li><a href="#">Primo Gino</a></li>
+               <li><a href="#">Mark & Mia</a></li>  
+               </ul>
+               <ul>
+                <li>
+                    <div style="width:300%"><img src="./assets/indexImage/first cry navbar image.jpg" alt="" width="100%" ></div></li>
+               </ul>
+                           </div></li>
+        <li><a href="#">NURSERY</a>
+            <div class="submenu-1">
+                <ul>
+                     <li><a href="#">SHOP BY CATEGORY</a></li>
+               <li><a href="#">Sets & Suits <span style="color: red">NEW</span> </a></li>
+               <li><a href="#">T-shirts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shorts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Nightwear</a></li>
+               <li><a href="#">Jeans & Trousers</a></li>
+               <li><a href="#">Onesies <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shirts NEW</a></li>
+               <li><a href="#">Party Wear</a></li>
+               <li><a href="#">Pajamas  <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Ethnic Wear</a></li>
+               
+                </ul>
+               <ul>
+                   <li><a href="#">SHOP BY COLLECTION</a></li>
+               <li><a href="#">Sunglasses </a></li>
+               <li><a href="#">Summer Caps</a></li>
+               <li><a href="#">Hair Bands <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Hair Clips</a></li>
+               <li><a href="#">Watches <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Jewellery</a></li>
+               <li><a href="#">Bags <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Kids Umbrellas</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY AGE</a></li>  
+               <li><a href="#">Preemie/Tine</a></li>
+               <li><a href="#">New Born (0-3 M)</a></li>
+               <li><a href="#">3-6 Months</a></li>
+               <li><a href="#">6-9 Months</a></li>
+               <li><a href="#">9-12 Months</a></li>
+               <li><a href="#">12-18 Months</a></li>
+               <li><a href="#">18-24 Months</a></li>
+               <li><a href="#">2 to 4 Years</a></li>
+               <li><a href="#">4 to 6 Years</a></li>
+               <li><a href="#">6 to 8 Years</a></li>
+               <li><a href="#">8+ Years</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY BRANDS</a></li>
+               <li><a href="#">Babyhug</a></li>
+               <li><a href="#">Babyoye</a></li>
+               <li><a href="#">Kookie Kids</a></li>
+               <li><a href="#">Carter's</a></li>
+               <li><a href="#">Pine Kids</a></li>
+               <li><a href="#">Cute Walk</a></li>
+               <li><a href="#">Honeyhap</a></li>
+               <li><a href="#">OLLINGTON ST.</a></li>
+               <li><a href="#">Doodle Poodle</a></li>
+               <li><a href="#">Primo Gino</a></li>
+               <li><a href="#">Mark & Mia</a></li>  
+               </ul>
+               <ul>
+                <li>
+                    <div style="width:300%"><img src="./assets/indexImage/first cry navbar image.jpg" alt="" width="100%" ></div></li>
+               </ul>
+                           </div></li>
+        <li><a href="#">MOMS</a>
+            <div class="submenu-1">
+                <ul>
+                     <li><a href="#">SHOP BY CATEGORY</a></li>
+               <li><a href="#">Sets & Suits <span style="color: red">NEW</span> </a></li>
+               <li><a href="#">T-shirts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shorts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Nightwear</a></li>
+               <li><a href="#">Jeans & Trousers</a></li>
+               <li><a href="#">Onesies <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shirts NEW</a></li>
+               <li><a href="#">Party Wear</a></li>
+               <li><a href="#">Pajamas  <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Ethnic Wear</a></li>
+               
+                </ul>
+               <ul>
+                   <li><a href="#">SHOP BY COLLECTION</a></li>
+               <li><a href="#">Sunglasses </a></li>
+               <li><a href="#">Summer Caps</a></li>
+               <li><a href="#">Hair Bands <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Hair Clips</a></li>
+               <li><a href="#">Watches <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Jewellery</a></li>
+               <li><a href="#">Bags <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Kids Umbrellas</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY AGE</a></li>  
+               <li><a href="#">Preemie/Tine</a></li>
+               <li><a href="#">New Born (0-3 M)</a></li>
+               <li><a href="#">3-6 Months</a></li>
+               <li><a href="#">6-9 Months</a></li>
+               <li><a href="#">9-12 Months</a></li>
+               <li><a href="#">12-18 Months</a></li>
+               <li><a href="#">18-24 Months</a></li>
+               <li><a href="#">2 to 4 Years</a></li>
+               <li><a href="#">4 to 6 Years</a></li>
+               <li><a href="#">6 to 8 Years</a></li>
+               <li><a href="#">8+ Years</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY BRANDS</a></li>
+               <li><a href="#">Babyhug</a></li>
+               <li><a href="#">Babyoye</a></li>
+               <li><a href="#">Kookie Kids</a></li>
+               <li><a href="#">Carter's</a></li>
+               <li><a href="#">Pine Kids</a></li>
+               <li><a href="#">Cute Walk</a></li>
+               <li><a href="#">Honeyhap</a></li>
+               <li><a href="#">OLLINGTON ST.</a></li>
+               <li><a href="#">Doodle Poodle</a></li>
+               <li><a href="#">Primo Gino</a></li>
+               <li><a href="#">Mark & Mia</a></li>  
+               </ul>
+               <ul>
+                <li>
+                    <div style="width:300%"><img src="./assets/indexImage/first cry navbar image.jpg" alt="" width="100%" ></div></li>
+               </ul>
+                           </div></li>
+        <li><a href="#">HEALTH</a>
+            <div class="submenu-1">
+                <ul>
+                     <li><a href="#">SHOP BY CATEGORY</a></li>
+               <li><a href="#">Sets & Suits <span style="color: red">NEW</span> </a></li>
+               <li><a href="#">T-shirts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shorts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Nightwear</a></li>
+               <li><a href="#">Jeans & Trousers</a></li>
+               <li><a href="#">Onesies <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shirts NEW</a></li>
+               <li><a href="#">Party Wear</a></li>
+               <li><a href="#">Pajamas  <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Ethnic Wear</a></li>
+               
+                </ul>
+               <ul>
+                   <li><a href="#">SHOP BY COLLECTION</a></li>
+               <li><a href="#">Sunglasses </a></li>
+               <li><a href="#">Summer Caps</a></li>
+               <li><a href="#">Hair Bands <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Hair Clips</a></li>
+               <li><a href="#">Watches <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Jewellery</a></li>
+               <li><a href="#">Bags <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Kids Umbrellas</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY AGE</a></li>  
+               <li><a href="#">Preemie/Tine</a></li>
+               <li><a href="#">New Born (0-3 M)</a></li>
+               <li><a href="#">3-6 Months</a></li>
+               <li><a href="#">6-9 Months</a></li>
+               <li><a href="#">9-12 Months</a></li>
+               <li><a href="#">12-18 Months</a></li>
+               <li><a href="#">18-24 Months</a></li>
+               <li><a href="#">2 to 4 Years</a></li>
+               <li><a href="#">4 to 6 Years</a></li>
+               <li><a href="#">6 to 8 Years</a></li>
+               <li><a href="#">8+ Years</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY BRANDS</a></li>
+               <li><a href="#">Babyhug</a></li>
+               <li><a href="#">Babyoye</a></li>
+               <li><a href="#">Kookie Kids</a></li>
+               <li><a href="#">Carter's</a></li>
+               <li><a href="#">Pine Kids</a></li>
+               <li><a href="#">Cute Walk</a></li>
+               <li><a href="#">Honeyhap</a></li>
+               <li><a href="#">OLLINGTON ST.</a></li>
+               <li><a href="#">Doodle Poodle</a></li>
+               <li><a href="#">Primo Gino</a></li>
+               <li><a href="#">Mark & Mia</a></li>  
+               </ul>
+               <ul>
+                <li>
+                    <div style="width:300%"><img src="./assets/indexImage/first cry navbar image.jpg" alt="" width="100%" ></div></li>
+               </ul>
+                           </div></li>
+        <li><a href="#">BOUTIQUES</a>
+            <div class="submenu-1">
+                <ul>
+                     <li><a href="#">SHOP BY CATEGORY</a></li>
+               <li><a href="#">Sets & Suits <span style="color: red">NEW</span> </a></li>
+               <li><a href="#">T-shirts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shorts <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Nightwear</a></li>
+               <li><a href="#">Jeans & Trousers</a></li>
+               <li><a href="#">Onesies <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Shirts NEW</a></li>
+               <li><a href="#">Party Wear</a></li>
+               <li><a href="#">Pajamas  <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Ethnic Wear</a></li>
+               
+                </ul>
+               <ul>
+                   <li><a href="#">SHOP BY COLLECTION</a></li>
+               <li><a href="#">Sunglasses </a></li>
+               <li><a href="#">Summer Caps</a></li>
+               <li><a href="#">Hair Bands <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Hair Clips</a></li>
+               <li><a href="#">Watches <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Jewellery</a></li>
+               <li><a href="#">Bags <span style="color: red">NEW</span></a></li>
+               <li><a href="#">Kids Umbrellas</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY AGE</a></li>  
+               <li><a href="#">Preemie/Tine</a></li>
+               <li><a href="#">New Born (0-3 M)</a></li>
+               <li><a href="#">3-6 Months</a></li>
+               <li><a href="#">6-9 Months</a></li>
+               <li><a href="#">9-12 Months</a></li>
+               <li><a href="#">12-18 Months</a></li>
+               <li><a href="#">18-24 Months</a></li>
+               <li><a href="#">2 to 4 Years</a></li>
+               <li><a href="#">4 to 6 Years</a></li>
+               <li><a href="#">6 to 8 Years</a></li>
+               <li><a href="#">8+ Years</a></li>
+               </ul>
+               <ul>
+               <li><a href="#">SHOP BY BRANDS</a></li>
+               <li><a href="#">Babyhug</a></li>
+               <li><a href="#">Babyoye</a></li>
+               <li><a href="#">Kookie Kids</a></li>
+               <li><a href="#">Carter's</a></li>
+               <li><a href="#">Pine Kids</a></li>
+               <li><a href="#">Cute Walk</a></li>
+               <li><a href="#">Honeyhap</a></li>
+               <li><a href="#">OLLINGTON ST.</a></li>
+               <li><a href="#">Doodle Poodle</a></li>
+               <li><a href="#">Primo Gino</a></li>
+               <li><a href="#">Mark & Mia</a></li>  
+               </ul>
+               <ul>
+                   <li>
+                    <div style="width:300%"><img src="./assets/indexImage/first cry navbar image.jpg" alt="" width="100%" ></div></li>
+               </ul>
+                           </div></li>
+        <li id="lilogo"><a href="#" ><img src="./assets/indexImage/club_logo.png" alt="" width="55px"></a></li>
+        <li style="margin-top:-1.6vh;" id="lilogo"><img src="./assets/indexImage/FC-menu-carters-logo.webp" alt="" width="80%"></a></li>
+       
+        </ul> 
+</div>
     </header>
 
     <main>
@@ -150,7 +1454,7 @@
                 <h3><u>Filter by Category</u></h3>
                 <br>
                 <hr>
-               
+                <button id="Filter_All">All</button>
                 <button id="Filter_girl">Girls</button>
                 <button id="Filter_boy">Boys</button>
                 
@@ -175,11 +1479,12 @@
                  <h3>Filter by Size</h3>
                 
                 <span id="span">
-                <button id="size_2">2-3y</button>
-                <button id="size_3">3-4y</button>
+                <button id="size_1" data-size="">All</button>
+                <button id="size_2" data-size="2-3 Y">2-3y</button>
+                <button id="size_3" data-size="3-4 Y">3-4y</button>
                 <br>
-                <button id="size_4">4-5y</button>
-                <button id="size_5">5-6y</button>
+                <button id="size_4" data-size="4-5 Y">4-5y</button>
+                <button id="size_5" data-size="5-6 Y">5-6y</button>
                     </span>
              
              

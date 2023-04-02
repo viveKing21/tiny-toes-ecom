@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-*,
-*::before,
-*::after {
+main *,
+main *::before,
+main *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,21 +19,38 @@ body {
     font-size: 1.6rem;
 }
 
-.container {
+main .container {
     width: 100%;
     padding: 0 2rem;
     
     /* : 2px solid red ;border */
 }
 
-.products {
+main .products {
     padding: 2rem 0;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 1.5rem;
 }
 
-.product {
+@media screen and (max-width: 993px) {
+    main .products {
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    main .products {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main .products {
+        grid-template-columns: 1fr;
+    }
+}
+main .product {
     
     display: flex;
     flex-direction: column;
@@ -51,75 +68,75 @@ body {
 }
 
 
-.product img {
+main .product img {
     width: 100%;
     padding: 5px;
     border-radius: 20px;
 }
-.product:hover{
+main .product:hover{
     box-shadow: 20px 20px 30px rgb(0, 0, 0,0.30);
     
 }
-.product:hover{
+main .product:hover{
     transform: scale(1.03);
 }
 
-.product:hover img{
+main .product:hover img{
    opacity: 0;
 }
 
-.product:hover .product-hover{
+main .product:hover .product-hover{
     opacity: 1;
 }
 
-.product img{
+main .product img{
     width: 100%;
     /* height: 70%; */
     transition: all linear 0.2s;
 }
 
-.product .product-hover{
+main .product .product-hover{
     width: 95%;
     padding: 10px;
 }
 
-.product img.product-hover{
+main .product img.product-hover{
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
 }
 
-.product-content {
+main .product-content {
     padding: 1rem 2rem;
     
     
     
 }
 
-.product .product-title {
+main .product .product-title {
     font-size: 1.5rem;
 }
 
-.product-description {
+main .product-description {
     text-align: justify;
 }
 
-.product-title,
-.product-price-container,
-.product-description,
-.product-category {
+main .product-title,
+main .product-price-container,
+main .product-description,
+main .product-category {
     padding: 0.5rem 0;
 }
 
-.product-price-container {
+main .product-price-container {
     padding-top: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.add-to-cart {
+main .add-to-cart {
     background: rgb(16, 8, 69);
     width: 4rem;
     height: 4rem;
@@ -131,33 +148,33 @@ body {
     border-radius: 1rem;
 }
 
-.add-to-cart ion-icon {
+main .add-to-cart ion-icon {
     font-size: 3rem;
 }
 
-#filter{
+main #filter{
     /* border: 2px solid black; */
     width: 30%;
  
 }
-#Display{
+main #Display{
     display: flex;
 }
-#Filter_category{
+main #Filter_category{
     
     background-color: gainsboro;
     width: 90%;
     height: 35px ;
     text-align: center;
 }
-#Filter_Brand{
+main #Filter_Brand{
     
     background-color: gainsboro;
     width: 90%;
     height: 35px ;
     text-align: center;
 }
-#filter_size{
+main #filter_size{
     
     background-color: gainsboro;
     width: 90%;
@@ -165,7 +182,7 @@ body {
     text-align: center;
 }
 
-#filter_price{
+main #filter_price{
     
     background-color: gainsboro;
     width: 90%;
@@ -176,7 +193,7 @@ body {
 
 /* navigation  */
 
-#nav1{
+main #nav1{
     display: flex;
     padding-top: 1%;
     width: 100%;
@@ -185,7 +202,7 @@ body {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
    
    }
-   input{
+   main input{
        margin-left: 20px;
        width: 300px;
        height: 40px;
@@ -193,7 +210,7 @@ body {
        border-radius: 7px;
        border: 2px solid orange;
    }
-   #inpbutton{
+   main #inpbutton{
        margin-left: -34px;
        background-color: white;
        border: none;
@@ -204,28 +221,28 @@ body {
    }
    
    
-   #nav1>div{
+   main #nav1>div{
        display: flex;
    }
-   #nav1>div:nth-child(2){
+   main #nav1>div:nth-child(2){
        margin: 18px 30px;
    }
-   #nav1>div:nth-child(2)>a{
+   main #nav1>div:nth-child(2)>a{
        text-decoration: none;
        margin-right:6px;
        color: grey;
    }
-   #nav1>div:nth-child(2)>a:hover{
+   main #nav1>div:nth-child(2)>a:hover{
       text-decoration: underline;
    }
-   .verticalline{
+   main .verticalline{
        height: 17px;
        width: 1.5px;
        margin-top: 1px;
        margin-right: 5px;
        background-color: rgb(204, 200, 200);
    }
-   #nav2{
+   main #nav2{
        display: flex;
        height: 6vh;
        width: 100%;
@@ -234,35 +251,35 @@ body {
       background-color:#F5CD12;
       align-items: center;
    }
-   #nav2 ul{
+   main #nav2 ul{
        display: inline-flex;
        list-style: none;
        color: rgb(52, 48, 48);
        
    }
-   #nav2 ul li{
+   main #nav2 ul li{
        padding: 5px 10px;
        height: 35px;
        margin-left: 10px;
    }
-   #nav2 ul li a{
+   main #nav2 ul li a{
        text-decoration: none;
        color: rgb(55, 52, 52);
        font-weight: 600;
        font-family: Calibri;
    }
-   .submenu-1{
+   main .submenu-1{
    display: none;
    background-color:white;
    
    
    }
-   #nav2>ul>li:hover{
+   main #nav2>ul>li:hover{
        background-color:whitesmoke;
        border-radius: 5px;
        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
    }
-   #nav2 ul li:hover .submenu-1{
+   main #nav2 ul li:hover .submenu-1{
        display: flex;
        position: absolute;
        margin-top: 11px;
@@ -271,83 +288,85 @@ body {
        width: 100%;
       
    }
-   #nav2 ul li:hover .submenu-1 ul{
+   main #nav2 ul li:hover .submenu-1 ul{
        display:block;
        margin-left: 1vw;
        margin-top: 40px;
        width: 100%;
    } 
-   #nav2 ul li:hover .submenu-1 ul li {
+   main #nav2 ul li:hover .submenu-1 ul li {
      margin-left: -10px;
      width: 100%;
    /* background-color: red; */
    
    
    } 
-   #nav2 ul li:hover .submenu-1>ul>li>a:hover{
+   main #nav2 ul li:hover .submenu-1>ul>li>a:hover{
        text-decoration: underline;
      
      }
 
      /* hover css */
      
-     #Filter_category{
+     main #Filter_category{
         
         margin-bottom: 50px;
         padding: 5px;
         margin-left: 20px;
      }
-     #Filter_girl{
+     main #Filter_All{
+        padding: 5px 10px;
+        border: none; 
+     }
+     main #Filter_girl{
         padding: 5px;
         margin:15px;
         border: none; 
-        
-        
      }
-     #Filter_boy{
+     main #Filter_boy{
         padding: 5px;
         margin-right: 2px;
         border: none;
      }
-     #Filter_Brand{
+     main #Filter_Brand{
        
         margin-bottom: 50px;
         padding: 5px;
         margin-left: 20px;
      }
-     #Brand_select{
+     main #Brand_select{
         margin-top: 25px;
         width: 100px;
         
      }
 
-     #filter_size{
+     main #filter_size{
         
         margin-bottom: 50px;
         padding: 5px;
         margin-left: 20px;
      }
      
-     #filter_size button {
+    main  #filter_size button {
          padding: 5px;
         margin-right: 2px;
         margin-top: 20px;
         border: none;
      }
-     #span{
+     main #span{
         display: flex;
         gap: 10px;
-        margin-left: 55px;
+        /* margin-left: 55px; */
      }
 
-     #filter_price{
+     main #filter_price{
          
         margin-bottom: 50px;
         padding: 5px;
         margin-left: 20px;
         
      }
- #filter_price input{
+ main #filter_price input{
     width: 20px;
     
  }
@@ -359,20 +378,28 @@ body {
     flex-direction: column;
  } */
 
- #pagination{
+ main #pagination{
    
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    
+    margin: 20px;
  }
- #pagination button {
+ main #pagination button {
     padding: 5px 10px 5px 10px;
     align-items: center;
     background-color: white ;
     font-weight: 500;
-    border-radius: 90%;
-
+    border: none;
+    box-shadow: 0 0 4px 0px #00000057;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: scale .2s;
+ }
+main #pagination button:hover{
+    scale: 1.1;
  }
  

@@ -19,9 +19,6 @@ console.log(arr2)
 
 
 
-
-
-
   
 
 

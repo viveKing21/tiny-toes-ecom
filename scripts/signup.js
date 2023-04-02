@@ -6,7 +6,7 @@ var phone=document.getElementById("mobile")
 var conPswrd=document.getElementById("password")
 var rowPswrd=document.getElementById("rowpswrd")
 var continuBtn=document.getElementById("registerBtn")
-  var user=JSON.parse(localStorage.getItem("user"))||[]
+  var user=JSON.parse(localStorage.getItem("users"))||[]
   var count=0
   if(user.length==0){
     count=0
@@ -30,7 +30,7 @@ continuBtn.addEventListener("click",function(){
         obj.phone=phone.value
         obj.password=conPswrd.value
         user.push(obj)
-        localStorage.setItem("user",JSON.stringify(user))
+        localStorage.setItem("users",JSON.stringify(user))
         alert("Registration Successful")
         setTimeout(function(){
             location="./signin.html"

@@ -9,6 +9,8 @@ if(query.has("pid") == false) {
     location = "/"
 }
 
+let count = document.getElementById("item-count") // header
+
 const loader = document.querySelector(".loading_screen")
 const error = document.querySelector(".error")
 const sliderItems = document.querySelector(".slider-wrapper")
@@ -106,6 +108,7 @@ function updateUi(){
             cartBtn.textContent ="Add to Cart"
         })
         alert("Product removed to cart")
+        count.textContent = carts.length
     }
     const addToCart = () => {
         if(uid == null) location = "/signin.html"
@@ -126,6 +129,7 @@ function updateUi(){
             cartBtn.textContent ="Remove to Cart"
         })
         alert("Product added to cart")
+        count.textContent = carts.length
     }
 
     addCart.forEach(cartBtn => {
