@@ -1,4 +1,8 @@
-
+#item-count {
+    position: absolute;
+    margin: -2.4vh 0px 0px 0px;
+    float: right;
+}
 #footer{
     padding: 4vh 5vw;
 } 
