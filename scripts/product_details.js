@@ -2,10 +2,14 @@ import { LSK, API, currency } from "./main.js";
 
 let query = new URLSearchParams(location.search)
 
+let uid = localStorage.getItem("logged")
+
 if(query.has("pid") == false) {
     alert("Invalid URL")
     location = "/"
 }
+
+let count = document.getElementById("item-count") // header
 
 const loader = document.querySelector(".loading_screen")
 const error = document.querySelector(".error")
@@ -103,12 +107,17 @@ function updateUi(){
             cartBtn.onclick = addToCart
             cartBtn.textContent ="Add to Cart"
         })
-        alert("Product added to cart")
+        alert("Product removed to cart")
+        count.textContent = carts.length
     }
     const addToCart = () => {
+        if(uid == null) location = "/signin.html"
+
         let id = carts.reduce((acc, cur) => Math.max(acc, cur.id), 0) + 1
         let cart = {
             pid,
+            uid,
+            qty:1,
             ...productData,
             id
         }
@@ -119,7 +128,8 @@ function updateUi(){
             cartBtn.onclick = removeToCart
             cartBtn.textContent ="Remove to Cart"
         })
-        alert("Product removed to cart")
+        alert("Product added to cart")
+        count.textContent = carts.length
     }
 
     addCart.forEach(cartBtn => {

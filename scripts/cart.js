@@ -17,9 +17,6 @@ arr2 = arr2.filter(({uid}) => uid == userlogin)
 
 
 
-
-
-
   
 
 
