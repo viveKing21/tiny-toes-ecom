@@ -517,10 +517,13 @@ align-items: center;
 }
 
 #profileTop{
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 35px;
-    font-family: 'Open Sans', sans-serif;
+     /* border:  solid brown; */
+     background-color: white;
+     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+     height: 70px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-family: 'Open Sans', sans-serif;
+     margin-left: 5px;
 }
