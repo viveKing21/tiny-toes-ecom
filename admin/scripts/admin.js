@@ -277,12 +277,19 @@ orders.addEventListener("click", () => {
     displayContainer.innerHTML = `
     <div id="topOrder">
         <h1>Order Status</h1>
+        <select name="" id="statusSelect"> 
+                 <option value="">All</option>
+                 <option value="processed">Processed</option>
+                 <option value="delivered">Delivered</option>
+                 <option value="returned">Returned</option>
+                </select>
         </div>
 
     <table>
     <thead >
       <tr>
         <th class="orderHeadings">Product Id</th>
+        <th class="orderHeadings">User Id</th>
         <th class="orderHeadings">Name</th>
         <th class="orderHeadings">Address</th>
         <th class="orderHeadings">City</th>
@@ -291,7 +298,7 @@ orders.addEventListener("click", () => {
       </tr>
     </thead>
     <tbody>
-    ${orderData.map((item) => renderorders(item.id, item.billing_address[0].name, item.billing_address[0].Houseno, item.billing_address[0].locality, item.billing_address[0].pincode, item.billing_address[0].city, item.billing_address[0].state,)).join("")}
+    ${orderData.map((item) => renderorders(item.id, item.uid, item.billing_address[0].name, item.billing_address[0].Houseno, item.billing_address[0].locality, item.billing_address[0].pincode, item.billing_address[0].city, item.billing_address[0].state,)).join("")}
     </tbody>
     </table>
 
@@ -315,6 +322,25 @@ orders.addEventListener("click", () => {
                 console.log("processed");
                 console.log(e)
                 el.style.backgroundColor = "orange";
+            } else if (el.value == "delivered") {
+                console.log("delivered");
+                el.style.backgroundColor = "green";
+            } else if (el.value == "returned") {
+                console.log("returned");
+                el.style.backgroundColor = "red";
+            } else if (el.value == "") {
+                console.log("not selected");
+                el.style.backgroundColor = "";
+            }
+        })
+    })
+
+    let statusSelect = document.getElementById("statusSelect");
+    statusSelect.forEach((el)=>{
+        el.addEventListener("change", (e) => {
+            if (el.value == "processed") {
+                console.log("processed");
+                console.log(e)
             } else if (el.value == "delivered") {
                 console.log("delivered");
                 el.style.backgroundColor = "green";
@@ -422,11 +448,12 @@ orders.addEventListener("click", () => {
 
 let orderList = document.getElementById("orders-btn");
 
-function renderorders(id,  firstname, houseNo,locality, pincode, city, state) {
+function renderorders(id, uid,  firstname, houseNo,locality, pincode, city, state) {
     let orderTable = `
     <tbody>
     <tr>
     <td>${id}</td>
+    <td>${uid}</td>
     <td>${firstname}</td>
     <td>${houseNo} ${locality} ${pincode}</td>
     <td>${city}</td>
