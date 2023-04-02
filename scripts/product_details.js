@@ -95,7 +95,7 @@ function updateUi(){
     discount.textContent = `(${productData.discount})`
 
     // cart
-    let curProduct = carts.find(({pid}) => pid == pid)
+    let curProduct = carts.find((cart) => cart.pid == pid)
 
     const removeToCart = () => {
         carts = carts.filter((cart) => cart.pid != pid)
