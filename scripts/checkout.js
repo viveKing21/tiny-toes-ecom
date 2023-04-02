@@ -84,3 +84,10 @@ name3.addEventListener("click",function(e){
            
     }
 })
+let myprofile=document.getElementById("Myaccount")
+
+
+myprofile.addEventListener("change",function(){
+  console.log("mazhar")
+  window.location=this.value
+})
