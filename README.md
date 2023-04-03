@@ -50,3 +50,24 @@ foolish-quiet-4224
 │   ├── orders.html
 
 
+
+
+## Tiny Toes - Grow with Style
+
+Tiny toes is basically a clone website for [firstcry.com](https://www.firstcry.com/). This website is responsible for providing the best baby faishon products and accessories all over the India.
+
+## Languages used
+
+HTML (Hyper Text Markup language)
+
+CSS (Cascading style sheet)
+
+JS (JavaScript)
+
+## Links used
+
+MockApi links
+
+Google chart links
+
+Google font/icon links
