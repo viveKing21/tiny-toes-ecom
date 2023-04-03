@@ -108,3 +108,10 @@ He is responsible for making the admin page of the website, where the admin page
 3. Order details section contains all the customer's information that are buying products from the website and also has the functionality to present network/connection to over the world of the website
 4. Admin profile section contains all information of admins. It has functionality to present the location of admin with the the help of google map.
 5. Create profile section is responsible to add & set the admin details for creating new account to the admin page.
+
+# Website Images
+
+## Landing Page
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 49 11 AM" src="https://user-images.githubusercontent.com/115460552/229401615-a2f4306e-4f4d-4dbc-a030-0d77894ebe25.png">
+
