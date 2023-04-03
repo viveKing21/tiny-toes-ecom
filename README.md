@@ -115,3 +115,9 @@ He is responsible for making the admin page of the website, where the admin page
 
 <img width="1680" alt="Screenshot 2023-04-03 at 7 49 11 AM" src="https://user-images.githubusercontent.com/115460552/229401615-a2f4306e-4f4d-4dbc-a030-0d77894ebe25.png">
 
+<img width="1680" alt="Screenshot 2023-04-03 at 7 49 30 AM" src="https://user-images.githubusercontent.com/115460552/229401686-e06bbe8b-2bc6-434f-86a7-7d67f740b618.png">
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 49 24 AM" src="https://user-images.githubusercontent.com/115460552/229401703-a4db19a3-151a-44f3-8e94-71b15a2804d0.png">
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 49 36 AM" src="https://user-images.githubusercontent.com/115460552/229401726-db41721d-6864-4244-8e99-15520519ecbd.png">
+
