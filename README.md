@@ -35,7 +35,7 @@ foolish-quiet-4224
 │   │   ├── checkout.html
 
 
-├── adminlogin.html
+├── admin.html
 ===
 
 │   ├── index.html
