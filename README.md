@@ -121,3 +121,54 @@ He is responsible for making the admin page of the website, where the admin page
 
 <img width="1680" alt="Screenshot 2023-04-03 at 7 49 36 AM" src="https://user-images.githubusercontent.com/115460552/229401726-db41721d-6864-4244-8e99-15520519ecbd.png">
 
+## Registration and Login Page
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 53 22 AM" src="https://user-images.githubusercontent.com/115460552/229401939-32f3d2cb-c0d0-431d-b674-3db178c4bd08.png">
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 53 26 AM" src="https://user-images.githubusercontent.com/115460552/229401963-33feedf4-d61e-49f8-8c9c-3b579bd190c0.png">
+
+## Product Display Page
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 49 49 AM" src="https://user-images.githubusercontent.com/115460552/229401994-45191d12-ef22-42c8-8391-f0d55a959776.png">
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 49 57 AM" src="https://user-images.githubusercontent.com/115460552/229402006-c99b7b7c-e3c3-491f-b169-403357ad94d7.png">
+
+## Product Description Page
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 50 37 AM" src="https://user-images.githubusercontent.com/115460552/229402060-a001913f-8230-4591-9549-ef3669e4de72.png">
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 50 42 AM" src="https://user-images.githubusercontent.com/115460552/229402078-614eb0fa-0424-42a9-84b0-a2eddc07de87.png">
+
+## Cart Page
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 51 03 AM" src="https://user-images.githubusercontent.com/115460552/229402108-a4c18a4a-9ce2-43db-b99d-b293884a652f.png">
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 51 14 AM" src="https://user-images.githubusercontent.com/115460552/229402122-64ee5052-e673-4dc7-867d-52296f8ccb68.png">
+
+## Checkout Page
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 51 27 AM" src="https://user-images.githubusercontent.com/115460552/229402147-ae0daf84-0259-4f30-a5a4-b07371e15438.png">
+
+## Profile and Orders Page
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 51 41 AM" src="https://user-images.githubusercontent.com/115460552/229402195-cfe8879f-ac28-440e-a937-f1af676d5cb7.png">
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 51 48 AM" src="https://user-images.githubusercontent.com/115460552/229402207-1175d3d4-0d61-4c02-8d07-24ae50527c36.png">
+
+## Admin Page
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 52 10 AM" src="https://user-images.githubusercontent.com/115460552/229402237-3b411463-1873-4613-81dd-3e9cfa5280cd.png">
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 52 22 AM" src="https://user-images.githubusercontent.com/115460552/229402253-9c2ed7e3-2a80-4946-8738-7302416d7094.png">
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 52 34 AM" src="https://user-images.githubusercontent.com/115460552/229402272-b674ffcd-7a73-40e2-a6af-640a36097459.png">
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 52 55 AM" src="https://user-images.githubusercontent.com/115460552/229402279-bc49d261-6f92-4b6c-ad20-b054cf2f0f4e.png">
+
+<img width="1680" alt="Screenshot 2023-04-03 at 7 53 08 AM" src="https://user-images.githubusercontent.com/115460552/229402292-701e8d5a-80f0-4bd9-abf4-f80767699825.png">
+
+
+
+
+
+
