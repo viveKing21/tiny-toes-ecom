@@ -167,7 +167,9 @@ He is responsible for making the admin page of the website, where the admin page
 
 <img width="1680" alt="Screenshot 2023-04-03 at 7 53 08 AM" src="https://user-images.githubusercontent.com/115460552/229402292-701e8d5a-80f0-4bd9-abf4-f80767699825.png">
 
+## Deployment
 
+Netlify : https://rad-wisp-729722.netlify.app/
 
 
 
